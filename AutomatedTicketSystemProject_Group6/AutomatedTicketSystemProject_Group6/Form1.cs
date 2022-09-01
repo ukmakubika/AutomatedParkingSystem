@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class Form1 : Form
+    public partial class MainLogin : Form
     {
-        public Form1()
+        public MainLogin()
         {
             InitializeComponent();
         }
