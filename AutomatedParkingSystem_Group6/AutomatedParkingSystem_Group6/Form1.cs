@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace AutomatedParkingSystem_Group6
 {
-    public partial class Form1 : Form
+    public partial class MainLogin : Form
     {
-        public Form1()
+        public MainLogin()
         {
             InitializeComponent();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
