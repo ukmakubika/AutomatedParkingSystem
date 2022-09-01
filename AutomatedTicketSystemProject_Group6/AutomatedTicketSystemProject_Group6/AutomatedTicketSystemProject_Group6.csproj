@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSignUp.Designer.cs">
+      <DependentUpon>ClientSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExistingClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExistingClient.Designer.cs">
+      <DependentUpon>ExistingClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExistingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExistingManager.Designer.cs">
+      <DependentUpon>ExistingManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientSignUp.resx">
+      <DependentUpon>ClientSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExistingClient.resx">
+      <DependentUpon>ExistingClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExistingManager.resx">
+      <DependentUpon>ExistingManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
