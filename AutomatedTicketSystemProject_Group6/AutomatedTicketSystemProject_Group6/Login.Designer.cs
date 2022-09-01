@@ -45,7 +45,7 @@
             // 
             // pbManager
             // 
-            this.pbManager.Location = new System.Drawing.Point(39, 33);
+            this.pbManager.Location = new System.Drawing.Point(56, 43);
             this.pbManager.Name = "pbManager";
             this.pbManager.Size = new System.Drawing.Size(190, 188);
             this.pbManager.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             // pbClient
             // 
-            this.pbClient.Location = new System.Drawing.Point(340, 33);
+            this.pbClient.Location = new System.Drawing.Point(357, 43);
             this.pbClient.Name = "pbClient";
             this.pbClient.Size = new System.Drawing.Size(190, 188);
             this.pbClient.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 312);
+            this.label1.Location = new System.Drawing.Point(53, 322);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 360);
+            this.label2.Location = new System.Drawing.Point(53, 370);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(39, 405);
+            this.btnLogin.Location = new System.Drawing.Point(56, 415);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 34);
             this.btnLogin.TabIndex = 4;
@@ -88,14 +88,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(126, 305);
+            this.txtUsername.Location = new System.Drawing.Point(143, 315);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(193, 20);
             this.txtUsername.TabIndex = 5;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(126, 353);
+            this.txtPassword.Location = new System.Drawing.Point(143, 363);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(193, 20);
             this.txtPassword.TabIndex = 6;
@@ -103,7 +103,7 @@
             // linkPassword
             // 
             this.linkPassword.AutoSize = true;
-            this.linkPassword.Location = new System.Drawing.Point(337, 360);
+            this.linkPassword.Location = new System.Drawing.Point(354, 370);
             this.linkPassword.Name = "linkPassword";
             this.linkPassword.Size = new System.Drawing.Size(92, 13);
             this.linkPassword.TabIndex = 7;
@@ -113,7 +113,7 @@
             // linkSignup
             // 
             this.linkSignup.AutoSize = true;
-            this.linkSignup.Location = new System.Drawing.Point(337, 312);
+            this.linkSignup.Location = new System.Drawing.Point(354, 322);
             this.linkSignup.Name = "linkSignup";
             this.linkSignup.Size = new System.Drawing.Size(111, 13);
             this.linkSignup.TabIndex = 8;
@@ -123,7 +123,7 @@
             // rbManager
             // 
             this.rbManager.AutoSize = true;
-            this.rbManager.Location = new System.Drawing.Point(39, 260);
+            this.rbManager.Location = new System.Drawing.Point(56, 270);
             this.rbManager.Name = "rbManager";
             this.rbManager.Size = new System.Drawing.Size(67, 17);
             this.rbManager.TabIndex = 9;
@@ -134,7 +134,7 @@
             // rbClient
             // 
             this.rbClient.AutoSize = true;
-            this.rbClient.Location = new System.Drawing.Point(340, 260);
+            this.rbClient.Location = new System.Drawing.Point(357, 270);
             this.rbClient.Name = "rbClient";
             this.rbClient.Size = new System.Drawing.Size(51, 17);
             this.rbClient.TabIndex = 10;
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 477);
+            this.ClientSize = new System.Drawing.Size(600, 483);
             this.Controls.Add(this.rbClient);
             this.Controls.Add(this.rbManager);
             this.Controls.Add(this.linkSignup);

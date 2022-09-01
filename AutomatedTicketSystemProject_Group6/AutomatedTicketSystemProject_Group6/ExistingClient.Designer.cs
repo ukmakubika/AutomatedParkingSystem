@@ -41,7 +41,7 @@
             // linkPassword
             // 
             this.linkPassword.AutoSize = true;
-            this.linkPassword.Location = new System.Drawing.Point(413, 283);
+            this.linkPassword.Location = new System.Drawing.Point(413, 302);
             this.linkPassword.Name = "linkPassword";
             this.linkPassword.Size = new System.Drawing.Size(92, 13);
             this.linkPassword.TabIndex = 14;
@@ -50,21 +50,21 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(202, 276);
+            this.txtPassword.Location = new System.Drawing.Point(202, 295);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(193, 20);
             this.txtPassword.TabIndex = 13;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(202, 228);
+            this.txtUsername.Location = new System.Drawing.Point(202, 247);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(193, 20);
             this.txtUsername.TabIndex = 12;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(255, 327);
+            this.btnLogin.Location = new System.Drawing.Point(255, 346);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 34);
             this.btnLogin.TabIndex = 11;
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 283);
+            this.label2.Location = new System.Drawing.Point(112, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 10;
@@ -83,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 235);
+            this.label1.Location = new System.Drawing.Point(112, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 9;
@@ -91,7 +91,7 @@
             // 
             // pbClient
             // 
-            this.pbClient.Location = new System.Drawing.Point(205, 12);
+            this.pbClient.Location = new System.Drawing.Point(205, 31);
             this.pbClient.Name = "pbClient";
             this.pbClient.Size = new System.Drawing.Size(190, 188);
             this.pbClient.TabIndex = 16;
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 383);
+            this.ClientSize = new System.Drawing.Size(634, 399);
             this.Controls.Add(this.pbClient);
             this.Controls.Add(this.linkPassword);
             this.Controls.Add(this.txtPassword);
