@@ -29,13 +29,36 @@
         private void InitializeComponent()
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.components = new System.ComponentModel.Container();
+=======
+            this.btnTest = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(337, 232);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 0;
+            this.btnTest.Text = "Testing";
+            this.btnTest.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+>>>>>>> Stashed changes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.btnTest);
+            this.Name = "Form1";
+            this.Text = "AutomatedParkingSystem";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+<<<<<<< Updated upstream
 =======
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
@@ -191,6 +214,10 @@
         private System.Windows.Forms.LinkLabel linkForgotPassword;
         private System.Windows.Forms.LinkLabel linkSignUp;
         private System.Windows.Forms.Button btnLogin;
+>>>>>>> Stashed changes
+=======
+
+        private System.Windows.Forms.Button btnTest;
 >>>>>>> Stashed changes
     }
 }
