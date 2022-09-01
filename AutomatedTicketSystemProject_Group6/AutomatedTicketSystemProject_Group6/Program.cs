@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AutomatedParkingSystem_Group6
+namespace AutomatedTicketSystemProject_Group6
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace AutomatedParkingSystem_Group6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainLogin());
+            Application.Run(new Form1());
         }
     }
 }
