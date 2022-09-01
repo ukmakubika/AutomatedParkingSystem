@@ -38,17 +38,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
+            this.txtIDNum = new System.Windows.Forms.TextBox();
+            this.txtAnswer = new System.Windows.Forms.TextBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.cbQuestion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -141,101 +141,102 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Username:";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtName.Location = new System.Drawing.Point(160, 49);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(155, 20);
+            this.txtName.TabIndex = 10;
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(481, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtSurname.Location = new System.Drawing.Point(481, 49);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(155, 20);
+            this.txtSurname.TabIndex = 11;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtEmail.Location = new System.Drawing.Point(160, 113);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(155, 20);
+            this.txtEmail.TabIndex = 12;
             // 
-            // textBox4
+            // txtNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(160, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(155, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtNumber.Location = new System.Drawing.Point(160, 183);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(155, 20);
+            this.txtNumber.TabIndex = 13;
             // 
-            // textBox5
+            // txtPassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(160, 253);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(155, 20);
-            this.textBox5.TabIndex = 14;
+            this.txtPassword.Location = new System.Drawing.Point(160, 253);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(155, 20);
+            this.txtPassword.TabIndex = 14;
             // 
-            // textBox6
+            // txtUsername
             // 
-            this.textBox6.Location = new System.Drawing.Point(160, 326);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(155, 20);
-            this.textBox6.TabIndex = 15;
+            this.txtUsername.Location = new System.Drawing.Point(160, 396);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(155, 20);
+            this.txtUsername.TabIndex = 16;
             // 
-            // textBox7
+            // txtConfirm
             // 
-            this.textBox7.Location = new System.Drawing.Point(160, 396);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(155, 20);
-            this.textBox7.TabIndex = 16;
+            this.txtConfirm.Location = new System.Drawing.Point(481, 253);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(155, 20);
+            this.txtConfirm.TabIndex = 17;
             // 
-            // textBox8
+            // txtIDNum
             // 
-            this.textBox8.Location = new System.Drawing.Point(481, 253);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(155, 20);
-            this.textBox8.TabIndex = 17;
+            this.txtIDNum.Location = new System.Drawing.Point(481, 113);
+            this.txtIDNum.Name = "txtIDNum";
+            this.txtIDNum.Size = new System.Drawing.Size(155, 20);
+            this.txtIDNum.TabIndex = 18;
             // 
-            // textBox9
+            // txtAnswer
             // 
-            this.textBox9.Location = new System.Drawing.Point(481, 113);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(155, 20);
-            this.textBox9.TabIndex = 18;
+            this.txtAnswer.Location = new System.Drawing.Point(481, 323);
+            this.txtAnswer.Name = "txtAnswer";
+            this.txtAnswer.Size = new System.Drawing.Size(155, 20);
+            this.txtAnswer.TabIndex = 19;
             // 
-            // textBox10
+            // btnConfirm
             // 
-            this.textBox10.Location = new System.Drawing.Point(481, 323);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(155, 20);
-            this.textBox10.TabIndex = 19;
+            this.btnConfirm.Location = new System.Drawing.Point(521, 387);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(115, 36);
+            this.btnConfirm.TabIndex = 20;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // cbQuestion
             // 
-            this.button1.Location = new System.Drawing.Point(521, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 36);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cbQuestion.FormattingEnabled = true;
+            this.cbQuestion.Location = new System.Drawing.Point(160, 323);
+            this.cbQuestion.Name = "cbQuestion";
+            this.cbQuestion.Size = new System.Drawing.Size(155, 21);
+            this.cbQuestion.TabIndex = 43;
             // 
             // ClientSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 470);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbQuestion);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.txtAnswer);
+            this.Controls.Add(this.txtIDNum);
+            this.Controls.Add(this.txtConfirm);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtNumber);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -265,16 +266,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtConfirm;
+        private System.Windows.Forms.TextBox txtIDNum;
+        private System.Windows.Forms.TextBox txtAnswer;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.ComboBox cbQuestion;
     }
 }
