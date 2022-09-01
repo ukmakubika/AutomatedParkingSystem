@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Group6_CMPG223_Project")]
+[assembly: AssemblyTitle("AutomatedParkingSystem_Group6")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Group6_CMPG223_Project")]
+[assembly: AssemblyProduct("AutomatedParkingSystem_Group6")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c7d48b58-a1e4-4ee0-a7c8-148600a23a92")]
+[assembly: Guid("4ae21913-4482-400b-97d7-0f1f8fc50cf9")]
 
 // Version information for an assembly consists of the following four values:
 //

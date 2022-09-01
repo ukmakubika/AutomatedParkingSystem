@@ -1,4 +1,4 @@
-﻿namespace Group6_CMPG223_Project
+﻿namespace AutomatedParkingSystem_Group6
 {
     partial class Form1
     {

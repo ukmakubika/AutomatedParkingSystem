@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7D48B58-A1E4-4EE0-A7C8-148600A23A92}</ProjectGuid>
+    <ProjectGuid>{4AE21913-4482-400B-97D7-0F1F8FC50CF9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Group6_CMPG223_Project</RootNamespace>
-    <AssemblyName>Group6_CMPG223_Project</AssemblyName>
+    <RootNamespace>AutomatedParkingSystem_Group6</RootNamespace>
+    <AssemblyName>AutomatedParkingSystem_Group6</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

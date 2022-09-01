@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Group6_CMPG223_Project.Properties
+namespace AutomatedParkingSystem_Group6.Properties
 {
 
 

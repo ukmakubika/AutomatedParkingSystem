@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Group6_CMPG223_Project
+namespace AutomatedParkingSystem_Group6
 {
     internal static class Program
     {
