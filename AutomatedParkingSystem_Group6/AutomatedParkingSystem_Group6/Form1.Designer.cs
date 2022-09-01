@@ -30,8 +30,11 @@
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.components = new System.ComponentModel.Container();
 =======
+=======
+>>>>>>> Stashed changes
             this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,6 +50,9 @@
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -55,6 +61,7 @@
             this.Text = "AutomatedParkingSystem";
             this.ResumeLayout(false);
 
+<<<<<<< Updated upstream
         }
 
         #endregion
@@ -199,10 +206,13 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+=======
+>>>>>>> Stashed changes
         }
 
         #endregion
 
+<<<<<<< Updated upstream
         private System.Windows.Forms.RadioButton rbManager;
         private System.Windows.Forms.RadioButton rbClient;
         private System.Windows.Forms.PictureBox pbManager;
@@ -217,6 +227,9 @@
 >>>>>>> Stashed changes
 =======
 
+        private System.Windows.Forms.Button btnTest;
+>>>>>>> Stashed changes
+=======
         private System.Windows.Forms.Button btnTest;
 >>>>>>> Stashed changes
     }
