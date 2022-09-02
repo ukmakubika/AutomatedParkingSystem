@@ -39,8 +39,10 @@
             this.linkSignup = new System.Windows.Forms.LinkLabel();
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbManager
@@ -62,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 322);
+            this.label1.Location = new System.Drawing.Point(18, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 2;
@@ -71,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 370);
+            this.label2.Location = new System.Drawing.Point(18, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 3;
@@ -79,7 +81,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(56, 415);
+            this.btnLogin.Location = new System.Drawing.Point(56, 448);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 34);
             this.btnLogin.TabIndex = 4;
@@ -88,14 +90,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(143, 315);
+            this.txtUsername.Location = new System.Drawing.Point(108, 36);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(193, 20);
             this.txtUsername.TabIndex = 5;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(143, 363);
+            this.txtPassword.Location = new System.Drawing.Point(108, 84);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(193, 20);
             this.txtPassword.TabIndex = 6;
@@ -103,7 +105,7 @@
             // linkPassword
             // 
             this.linkPassword.AutoSize = true;
-            this.linkPassword.Location = new System.Drawing.Point(354, 370);
+            this.linkPassword.Location = new System.Drawing.Point(319, 91);
             this.linkPassword.Name = "linkPassword";
             this.linkPassword.Size = new System.Drawing.Size(92, 13);
             this.linkPassword.TabIndex = 7;
@@ -113,7 +115,7 @@
             // linkSignup
             // 
             this.linkSignup.AutoSize = true;
-            this.linkSignup.Location = new System.Drawing.Point(354, 322);
+            this.linkSignup.Location = new System.Drawing.Point(319, 43);
             this.linkSignup.Name = "linkSignup";
             this.linkSignup.Size = new System.Drawing.Size(111, 13);
             this.linkSignup.TabIndex = 8;
@@ -123,7 +125,7 @@
             // rbManager
             // 
             this.rbManager.AutoSize = true;
-            this.rbManager.Location = new System.Drawing.Point(56, 270);
+            this.rbManager.Location = new System.Drawing.Point(56, 258);
             this.rbManager.Name = "rbManager";
             this.rbManager.Size = new System.Drawing.Size(67, 17);
             this.rbManager.TabIndex = 9;
@@ -134,7 +136,7 @@
             // rbClient
             // 
             this.rbClient.AutoSize = true;
-            this.rbClient.Location = new System.Drawing.Point(357, 270);
+            this.rbClient.Location = new System.Drawing.Point(357, 258);
             this.rbClient.Name = "rbClient";
             this.rbClient.Size = new System.Drawing.Size(51, 17);
             this.rbClient.TabIndex = 10;
@@ -142,26 +144,38 @@
             this.rbClient.Text = "Client";
             this.rbClient.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.linkSignup);
+            this.groupBox1.Controls.Add(this.linkPassword);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.txtUsername);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(56, 294);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(491, 135);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Login";
+            // 
             // MainLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 483);
+            this.ClientSize = new System.Drawing.Size(600, 499);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rbClient);
             this.Controls.Add(this.rbManager);
-            this.Controls.Add(this.linkSignup);
-            this.Controls.Add(this.linkPassword);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pbClient);
             this.Controls.Add(this.pbManager);
             this.Name = "MainLogin";
             this.Text = "Main Login";
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +194,7 @@
         private System.Windows.Forms.LinkLabel linkSignup;
         private System.Windows.Forms.RadioButton rbManager;
         private System.Windows.Forms.RadioButton rbClient;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
