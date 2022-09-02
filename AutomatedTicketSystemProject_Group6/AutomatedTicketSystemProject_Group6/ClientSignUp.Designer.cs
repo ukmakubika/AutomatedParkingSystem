@@ -49,12 +49,16 @@
             this.txtAnswer = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.cbQuestion = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 52);
+            this.label1.Location = new System.Drawing.Point(30, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -63,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 52);
+            this.label2.Location = new System.Drawing.Point(362, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -72,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(379, 326);
+            this.label3.Location = new System.Drawing.Point(362, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 2;
@@ -81,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 329);
+            this.label4.Location = new System.Drawing.Point(30, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 3;
@@ -90,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(379, 256);
+            this.label5.Location = new System.Drawing.Point(362, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 4;
@@ -99,7 +103,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 256);
+            this.label6.Location = new System.Drawing.Point(30, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 5;
@@ -108,7 +112,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 186);
+            this.label7.Location = new System.Drawing.Point(362, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 13);
             this.label7.TabIndex = 6;
@@ -117,7 +121,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(379, 116);
+            this.label8.Location = new System.Drawing.Point(362, 77);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 7;
@@ -126,7 +130,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 116);
+            this.label9.Location = new System.Drawing.Point(30, 77);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 8;
@@ -135,7 +139,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(47, 399);
+            this.label10.Location = new System.Drawing.Point(30, 121);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 9;
@@ -143,70 +147,70 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(160, 49);
+            this.txtName.Location = new System.Drawing.Point(143, 30);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(155, 20);
             this.txtName.TabIndex = 10;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(481, 49);
+            this.txtSurname.Location = new System.Drawing.Point(464, 30);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(155, 20);
             this.txtSurname.TabIndex = 11;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(160, 113);
+            this.txtEmail.Location = new System.Drawing.Point(143, 74);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(155, 20);
             this.txtEmail.TabIndex = 12;
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(160, 183);
+            this.txtNumber.Location = new System.Drawing.Point(464, 118);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(155, 20);
             this.txtNumber.TabIndex = 13;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(160, 253);
+            this.txtPassword.Location = new System.Drawing.Point(143, 32);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(155, 20);
             this.txtPassword.TabIndex = 14;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(160, 396);
+            this.txtUsername.Location = new System.Drawing.Point(143, 118);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(155, 20);
             this.txtUsername.TabIndex = 16;
             // 
             // txtConfirm
             // 
-            this.txtConfirm.Location = new System.Drawing.Point(481, 253);
+            this.txtConfirm.Location = new System.Drawing.Point(464, 32);
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.Size = new System.Drawing.Size(155, 20);
             this.txtConfirm.TabIndex = 17;
             // 
             // txtIDNum
             // 
-            this.txtIDNum.Location = new System.Drawing.Point(481, 113);
+            this.txtIDNum.Location = new System.Drawing.Point(464, 74);
             this.txtIDNum.Name = "txtIDNum";
             this.txtIDNum.Size = new System.Drawing.Size(155, 20);
             this.txtIDNum.TabIndex = 18;
             // 
             // txtAnswer
             // 
-            this.txtAnswer.Location = new System.Drawing.Point(481, 323);
+            this.txtAnswer.Location = new System.Drawing.Point(464, 76);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(155, 20);
             this.txtAnswer.TabIndex = 19;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(521, 387);
+            this.btnConfirm.Location = new System.Drawing.Point(568, 386);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(115, 36);
             this.btnConfirm.TabIndex = 20;
@@ -216,41 +220,64 @@
             // cbQuestion
             // 
             this.cbQuestion.FormattingEnabled = true;
-            this.cbQuestion.Location = new System.Drawing.Point(160, 323);
+            this.cbQuestion.Location = new System.Drawing.Point(143, 76);
             this.cbQuestion.Name = "cbQuestion";
             this.cbQuestion.Size = new System.Drawing.Size(155, 21);
             this.cbQuestion.TabIndex = 43;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtIDNum);
+            this.groupBox1.Controls.Add(this.txtNumber);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtUsername);
+            this.groupBox1.Controls.Add(this.txtSurname);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.txtName);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(17, 41);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(666, 165);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Personal Deatils";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cbQuestion);
+            this.groupBox2.Controls.Add(this.txtAnswer);
+            this.groupBox2.Controls.Add(this.txtConfirm);
+            this.groupBox2.Controls.Add(this.txtPassword);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(17, 221);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(666, 132);
+            this.groupBox2.TabIndex = 45;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Security";
             // 
             // ClientSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 470);
-            this.Controls.Add(this.cbQuestion);
+            this.ClientSize = new System.Drawing.Size(710, 434);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.txtAnswer);
-            this.Controls.Add(this.txtIDNum);
-            this.Controls.Add(this.txtConfirm);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtNumber);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtSurname);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "ClientSignUp";
             this.Text = "ClientSignUp";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -277,5 +304,7 @@
         private System.Windows.Forms.TextBox txtAnswer;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.ComboBox cbQuestion;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
