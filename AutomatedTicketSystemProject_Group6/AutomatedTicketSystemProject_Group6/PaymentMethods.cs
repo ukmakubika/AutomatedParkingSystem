@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class ManagerSignUp : Form
+    public partial class PaymentMethods : Form
     {
-        public ManagerSignUp()
+        public PaymentMethods()
         {
             InitializeComponent();
         }
 
-        private void ManagerSignUp_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
