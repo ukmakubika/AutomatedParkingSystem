@@ -38,6 +38,8 @@
             this.txtCardNo = new System.Windows.Forms.TextBox();
             this.pbBank = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBank)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 195);
+            this.label3.Location = new System.Drawing.Point(35, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 2;
@@ -87,7 +89,7 @@
             // 
             // expCal
             // 
-            this.expCal.Location = new System.Drawing.Point(141, 195);
+            this.expCal.Location = new System.Drawing.Point(141, 255);
             this.expCal.Name = "expCal";
             this.expCal.TabIndex = 6;
             // 
@@ -108,7 +110,7 @@
             // 
             // pbBank
             // 
-            this.pbBank.Location = new System.Drawing.Point(421, 18);
+            this.pbBank.Location = new System.Drawing.Point(416, 36);
             this.pbBank.Name = "pbBank";
             this.pbBank.Size = new System.Drawing.Size(124, 54);
             this.pbBank.TabIndex = 9;
@@ -116,18 +118,36 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(38, 392);
+            this.btnSave.Location = new System.Drawing.Point(38, 445);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 37);
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "CVV:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(141, 194);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 20);
+            this.textBox1.TabIndex = 12;
+            // 
             // PaymentMethods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 452);
+            this.ClientSize = new System.Drawing.Size(592, 506);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pbBank);
             this.Controls.Add(this.txtCardNo);
@@ -158,5 +178,7 @@
         private System.Windows.Forms.TextBox txtCardNo;
         private System.Windows.Forms.PictureBox pbBank;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
