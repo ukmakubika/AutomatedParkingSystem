@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AutomatedParkingSystem_Group6.Properties
+namespace AutomatedTicketSystemProject_Group6.Properties
 {
 
 

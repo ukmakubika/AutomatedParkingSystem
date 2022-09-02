@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AutomatedParkingSystem_Group6
+namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class Form1 : Form
+    public partial class MainLogin : Form
     {
-        public Form1()
+        public MainLogin()
         {
             InitializeComponent();
         }
