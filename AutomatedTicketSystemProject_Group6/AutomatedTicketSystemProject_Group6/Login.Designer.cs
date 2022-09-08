@@ -50,33 +50,35 @@
             // 
             this.pbManager.Location = new System.Drawing.Point(56, 57);
             this.pbManager.Name = "pbManager";
-            this.pbManager.Size = new System.Drawing.Size(190, 188);
+            this.pbManager.Size = new System.Drawing.Size(268, 188);
             this.pbManager.TabIndex = 0;
             this.pbManager.TabStop = false;
             // 
             // pbClient
             // 
-            this.pbClient.Location = new System.Drawing.Point(357, 57);
+            this.pbClient.Location = new System.Drawing.Point(476, 57);
             this.pbClient.Name = "pbClient";
-            this.pbClient.Size = new System.Drawing.Size(190, 188);
+            this.pbClient.Size = new System.Drawing.Size(268, 188);
             this.pbClient.TabIndex = 1;
             this.pbClient.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
@@ -93,20 +95,20 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(108, 36);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(193, 20);
+            this.txtUsername.Size = new System.Drawing.Size(292, 20);
             this.txtUsername.TabIndex = 5;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(108, 84);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(193, 20);
+            this.txtPassword.Size = new System.Drawing.Size(292, 20);
             this.txtPassword.TabIndex = 6;
             // 
             // linkPassword
             // 
             this.linkPassword.AutoSize = true;
-            this.linkPassword.Location = new System.Drawing.Point(319, 91);
+            this.linkPassword.Location = new System.Drawing.Point(417, 91);
             this.linkPassword.Name = "linkPassword";
             this.linkPassword.Size = new System.Drawing.Size(92, 13);
             this.linkPassword.TabIndex = 7;
@@ -116,7 +118,7 @@
             // linkSignup
             // 
             this.linkSignup.AutoSize = true;
-            this.linkSignup.Location = new System.Drawing.Point(319, 43);
+            this.linkSignup.Location = new System.Drawing.Point(417, 43);
             this.linkSignup.Name = "linkSignup";
             this.linkSignup.Size = new System.Drawing.Size(111, 13);
             this.linkSignup.TabIndex = 8;
@@ -139,7 +141,7 @@
             // 
             this.rbClient.AutoSize = true;
             this.rbClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbClient.Location = new System.Drawing.Point(357, 258);
+            this.rbClient.Location = new System.Drawing.Point(476, 258);
             this.rbClient.Name = "rbClient";
             this.rbClient.Size = new System.Drawing.Size(58, 20);
             this.rbClient.TabIndex = 10;
@@ -157,7 +159,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(56, 294);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(491, 135);
+            this.groupBox1.Size = new System.Drawing.Size(688, 135);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
@@ -166,7 +168,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(147, 18);
+            this.label11.Location = new System.Drawing.Point(227, 18);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(337, 25);
             this.label11.TabIndex = 14;
@@ -176,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 508);
+            this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rbClient);
