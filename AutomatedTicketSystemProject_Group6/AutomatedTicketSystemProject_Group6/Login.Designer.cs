@@ -40,6 +40,7 @@
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -47,7 +48,7 @@
             // 
             // pbManager
             // 
-            this.pbManager.Location = new System.Drawing.Point(56, 43);
+            this.pbManager.Location = new System.Drawing.Point(56, 57);
             this.pbManager.Name = "pbManager";
             this.pbManager.Size = new System.Drawing.Size(190, 188);
             this.pbManager.TabIndex = 0;
@@ -55,7 +56,7 @@
             // 
             // pbClient
             // 
-            this.pbClient.Location = new System.Drawing.Point(357, 43);
+            this.pbClient.Location = new System.Drawing.Point(357, 57);
             this.pbClient.Name = "pbClient";
             this.pbClient.Size = new System.Drawing.Size(190, 188);
             this.pbClient.TabIndex = 1;
@@ -159,11 +160,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(147, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(337, 25);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "AUTOMATED PARKING SYSTEM";
+            // 
             // MainLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 499);
+            this.ClientSize = new System.Drawing.Size(707, 508);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rbClient);
             this.Controls.Add(this.rbManager);
@@ -195,6 +207,7 @@
         private System.Windows.Forms.RadioButton rbManager;
         private System.Windows.Forms.RadioButton rbClient;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label11;
     }
 }
 
