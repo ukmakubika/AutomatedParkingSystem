@@ -270,6 +270,45 @@
             // cbBankNames
             // 
             this.cbBankNames.FormattingEnabled = true;
+            this.cbBankNames.Items.AddRange(new object[] {
+            "FNB/RMB",
+            "ABSA BANK LIMITED",
+            "Capitec Bank",
+            "Nedbank Limited",
+            "Standard Bank",
+            "African Bank",
+            "Albaraka Bank",
+            "BNP Paribas",
+            "Bidvest Bank",
+            "CitiBank",
+            "Access Bank (South Africa) Ltd",
+            "Bank Zero ",
+            "Discovery Bank",
+            "FinBond Mutual Bank",
+            "Finbond Net1",
+            "Grindrob Bank",
+            "HBZ Bank",
+            "HSBC Bank",
+            "Habib Overseas Bank",
+            "Investec Bank",
+            "Ithala",
+            "JP Morgan Chase",
+            "MTN Banking",
+            "Mercantile Bank",
+            "Nedbank Incorp FCB",
+            "Nedbank PEP Bank",
+            "Olympus mODILE",
+            "People\'s Bank Ltd Inc NBS",
+            "S.A. Reserve Bank",
+            "SASFIN Bank",
+            "Societe Generale",
+            "South African Postbank SOC Ltd",
+            "Standard Chartered Bank",
+            "State Bank of India",
+            "TymeBank",
+            "UBank Limited",
+            "Unibank",
+            "VBS Mutual Bank"});
             this.cbBankNames.Location = new System.Drawing.Point(137, 49);
             this.cbBankNames.Name = "cbBankNames";
             this.cbBankNames.Size = new System.Drawing.Size(227, 21);
