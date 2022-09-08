@@ -56,12 +56,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.pbBank = new System.Windows.Forms.PictureBox();
             this.Help = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbFAQ = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -72,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBank)).BeginInit();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -339,9 +337,10 @@
             // 
             // Help
             // 
-            this.Help.Controls.Add(this.groupBox6);
             this.Help.Controls.Add(this.groupBox5);
             this.Help.Controls.Add(this.label11);
+            this.Help.Controls.Add(this.label12);
+            this.Help.Controls.Add(this.label13);
             this.Help.Location = new System.Drawing.Point(4, 22);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(767, 399);
@@ -349,68 +348,51 @@
             this.Help.Text = "Help ";
             this.Help.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // label11
             // 
-            this.groupBox5.Controls.Add(this.linkLabel1);
-            this.groupBox5.Location = new System.Drawing.Point(320, 78);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(217, 79);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "More Help";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(24, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(145, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Frequently asked questions...\r\n";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(154, 34);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 195);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "R5\r\n\r\nR10\r\n\r\nR10\r\n\r\nR10\r\n\r\nR10\r\n\r\nR10\r\n\r\nR40\r\n";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(217, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(337, 25);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "AUTOMATED PARKING SYSTEM";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 34);
+            this.label12.Location = new System.Drawing.Point(236, 72);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 195);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "0 - 1 Hours\t \r\n\r\n1 - 2 Hours\r\n\t \r\n2 - 3 Hours\r\n\t \r\n3 - 4 Hours\r\n\t \r\n4 - 5 Hours\r\n" +
-    "\t \r\n5 - 6 Hours\r\n\t \r\n6+    Hours\t                 ";
+            this.label12.Size = new System.Drawing.Size(284, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Please select one of the frequently asked questions below.";
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(157, 24);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Accessibility Help";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(202, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(362, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // groupBox6
+            // cbFAQ
             // 
-            this.groupBox6.Controls.Add(this.label13);
-            this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Location = new System.Drawing.Point(35, 78);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(228, 267);
-            this.groupBox6.TabIndex = 5;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Trading Hours";
+            this.cbFAQ.FormattingEnabled = true;
+            this.cbFAQ.Location = new System.Drawing.Point(76, 56);
+            this.cbFAQ.Name = "cbFAQ";
+            this.cbFAQ.Size = new System.Drawing.Size(202, 21);
+            this.cbFAQ.TabIndex = 14;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.cbFAQ);
+            this.groupBox5.Location = new System.Drawing.Point(205, 130);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(353, 133);
+            this.groupBox5.TabIndex = 15;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Frequently Asked Quetsions";
             // 
             // Functions
             // 
@@ -435,9 +417,6 @@
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -472,11 +451,10 @@
         private System.Windows.Forms.ListBox listCode;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TabPage Help;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox cbFAQ;
     }
 }
