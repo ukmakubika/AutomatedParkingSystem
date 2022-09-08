@@ -43,7 +43,7 @@
             // linkPassword
             // 
             this.linkPassword.AutoSize = true;
-            this.linkPassword.Location = new System.Drawing.Point(423, 303);
+            this.linkPassword.Location = new System.Drawing.Point(574, 303);
             this.linkPassword.Name = "linkPassword";
             this.linkPassword.Size = new System.Drawing.Size(92, 13);
             this.linkPassword.TabIndex = 20;
@@ -54,19 +54,19 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(212, 296);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(193, 20);
+            this.txtPassword.Size = new System.Drawing.Size(343, 20);
             this.txtPassword.TabIndex = 19;
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(212, 248);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(193, 20);
+            this.txtUsername.Size = new System.Drawing.Size(343, 20);
             this.txtUsername.TabIndex = 18;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(254, 383);
+            this.btnLogin.Location = new System.Drawing.Point(332, 388);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 34);
             this.btnLogin.TabIndex = 17;
@@ -76,35 +76,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(122, 303);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "Password:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(122, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "Username:";
             // 
             // pbManager
             // 
-            this.pbManager.Location = new System.Drawing.Point(212, 32);
+            this.pbManager.Location = new System.Drawing.Point(232, 27);
             this.pbManager.Name = "pbManager";
-            this.pbManager.Size = new System.Drawing.Size(190, 188);
+            this.pbManager.Size = new System.Drawing.Size(296, 188);
             this.pbManager.TabIndex = 21;
             this.pbManager.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(125, 345);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 22;
             this.label3.Text = "Code:";
             // 
@@ -112,14 +115,14 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(212, 342);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(193, 20);
+            this.txtCode.Size = new System.Drawing.Size(343, 20);
             this.txtCode.TabIndex = 23;
             // 
             // ExistingManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 429);
+            this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pbManager);
