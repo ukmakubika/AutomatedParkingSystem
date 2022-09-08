@@ -126,9 +126,10 @@
             // rbManager
             // 
             this.rbManager.AutoSize = true;
+            this.rbManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbManager.Location = new System.Drawing.Point(56, 258);
             this.rbManager.Name = "rbManager";
-            this.rbManager.Size = new System.Drawing.Size(67, 17);
+            this.rbManager.Size = new System.Drawing.Size(79, 20);
             this.rbManager.TabIndex = 9;
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
@@ -137,9 +138,10 @@
             // rbClient
             // 
             this.rbClient.AutoSize = true;
+            this.rbClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbClient.Location = new System.Drawing.Point(357, 258);
             this.rbClient.Name = "rbClient";
-            this.rbClient.Size = new System.Drawing.Size(51, 17);
+            this.rbClient.Size = new System.Drawing.Size(58, 20);
             this.rbClient.TabIndex = 10;
             this.rbClient.TabStop = true;
             this.rbClient.Text = "Client";

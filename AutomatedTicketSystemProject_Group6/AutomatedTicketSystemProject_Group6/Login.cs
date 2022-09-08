@@ -16,5 +16,10 @@ namespace AutomatedTicketSystemProject_Group6
         {
             InitializeComponent();
         }
+
+        private void MainLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
