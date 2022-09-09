@@ -186,7 +186,7 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "AUTOMATED PARKING SYSTEM";
             // 
- PabiLexer404_Work
+// PabiLexer404_Work
             // loginBtn
             // 
             this.loginBtn.Location = new System.Drawing.Point(567, 69);
@@ -197,7 +197,7 @@
             this.loginBtn.UseVisualStyleBackColor = true;
             // 
 
- main
+// main
             // MainLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
