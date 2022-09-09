@@ -21,5 +21,14 @@ namespace AutomatedTicketSystemProject_Group6
         {
 
         }
+
+        private void linkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (rbClient.Checked)
+            {
+                ClientSignUp clientFrm = new ClientSignUp();
+                clientFrm.ShowDialog();
+            }
+        }
     }
 }

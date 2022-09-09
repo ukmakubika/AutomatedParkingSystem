@@ -41,6 +41,7 @@
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,7 +69,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username:";
             // 
@@ -78,7 +79,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
@@ -124,6 +125,7 @@
             this.linkSignup.TabIndex = 8;
             this.linkSignup.TabStop = true;
             this.linkSignup.Text = "No Account? Sign Up";
+            this.linkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignup_LinkClicked);
             // 
             // rbManager
             // 
@@ -131,7 +133,7 @@
             this.rbManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbManager.Location = new System.Drawing.Point(56, 258);
             this.rbManager.Name = "rbManager";
-            this.rbManager.Size = new System.Drawing.Size(79, 20);
+            this.rbManager.Size = new System.Drawing.Size(80, 20);
             this.rbManager.TabIndex = 9;
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
@@ -143,7 +145,7 @@
             this.rbClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbClient.Location = new System.Drawing.Point(476, 258);
             this.rbClient.Name = "rbClient";
-            this.rbClient.Size = new System.Drawing.Size(58, 20);
+            this.rbClient.Size = new System.Drawing.Size(59, 20);
             this.rbClient.TabIndex = 10;
             this.rbClient.TabStop = true;
             this.rbClient.Text = "Client";
@@ -151,6 +153,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.loginBtn);
             this.groupBox1.Controls.Add(this.linkSignup);
             this.groupBox1.Controls.Add(this.linkPassword);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -173,6 +176,15 @@
             this.label11.Size = new System.Drawing.Size(337, 25);
             this.label11.TabIndex = 14;
             this.label11.Text = "AUTOMATED PARKING SYSTEM";
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.Location = new System.Drawing.Point(567, 69);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(75, 26);
+            this.loginBtn.TabIndex = 9;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
             // 
             // MainLogin
             // 
@@ -212,6 +224,7 @@
         private System.Windows.Forms.RadioButton rbClient;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button loginBtn;
     }
 }
 
