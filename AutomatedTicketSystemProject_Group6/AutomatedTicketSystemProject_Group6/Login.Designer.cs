@@ -40,8 +40,8 @@
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -167,6 +167,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
+            // loginBtn
+            // 
+            this.loginBtn.Location = new System.Drawing.Point(576, 79);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(94, 28);
+            this.loginBtn.TabIndex = 9;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -177,6 +186,7 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "AUTOMATED PARKING SYSTEM";
             // 
+ PabiLexer404_Work
             // loginBtn
             // 
             this.loginBtn.Location = new System.Drawing.Point(567, 69);
@@ -186,6 +196,8 @@
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
             // 
+
+ main
             // MainLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
