@@ -21,5 +21,10 @@ namespace AutomatedTicketSystemProject_Group6
         {
 
         }
+
+        private void linkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
