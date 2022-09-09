@@ -58,17 +58,23 @@
     <Compile Include="ExistingManager.Designer.cs">
       <DependentUpon>ExistingManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions.cs">
+    <Compile Include="CustomerInterface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Functions.Designer.cs">
-      <DependentUpon>Functions.cs</DependentUpon>
+    <Compile Include="CustomerInterface.Designer.cs">
+      <DependentUpon>CustomerInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerInterface.Designer.cs">
+      <DependentUpon>ManagerInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerSignUp.cs">
       <SubType>Form</SubType>
@@ -84,11 +90,14 @@
     <EmbeddedResource Include="ExistingManager.resx">
       <DependentUpon>ExistingManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Functions.resx">
-      <DependentUpon>Functions.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerInterface.resx">
+      <DependentUpon>CustomerInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerInterface.resx">
+      <DependentUpon>ManagerInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerSignUp.resx">
       <DependentUpon>ManagerSignUp.cs</DependentUpon>
