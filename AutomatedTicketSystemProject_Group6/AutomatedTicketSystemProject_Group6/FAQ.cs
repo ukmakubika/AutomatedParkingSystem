@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class ClientSignUp : Form
+    public partial class FAQ : Form
     {
-        public ClientSignUp()
+        public FAQ()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
