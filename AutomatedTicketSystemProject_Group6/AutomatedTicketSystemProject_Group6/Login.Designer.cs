@@ -41,6 +41,7 @@
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -151,6 +152,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.loginBtn);
             this.groupBox1.Controls.Add(this.linkSignup);
             this.groupBox1.Controls.Add(this.linkPassword);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -173,6 +175,15 @@
             this.label11.Size = new System.Drawing.Size(337, 25);
             this.label11.TabIndex = 14;
             this.label11.Text = "AUTOMATED PARKING SYSTEM";
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.Location = new System.Drawing.Point(576, 79);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(94, 28);
+            this.loginBtn.TabIndex = 9;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
             // 
             // MainLogin
             // 
@@ -212,6 +223,7 @@
         private System.Windows.Forms.RadioButton rbClient;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button loginBtn;
     }
 }
 
