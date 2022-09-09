@@ -17,7 +17,7 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void MainLogin_Load(object sender, EventArgs e)
         {
 
         }
@@ -26,9 +26,8 @@ namespace AutomatedTicketSystemProject_Group6
         {
             if (rbClient.Checked)
             {
-                //Display the client login form
-                ClientSignUp frmClient = new ClientSignUp();
-                frmClient.Show();
+                ClientSignUp clientFrm = new ClientSignUp();
+                clientFrm.ShowDialog();
             }
         }
     }
