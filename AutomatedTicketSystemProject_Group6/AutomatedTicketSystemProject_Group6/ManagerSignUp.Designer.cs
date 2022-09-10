@@ -48,9 +48,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -252,6 +252,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Security";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "In what city were you born?",
+            "What is the name of your favorite pet?",
+            "What is your mother\'s maiden name?",
+            "What high school did you attend?",
+            "What was the name of your elementary school?",
+            "What was your favorite food as a child?"});
+            this.comboBox1.Location = new System.Drawing.Point(158, 76);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 24);
+            this.comboBox1.TabIndex = 66;
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(158, 109);
@@ -265,14 +280,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(215, 22);
             this.textBox6.TabIndex = 63;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(158, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 24);
-            this.comboBox1.TabIndex = 66;
             // 
             // ManagerSignUp
             // 
