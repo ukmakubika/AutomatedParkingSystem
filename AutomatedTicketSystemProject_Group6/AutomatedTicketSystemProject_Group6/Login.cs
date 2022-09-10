@@ -42,5 +42,20 @@ namespace AutomatedTicketSystemProject_Group6
         {
 
         }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            if (rbManager.Checked)
+            {
+                ManagerInterface managerInt = new ManagerInterface();
+                managerInt.ShowDialog();
+            }
+
+            if (rbClient.Checked)
+            {
+                Functions customerInt = new Functions();
+                customerInt.ShowDialog();
+            }
+        }
     }
 }
