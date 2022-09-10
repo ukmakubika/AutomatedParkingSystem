@@ -19,7 +19,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void ManagerSignUp_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

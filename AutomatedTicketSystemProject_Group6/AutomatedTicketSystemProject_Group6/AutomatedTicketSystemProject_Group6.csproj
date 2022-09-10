@@ -128,5 +128,14 @@
   <ItemGroup>
     <None Include="Resources\Nduv2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-pixabay-257416.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ndu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

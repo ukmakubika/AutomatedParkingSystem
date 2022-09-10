@@ -32,7 +32,6 @@
             this.pbClient = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.linkPassword = new System.Windows.Forms.LinkLabel();
@@ -50,8 +49,8 @@
             // 
             // pbManager
             // 
-            this.pbManager.Image = global::AutomatedTicketSystemProject_Group6.Properties.Resources.Nduv2;
-            this.pbManager.Location = new System.Drawing.Point(219, 29);
+            this.pbManager.Image = global::AutomatedTicketSystemProject_Group6.Properties.Resources.Ndu;
+            this.pbManager.Location = new System.Drawing.Point(359, 39);
             this.pbManager.Margin = new System.Windows.Forms.Padding(4);
             this.pbManager.Name = "pbManager";
             this.pbManager.Size = new System.Drawing.Size(312, 239);
@@ -61,11 +60,11 @@
             // 
             // pbClient
             // 
-            this.pbClient.Image = global::AutomatedTicketSystemProject_Group6.Properties.Resources.Nduv;
-            this.pbClient.Location = new System.Drawing.Point(635, 29);
+            this.pbClient.Image = global::AutomatedTicketSystemProject_Group6.Properties.Resources.Nd;
+            this.pbClient.Location = new System.Drawing.Point(774, 39);
             this.pbClient.Margin = new System.Windows.Forms.Padding(4);
             this.pbClient.Name = "pbClient";
-            this.pbClient.Size = new System.Drawing.Size(296, 239);
+            this.pbClient.Size = new System.Drawing.Size(352, 239);
             this.pbClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClient.TabIndex = 1;
             this.pbClient.TabStop = false;
@@ -95,16 +94,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             this.label2.UseWaitCursor = true;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(75, 551);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(120, 42);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
             // 
             // txtUsername
             // 
@@ -155,7 +144,7 @@
             this.rbManager.BackColor = System.Drawing.Color.Transparent;
             this.rbManager.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbManager.ForeColor = System.Drawing.Color.White;
-            this.rbManager.Location = new System.Drawing.Point(219, 305);
+            this.rbManager.Location = new System.Drawing.Point(359, 315);
             this.rbManager.Margin = new System.Windows.Forms.Padding(4);
             this.rbManager.Name = "rbManager";
             this.rbManager.Size = new System.Drawing.Size(101, 23);
@@ -171,7 +160,7 @@
             this.rbClient.BackColor = System.Drawing.Color.Transparent;
             this.rbClient.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbClient.ForeColor = System.Drawing.Color.White;
-            this.rbClient.Location = new System.Drawing.Point(635, 305);
+            this.rbClient.Location = new System.Drawing.Point(775, 315);
             this.rbClient.Margin = new System.Windows.Forms.Padding(4);
             this.rbClient.Name = "rbClient";
             this.rbClient.Size = new System.Drawing.Size(80, 23);
@@ -193,7 +182,7 @@
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(75, 337);
+            this.groupBox1.Location = new System.Drawing.Point(215, 347);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -229,6 +218,7 @@
             // 
             // loginBtn
             // 
+            this.loginBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.Location = new System.Drawing.Point(756, 85);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
@@ -245,14 +235,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AutomatedTicketSystemProject_Group6.Properties.Resources.pexels_brett_sayles_1756957;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 548);
+            this.ClientSize = new System.Drawing.Size(1334, 658);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rbClient);
             this.Controls.Add(this.rbManager);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pbClient);
             this.Controls.Add(this.pbManager);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "MainLogin";
             this.Text = "Main Login";
             this.Load += new System.EventHandler(this.MainLogin_Load_1);
@@ -271,7 +262,6 @@
         private System.Windows.Forms.PictureBox pbClient;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel linkPassword;

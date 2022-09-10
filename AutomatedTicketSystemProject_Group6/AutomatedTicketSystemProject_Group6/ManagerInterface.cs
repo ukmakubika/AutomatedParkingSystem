@@ -16,5 +16,10 @@ namespace AutomatedTicketSystemProject_Group6
         {
             InitializeComponent();
         }
+
+        private void ManagerInterface_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

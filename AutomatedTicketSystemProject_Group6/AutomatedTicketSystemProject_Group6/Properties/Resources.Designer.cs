@@ -63,6 +63,26 @@ namespace AutomatedTicketSystemProject_Group6.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nd {
+            get {
+                object obj = ResourceManager.GetObject("Nd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ndu {
+            get {
+                object obj = ResourceManager.GetObject("Ndu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nduv {
             get {
                 object obj = ResourceManager.GetObject("Nduv", resourceCulture);
@@ -96,6 +116,16 @@ namespace AutomatedTicketSystemProject_Group6.Properties {
         internal static System.Drawing.Bitmap pexels_monstera_7794440 {
             get {
                 object obj = ResourceManager.GetObject("pexels-monstera-7794440", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_pixabay_257416 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-pixabay-257416", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

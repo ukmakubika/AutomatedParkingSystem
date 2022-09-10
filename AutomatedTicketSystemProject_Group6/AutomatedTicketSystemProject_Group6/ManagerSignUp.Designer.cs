@@ -57,6 +57,7 @@
             // 
             // btnConfirm
             // 
+            this.btnConfirm.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Location = new System.Drawing.Point(880, 476);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
@@ -70,7 +71,7 @@
             this.txtAnswer.Location = new System.Drawing.Point(687, 86);
             this.txtAnswer.Margin = new System.Windows.Forms.Padding(4);
             this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(285, 26);
+            this.txtAnswer.Size = new System.Drawing.Size(285, 27);
             this.txtAnswer.TabIndex = 62;
             // 
             // txtConfirm
@@ -78,7 +79,7 @@
             this.txtConfirm.Location = new System.Drawing.Point(687, 34);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirm.Name = "txtConfirm";
-            this.txtConfirm.Size = new System.Drawing.Size(285, 26);
+            this.txtConfirm.Size = new System.Drawing.Size(285, 27);
             this.txtConfirm.TabIndex = 60;
             // 
             // txtNumber
@@ -86,7 +87,7 @@
             this.txtNumber.Location = new System.Drawing.Point(687, 92);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(285, 22);
+            this.txtNumber.Size = new System.Drawing.Size(285, 27);
             this.txtNumber.TabIndex = 57;
             // 
             // txtSurname
@@ -94,7 +95,7 @@
             this.txtSurname.Location = new System.Drawing.Point(687, 43);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(285, 22);
+            this.txtSurname.Size = new System.Drawing.Size(285, 27);
             this.txtSurname.TabIndex = 55;
             // 
             // label10
@@ -230,11 +231,12 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(28, 36);
+            this.groupBox1.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(53, 36);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1005, 202);
+            this.groupBox1.Size = new System.Drawing.Size(1231, 202);
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Details";
@@ -244,7 +246,7 @@
             this.txtUsername.Location = new System.Drawing.Point(211, 143);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(285, 22);
+            this.txtUsername.Size = new System.Drawing.Size(285, 27);
             this.txtUsername.TabIndex = 62;
             // 
             // txtEmail
@@ -252,7 +254,7 @@
             this.txtEmail.Location = new System.Drawing.Point(211, 92);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(285, 22);
+            this.txtEmail.Size = new System.Drawing.Size(285, 27);
             this.txtEmail.TabIndex = 61;
             // 
             // txtName
@@ -260,7 +262,7 @@
             this.txtName.Location = new System.Drawing.Point(211, 43);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(285, 22);
+            this.txtName.Size = new System.Drawing.Size(285, 27);
             this.txtName.TabIndex = 60;
             // 
             // groupBox2
@@ -276,12 +278,12 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(28, 260);
+            this.groupBox2.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(53, 260);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1005, 192);
+            this.groupBox2.Size = new System.Drawing.Size(1215, 192);
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Security";
@@ -299,7 +301,7 @@
             this.cbSecurity.Location = new System.Drawing.Point(211, 94);
             this.cbSecurity.Margin = new System.Windows.Forms.Padding(4);
             this.cbSecurity.Name = "cbSecurity";
-            this.cbSecurity.Size = new System.Drawing.Size(285, 28);
+            this.cbSecurity.Size = new System.Drawing.Size(285, 26);
             this.cbSecurity.TabIndex = 66;
             // 
             // txtCode
@@ -307,7 +309,7 @@
             this.txtCode.Location = new System.Drawing.Point(211, 140);
             this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(285, 26);
+            this.txtCode.Size = new System.Drawing.Size(285, 27);
             this.txtCode.TabIndex = 65;
             // 
             // txtPassword
@@ -315,7 +317,7 @@
             this.txtPassword.Location = new System.Drawing.Point(211, 34);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(285, 26);
+            this.txtPassword.Size = new System.Drawing.Size(285, 27);
             this.txtPassword.TabIndex = 63;
             // 
             // ManagerSignUp
@@ -323,11 +325,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AutomatedTicketSystemProject_Group6.Properties.Resources.pexels_monstera_7794440;
-            this.ClientSize = new System.Drawing.Size(1067, 548);
+            this.ClientSize = new System.Drawing.Size(1334, 658);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnConfirm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "ManagerSignUp";
             this.Text = "ManagerSignUp";
             this.Load += new System.EventHandler(this.ManagerSignUp_Load);
