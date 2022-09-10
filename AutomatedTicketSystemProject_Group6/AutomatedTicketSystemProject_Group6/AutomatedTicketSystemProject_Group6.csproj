@@ -52,12 +52,6 @@
     <Compile Include="ClientSignUp.Designer.cs">
       <DependentUpon>ClientSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExistingManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExistingManager.Designer.cs">
-      <DependentUpon>ExistingManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomerInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +80,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClientSignUp.resx">
       <DependentUpon>ClientSignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExistingManager.resx">
-      <DependentUpon>ExistingManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerInterface.resx">
       <DependentUpon>CustomerInterface.cs</DependentUpon>

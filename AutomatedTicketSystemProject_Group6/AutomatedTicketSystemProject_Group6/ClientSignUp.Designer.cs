@@ -40,17 +40,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -187,22 +187,26 @@
             this.groupBox1.Text = "Personal Deatils";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // textBox4
             // 
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(38, 228);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(729, 132);
-            this.groupBox2.TabIndex = 45;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Security";
+            this.textBox4.Location = new System.Drawing.Point(143, 111);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(215, 22);
+            this.textBox4.TabIndex = 68;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(143, 70);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(215, 22);
+            this.textBox5.TabIndex = 67;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(143, 30);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(215, 22);
+            this.textBox6.TabIndex = 66;
             // 
             // textBox3
             // 
@@ -225,40 +229,29 @@
             this.textBox2.Size = new System.Drawing.Size(215, 22);
             this.textBox2.TabIndex = 63;
             // 
-            // textBox4
+            // groupBox2
             // 
-            this.textBox4.Location = new System.Drawing.Point(143, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 22);
-            this.textBox4.TabIndex = 68;
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(38, 228);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(729, 132);
+            this.groupBox2.TabIndex = 45;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Security";
             // 
-            // textBox5
+            // textBox10
             // 
-            this.textBox5.Location = new System.Drawing.Point(143, 70);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(215, 22);
-            this.textBox5.TabIndex = 67;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(143, 30);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(215, 22);
-            this.textBox6.TabIndex = 66;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(143, 72);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(215, 20);
-            this.textBox8.TabIndex = 70;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(143, 32);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(215, 20);
-            this.textBox9.TabIndex = 69;
+            this.textBox10.Location = new System.Drawing.Point(498, 74);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(215, 20);
+            this.textBox10.TabIndex = 73;
             // 
             // textBox7
             // 
@@ -267,12 +260,27 @@
             this.textBox7.Size = new System.Drawing.Size(215, 20);
             this.textBox7.TabIndex = 72;
             // 
-            // textBox10
+            // textBox9
             // 
-            this.textBox10.Location = new System.Drawing.Point(498, 74);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(215, 20);
-            this.textBox10.TabIndex = 73;
+            this.textBox9.Location = new System.Drawing.Point(143, 32);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(215, 20);
+            this.textBox9.TabIndex = 69;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "In what city were you born?",
+            "What is the name of your favorite pet?",
+            "What is your mother\'s maiden name?",
+            "What high school did you attend?",
+            "What was the name of your elementary school?",
+            "What was your favorite food as a child?"});
+            this.comboBox1.Location = new System.Drawing.Point(143, 71);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 21);
+            this.comboBox1.TabIndex = 74;
             // 
             // ClientSignUp
             // 
@@ -315,7 +323,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
