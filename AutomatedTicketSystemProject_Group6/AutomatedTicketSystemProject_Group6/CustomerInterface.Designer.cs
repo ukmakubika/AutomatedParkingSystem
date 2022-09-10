@@ -472,9 +472,9 @@
             this.cbFAQ.Items.AddRange(new object[] {
             "Where can I get my Requested Code code?",
             "Which bank cards are accepted on the Automated Parking System?",
-            "Is there a fee to use the Zapper app?",
-            "How do I add/remove a bank card on the App?",
-            "How do I set default card on the App?",
+            "Is there a fee to use the Automated Parking System app?",
+            "How do I add/remove a bank card on the Automated Parking System app?",
+            "How do I set default card on the Automated Parking System app?",
             "What if I forget my password?"});
             this.cbFAQ.Location = new System.Drawing.Point(76, 56);
             this.cbFAQ.Name = "cbFAQ";

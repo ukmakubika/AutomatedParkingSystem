@@ -88,6 +88,11 @@
             // cbFAQ
             // 
             this.cbFAQ.FormattingEnabled = true;
+            this.cbFAQ.Items.AddRange(new object[] {
+            "How can I see my top customers?",
+            "What do I do if I forget my manager code?",
+            "What do I do if I forget my Username?",
+            "Can I use the app to request a mall code similarly to a customer?"});
             this.cbFAQ.Location = new System.Drawing.Point(76, 56);
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
