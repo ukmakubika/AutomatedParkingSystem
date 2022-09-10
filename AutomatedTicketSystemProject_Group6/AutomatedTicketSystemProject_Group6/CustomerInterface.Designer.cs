@@ -290,7 +290,6 @@
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(161, 21);
             this.cbYear.TabIndex = 26;
-            //this.cbYear.Validating += new System.ComponentModel.CancelEventHandler(this.cbYear_Validating);
             // 
             // cbMonth
             // 
@@ -312,7 +311,6 @@
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.Size = new System.Drawing.Size(161, 21);
             this.cbMonth.TabIndex = 25;
-            //this.cbMonth.Validating += new System.ComponentModel.CancelEventHandler(this.cbMonth_Validating);
             // 
             // txtCVV
             // 
@@ -320,7 +318,6 @@
             this.txtCVV.Name = "txtCVV";
             this.txtCVV.Size = new System.Drawing.Size(227, 20);
             this.txtCVV.TabIndex = 24;
-            //this.txtCVV.Validating += new System.ComponentModel.CancelEventHandler(this.txtCVV_Validating);
             // 
             // label4
             // 
@@ -338,7 +335,6 @@
             this.txtCardNo.Name = "txtCardNo";
             this.txtCardNo.Size = new System.Drawing.Size(227, 20);
             this.txtCardNo.TabIndex = 20;
-            //this.txtCardNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCardNo_Validating);
             // 
             // cbBankNames
             // 
@@ -386,7 +382,6 @@
             this.cbBankNames.Name = "cbBankNames";
             this.cbBankNames.Size = new System.Drawing.Size(227, 21);
             this.cbBankNames.TabIndex = 17;
-            //this.cbBankNames.Validating += new System.ComponentModel.CancelEventHandler(this.cbBankNames_Validating);
             // 
             // label7
             // 
@@ -474,6 +469,7 @@
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
             this.cbFAQ.TabIndex = 14;
+            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged);
             // 
             // label11
             // 

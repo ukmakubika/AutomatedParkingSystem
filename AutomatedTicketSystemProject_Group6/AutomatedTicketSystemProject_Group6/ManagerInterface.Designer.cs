@@ -32,11 +32,11 @@
             this.Reports = new System.Windows.Forms.TabPage();
             this.HelpManager = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.listAnswer = new System.Windows.Forms.ListBox();
             this.cbFAQ = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.listAnswer = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.HelpManager.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -87,6 +87,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Frequently Asked Quetsions";
             // 
+            // listAnswer
+            // 
+            this.listAnswer.FormattingEnabled = true;
+            this.listAnswer.Location = new System.Drawing.Point(17, 92);
+            this.listAnswer.Name = "listAnswer";
+            this.listAnswer.Size = new System.Drawing.Size(320, 95);
+            this.listAnswer.TabIndex = 15;
+            // 
             // cbFAQ
             // 
             this.cbFAQ.FormattingEnabled = true;
@@ -99,6 +107,7 @@
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
             this.cbFAQ.TabIndex = 14;
+            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -129,14 +138,6 @@
             this.label13.Size = new System.Drawing.Size(446, 16);
             this.label13.TabIndex = 16;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
-            // 
-            // listAnswer
-            // 
-            this.listAnswer.FormattingEnabled = true;
-            this.listAnswer.Location = new System.Drawing.Point(17, 92);
-            this.listAnswer.Name = "listAnswer";
-            this.listAnswer.Size = new System.Drawing.Size(320, 95);
-            this.listAnswer.TabIndex = 15;
             // 
             // ManagerInterface
             // 
