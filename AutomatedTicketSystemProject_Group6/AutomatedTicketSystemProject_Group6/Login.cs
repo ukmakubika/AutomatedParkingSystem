@@ -42,7 +42,8 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void rbManager_CheckedChanged(object sender, EventArgs e)
         {
-
+            txtCode.Enabled = true;
+            lblCode.Visible = true; 
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -73,6 +74,17 @@ namespace AutomatedTicketSystemProject_Group6
                 Functions customerInt = new Functions();
                 customerInt.ShowDialog();
             }
+        }
+
+        private void rbClient_CheckedChanged(object sender, EventArgs e)
+        {
+            txtCode.Enabled = false;
+            lblCode.Visible = false;
+        }
+
+        private void MainLogin_Load_1(object sender, EventArgs e)
+        {
+            lblCode.Visible = false;
         }
     }
 }

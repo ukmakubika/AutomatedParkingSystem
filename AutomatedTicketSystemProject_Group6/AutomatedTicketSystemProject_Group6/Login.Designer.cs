@@ -42,7 +42,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -158,11 +158,12 @@
             this.rbClient.TabStop = true;
             this.rbClient.Text = "Client";
             this.rbClient.UseVisualStyleBackColor = true;
+            this.rbClient.CheckedChanged += new System.EventHandler(this.rbClient_CheckedChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtCode);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblCode);
             this.groupBox1.Controls.Add(this.loginBtn);
             this.groupBox1.Controls.Add(this.linkSignup);
             this.groupBox1.Controls.Add(this.linkPassword);
@@ -192,22 +193,23 @@
             // txtCode
             // 
             this.txtCode.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(108, 110);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(292, 20);
             this.txtCode.TabIndex = 11;
             this.txtCode.UseWaitCursor = true;
             // 
-            // label3
+            // lblCode
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Code:";
-            this.label3.UseWaitCursor = true;
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.Location = new System.Drawing.Point(18, 114);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(43, 16);
+            this.lblCode.TabIndex = 10;
+            this.lblCode.Text = "Code:";
+            this.lblCode.UseWaitCursor = true;
             // 
             // MainLogin
             // 
@@ -222,6 +224,7 @@
             this.Controls.Add(this.pbManager);
             this.Name = "MainLogin";
             this.Text = "Main Login";
+            this.Load += new System.EventHandler(this.MainLogin_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -247,7 +250,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCode;
     }
 }
 
