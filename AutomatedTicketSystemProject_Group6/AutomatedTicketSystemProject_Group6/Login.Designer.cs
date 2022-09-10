@@ -137,6 +137,7 @@
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
             this.rbManager.UseVisualStyleBackColor = true;
+            this.rbManager.CheckedChanged += new System.EventHandler(this.rbManager_CheckedChanged);
             // 
             // rbClient
             // 

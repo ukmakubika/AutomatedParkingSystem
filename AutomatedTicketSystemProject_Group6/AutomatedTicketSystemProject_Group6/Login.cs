@@ -31,6 +31,16 @@ namespace AutomatedTicketSystemProject_Group6
                 clientFrm.ShowDialog();
             }
 // main
+            if (rbManager.Checked)
+            {
+                ManagerSignUp managerFrm = new ManagerSignUp();
+                managerFrm.ShowDialog();
+            }
+        }
+
+        private void rbManager_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
