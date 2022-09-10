@@ -56,5 +56,10 @@ namespace AutomatedTicketSystemProject_Group6
                 }
              }             
         }
+
+        private void Functions_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }
