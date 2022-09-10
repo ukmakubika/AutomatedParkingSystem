@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAnswer = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -90,19 +90,19 @@
             this.txtAnswer.Size = new System.Drawing.Size(318, 20);
             this.txtAnswer.TabIndex = 3;
             // 
-            // textBox1
+            // txtNewPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNewPassword.Location = new System.Drawing.Point(135, 37);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(234, 20);
+            this.txtNewPassword.TabIndex = 4;
             // 
-            // textBox2
+            // txtConfirm
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtConfirm.Location = new System.Drawing.Point(135, 69);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(234, 20);
+            this.txtConfirm.TabIndex = 5;
             // 
             // label3
             // 
@@ -128,8 +128,8 @@
             // 
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtConfirm);
+            this.groupBox2.Controls.Add(this.txtNewPassword);
             this.groupBox2.Location = new System.Drawing.Point(180, 241);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(419, 124);
@@ -174,8 +174,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtAnswer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNewPassword;
+        private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;

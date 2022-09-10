@@ -40,9 +40,9 @@
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.loginBtn = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblCode = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -97,6 +97,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtUsername.Location = new System.Drawing.Point(108, 36);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(292, 20);
@@ -105,6 +106,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtPassword.Location = new System.Drawing.Point(108, 72);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(292, 20);
@@ -179,17 +181,6 @@
             this.groupBox1.Text = "Login";
             this.groupBox1.UseWaitCursor = true;
             // 
-            // loginBtn
-            // 
-            this.loginBtn.Location = new System.Drawing.Point(567, 69);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 26);
-            this.loginBtn.TabIndex = 9;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.UseWaitCursor = true;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_1);
-            // 
             // txtCode
             // 
             this.txtCode.Cursor = System.Windows.Forms.Cursors.WaitCursor;
@@ -210,6 +201,17 @@
             this.lblCode.TabIndex = 10;
             this.lblCode.Text = "Code:";
             this.lblCode.UseWaitCursor = true;
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.Location = new System.Drawing.Point(567, 69);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(75, 26);
+            this.loginBtn.TabIndex = 9;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.UseWaitCursor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_1);
             // 
             // MainLogin
             // 
