@@ -71,8 +71,38 @@ namespace AutomatedTicketSystemProject_Group6
 
             if (rbClient.Checked)
             {
-                Functions customerInt = new Functions();
-                customerInt.ShowDialog();
+                string userName, password;
+                userName = txtUsername.Text;
+                password = txtPassword.Text;
+                try
+                {
+                    string userDetails;
+
+                    StreamReader inputFile;
+                    inputFile = File.OpenText("UserDetails.txt");
+
+                    while (!inputFile.EndOfStream)
+                    {
+                        userDetails = inputFile.ReadLine();
+                        if (userDetails.Contains(userName) && userDetails.Contains(password))
+                        {
+                            MessageBox.Show("Logged in");
+                            Functions customerInt = new Functions();
+                            customerInt.ShowDialog();
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password");
+                            
+                        }
+                        break;
+                    }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
         }
 
