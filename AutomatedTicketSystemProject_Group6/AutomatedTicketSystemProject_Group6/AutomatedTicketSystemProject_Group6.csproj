@@ -101,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,6 +115,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-brett-sayles-1756957.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-monstera-7794440.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nduv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nduv2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,7 +21,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void MainLogin_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void linkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
