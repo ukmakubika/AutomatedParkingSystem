@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class Functions : Form
+    public partial class CustomerInterface : Form
     {
-        public Functions()
+        public CustomerInterface()
         {
             InitializeComponent();
         }
@@ -97,6 +97,18 @@ namespace AutomatedTicketSystemProject_Group6
                 listAnswer.Items.Add("Choose the edit account details page and");
                 listAnswer.Items.Add("select the change password option.");
             }
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            int code;
+            Random requestedCode = new Random();
+            code = requestedCode.Next(10000, 99999);
+            DateTime thisday = DateTime.Today;
+
+            listCode.Items.Clear();
+            listCode.Items.Add(code.ToString());
+            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
         }
     }
 }

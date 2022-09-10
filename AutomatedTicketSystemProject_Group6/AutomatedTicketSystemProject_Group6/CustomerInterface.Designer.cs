@@ -1,6 +1,6 @@
 ﻿namespace AutomatedTicketSystemProject_Group6
 {
-    partial class Functions
+    partial class CustomerInterface
     {
         /// <summary>
         /// Required designer variable.
@@ -188,6 +188,7 @@
             this.btnRequest.TabIndex = 4;
             this.btnRequest.Text = "Request Code";
             this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // label3
             // 
@@ -521,14 +522,14 @@
             // 
             this.errYear.ContainerControl = this;
             // 
-            // Functions
+            // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Functions";
-            this.Text = "Functions";
+            this.Name = "CustomerInterface";
+            this.Text = "Customer Interface";
             this.tabControl1.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
             this.MainPage.PerformLayout();

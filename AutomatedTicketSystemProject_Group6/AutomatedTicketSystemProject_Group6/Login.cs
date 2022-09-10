@@ -56,7 +56,7 @@ namespace AutomatedTicketSystemProject_Group6
 
             if (rbClient.Checked)
             {
-                Functions customerInt = new Functions();
+                CustomerInterface customerInt = new CustomerInterface();
                 customerInt.ShowDialog();
             }
         }
@@ -71,7 +71,7 @@ namespace AutomatedTicketSystemProject_Group6
 
             if (rbClient.Checked)
             {
-                Functions customerInt = new Functions();
+                CustomerInterface customerInt = new CustomerInterface();
                 customerInt.ShowDialog();
             }
         }
