@@ -61,5 +61,10 @@ namespace AutomatedTicketSystemProject_Group6
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
