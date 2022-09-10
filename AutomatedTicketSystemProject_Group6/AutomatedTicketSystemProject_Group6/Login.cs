@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace AutomatedTicketSystemProject_Group6
 {
@@ -56,6 +58,11 @@ namespace AutomatedTicketSystemProject_Group6
                 Functions customerInt = new Functions();
                 customerInt.ShowDialog();
             }
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
