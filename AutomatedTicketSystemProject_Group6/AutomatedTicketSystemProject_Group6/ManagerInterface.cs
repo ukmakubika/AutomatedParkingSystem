@@ -19,11 +19,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFAQ.SelectedItem.ToString() == "How can I see my top customers?")
-            {
-
-            }
-
+           
             if (cbFAQ.SelectedItem.ToString() == "What do I do if I forget my manager code?")
             {
                 listAnswer.Items.Clear();
@@ -44,16 +40,64 @@ namespace AutomatedTicketSystemProject_Group6
                 listAnswer.Items.Add("Yes.");
                 
             }
+
+            if (cbFAQ.SelectedItem.ToString() == "How can I see my top customers?")
+            {
+
+            }
+
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+
+        private void btnCreate_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            rbLowToHigh.Enabled = true;
+            rbHighToLow.Enabled = true;
+            rbName.Enabled = true;
+            rbLongestHours.Enabled = true;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void cbGeneral_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+            if (cbGeneral.Items != null)
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+            }
+            else
+            {
+                rbLowToHigh.Enabled = false;
+                rbHighToLow.Enabled = false;
+                rbName.Enabled = false;
+                rbLongestHours.Enabled = false;
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbGeneral.ResetText();
+            rbLowToHigh.Enabled = false;
+            rbHighToLow.Enabled = false;
+            rbName.Enabled = false;
+            rbLongestHours.Enabled = false;
+
+        }
+
+        private void checkCustom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkCustom.Checked)
+            {
+                txtCustomName.Enabled = true;
+                btnCreate.Enabled = true;
+            }
+            else
+            {
+                txtCustomName.Enabled = false;
+                btnCreate.Enabled = false;
+            }
         }
     }
 }

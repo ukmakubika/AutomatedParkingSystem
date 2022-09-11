@@ -72,8 +72,41 @@ namespace AutomatedTicketSystemProject_Group6
             {
                 if (rbManager.Checked)
                 {
-                    ManagerInterface managerInt = new ManagerInterface();
-                    managerInt.ShowDialog();
+                    string userName, password, code;
+                    userName = txtUsername.Text;
+                    password = txtPassword.Text;
+                    code = txtCode.Text;
+                    try
+                    {
+                        string managerDetails = " ";
+
+                        StreamReader inputFile;
+                        inputFile = File.OpenText("ManagerDetails.txt");
+
+                        while (!inputFile.EndOfStream)
+                        {
+                            managerDetails += inputFile.ReadLine();
+                        }
+                        if ((managerDetails.Contains(userName)) && (managerDetails.Contains(password)) && (managerDetails.Contains(code)))
+                        {
+                            MessageBox.Show("Logged in");
+                            ManagerInterface managerFrm = new ManagerInterface();
+                            managerFrm.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect login details");
+                            txtUsername.Text = " ";
+                            txtPassword.Text = " ";
+                            txtCode.Text = " ";
+                            txtUsername.Focus();
+                        }
+                    }
+                    catch(Exception error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }                    //ManagerInterface managerInt = new ManagerInterface();
+                    //managerInt.ShowDialog();
                 }
 
                 if (rbClient.Checked)
@@ -104,7 +137,9 @@ namespace AutomatedTicketSystemProject_Group6
                         else
                         {
                             MessageBox.Show("Invalid username or password");
-
+                            txtUsername.Text = " ";
+                            txtPassword.Text = " ";
+                            txtUsername.Focus();
                         }
                     }
                     catch (Exception error)
