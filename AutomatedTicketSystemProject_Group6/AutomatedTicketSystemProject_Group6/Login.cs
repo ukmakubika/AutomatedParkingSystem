@@ -176,6 +176,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void linkPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Open forgot password form
             ForgotPassword passwordFrm = new ForgotPassword();
             passwordFrm.ShowDialog();
         }
