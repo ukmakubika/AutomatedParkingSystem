@@ -111,7 +111,9 @@ namespace AutomatedTicketSystemProject_Group6
             listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
         }
 
-        private void btnRequest_Click(object sender, EventArgs e)
+       
+
+        private void btnRequest_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -17,7 +17,7 @@ namespace AutomatedTicketSystemProject_Group6
     {
         string name, surname, email, idNum; 
         string userName, contactNo, password, securityQuestion, confirmPassword, answer;
-        string connectString = @"Data Source=LAPTOP-9UVIJHCO;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         SqlConnection connection;
         SqlCommand command;
         SqlDataAdapter adapter;
