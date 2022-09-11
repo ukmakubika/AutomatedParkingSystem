@@ -98,5 +98,10 @@ namespace AutomatedTicketSystemProject_Group6
                 listAnswer.Items.Add("select the change password option.");
             }
         }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
