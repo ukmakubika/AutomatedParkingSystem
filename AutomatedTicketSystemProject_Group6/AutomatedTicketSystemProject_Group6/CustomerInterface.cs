@@ -26,5 +26,10 @@ namespace AutomatedTicketSystemProject_Group6
         {
 
         }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
