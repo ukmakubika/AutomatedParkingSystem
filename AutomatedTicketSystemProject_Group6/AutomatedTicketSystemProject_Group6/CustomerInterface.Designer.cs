@@ -1,6 +1,6 @@
 ﻿namespace AutomatedTicketSystemProject_Group6
 {
-    partial class Functions
+    partial class CustomerInterface
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
@@ -45,25 +46,28 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.cbMonth = new System.Windows.Forms.ComboBox();
+            this.txtCVV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCardNo = new System.Windows.Forms.TextBox();
-            this.txtBranchNo = new System.Windows.Forms.TextBox();
             this.cbBankNames = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.pbBank = new System.Windows.Forms.PictureBox();
             this.Help = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.listAnswer = new System.Windows.Forms.ListBox();
             this.cbFAQ = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.errBankname = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errCardNo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errCVV = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errMonth = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errYear = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -71,9 +75,13 @@
             this.groupBox1.SuspendLayout();
             this.PaymentDetails.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBank)).BeginInit();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errBankname)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCardNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCVV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMonth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errYear)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -180,6 +188,7 @@
             this.btnRequest.TabIndex = 4;
             this.btnRequest.Text = "Request Code";
             this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // label3
             // 
@@ -215,7 +224,6 @@
             // 
             this.PaymentDetails.Controls.Add(this.groupBox3);
             this.PaymentDetails.Controls.Add(this.btnSave);
-            this.PaymentDetails.Controls.Add(this.pbBank);
             this.PaymentDetails.Location = new System.Drawing.Point(4, 22);
             this.PaymentDetails.Name = "PaymentDetails";
             this.PaymentDetails.Padding = new System.Windows.Forms.Padding(3);
@@ -228,14 +236,12 @@
             // 
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.cbYear);
+            this.groupBox3.Controls.Add(this.cbMonth);
+            this.groupBox3.Controls.Add(this.txtCVV);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtCardNo);
-            this.groupBox3.Controls.Add(this.txtBranchNo);
             this.groupBox3.Controls.Add(this.cbBankNames);
-            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
@@ -250,7 +256,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(138, 327);
+            this.label15.Location = new System.Drawing.Point(138, 318);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 16);
             this.label15.TabIndex = 28;
@@ -260,16 +266,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(138, 287);
+            this.label1.Location = new System.Drawing.Point(138, 259);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 27;
             this.label1.Text = "Month:";
             // 
-            // comboBox2
+            // cbYear
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Items.AddRange(new object[] {
             "2022",
             "2023",
             "2024",
@@ -281,15 +287,15 @@
             "2030",
             "2031",
             "2032"});
-            this.comboBox2.Location = new System.Drawing.Point(202, 322);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(161, 21);
-            this.comboBox2.TabIndex = 26;
+            this.cbYear.Location = new System.Drawing.Point(202, 313);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(161, 21);
+            this.cbYear.TabIndex = 26;
             // 
-            // comboBox1
+            // cbMonth
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -302,23 +308,23 @@
             "October",
             "November",
             "December"});
-            this.comboBox1.Location = new System.Drawing.Point(203, 286);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 21);
-            this.comboBox1.TabIndex = 25;
+            this.cbMonth.Location = new System.Drawing.Point(203, 258);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(161, 21);
+            this.cbMonth.TabIndex = 25;
             // 
-            // textBox1
+            // txtCVV
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 24;
+            this.txtCVV.Location = new System.Drawing.Point(137, 191);
+            this.txtCVV.Name = "txtCVV";
+            this.txtCVV.Size = new System.Drawing.Size(227, 20);
+            this.txtCVV.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 232);
+            this.label4.Location = new System.Drawing.Point(31, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 16);
             this.label4.TabIndex = 23;
@@ -326,17 +332,10 @@
             // 
             // txtCardNo
             // 
-            this.txtCardNo.Location = new System.Drawing.Point(137, 171);
+            this.txtCardNo.Location = new System.Drawing.Point(137, 123);
             this.txtCardNo.Name = "txtCardNo";
             this.txtCardNo.Size = new System.Drawing.Size(227, 20);
             this.txtCardNo.TabIndex = 20;
-            // 
-            // txtBranchNo
-            // 
-            this.txtBranchNo.Location = new System.Drawing.Point(137, 105);
-            this.txtBranchNo.Name = "txtBranchNo";
-            this.txtBranchNo.Size = new System.Drawing.Size(227, 20);
-            this.txtBranchNo.TabIndex = 19;
             // 
             // cbBankNames
             // 
@@ -380,26 +379,16 @@
             "UBank Limited",
             "Unibank",
             "VBS Mutual Bank"});
-            this.cbBankNames.Location = new System.Drawing.Point(137, 49);
+            this.cbBankNames.Location = new System.Drawing.Point(137, 58);
             this.cbBankNames.Name = "cbBankNames";
             this.cbBankNames.Size = new System.Drawing.Size(227, 21);
             this.cbBankNames.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 108);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 16);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Branch Number:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 174);
+            this.label7.Location = new System.Drawing.Point(31, 126);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 16);
             this.label7.TabIndex = 15;
@@ -409,7 +398,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 286);
+            this.label8.Location = new System.Drawing.Point(31, 258);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 16);
             this.label8.TabIndex = 14;
@@ -419,7 +408,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 52);
+            this.label9.Location = new System.Drawing.Point(31, 61);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 16);
             this.label9.TabIndex = 13;
@@ -433,15 +422,7 @@
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // pbBank
-            // 
-            this.pbBank.Location = new System.Drawing.Point(492, 17);
-            this.pbBank.Name = "pbBank";
-            this.pbBank.Size = new System.Drawing.Size(248, 79);
-            this.pbBank.TabIndex = 21;
-            this.pbBank.TabStop = false;
-            this.pbBank.Click += new System.EventHandler(this.pbBank_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Help
             // 
@@ -458,13 +439,22 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.listAnswer);
             this.groupBox5.Controls.Add(this.cbFAQ);
             this.groupBox5.Location = new System.Drawing.Point(205, 130);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(353, 133);
+            this.groupBox5.Size = new System.Drawing.Size(353, 210);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Frequently Asked Quetsions";
+            // 
+            // listAnswer
+            // 
+            this.listAnswer.FormattingEnabled = true;
+            this.listAnswer.Location = new System.Drawing.Point(17, 96);
+            this.listAnswer.Name = "listAnswer";
+            this.listAnswer.Size = new System.Drawing.Size(320, 95);
+            this.listAnswer.TabIndex = 16;
             // 
             // cbFAQ
             // 
@@ -480,6 +470,7 @@
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
             this.cbFAQ.TabIndex = 14;
+            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -511,14 +502,34 @@
             this.label13.TabIndex = 11;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // Functions
+            // errBankname
+            // 
+            this.errBankname.ContainerControl = this;
+            // 
+            // errCardNo
+            // 
+            this.errCardNo.ContainerControl = this;
+            // 
+            // errCVV
+            // 
+            this.errCVV.ContainerControl = this;
+            // 
+            // errMonth
+            // 
+            this.errMonth.ContainerControl = this;
+            // 
+            // errYear
+            // 
+            this.errYear.ContainerControl = this;
+            // 
+            // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Functions";
-            this.Text = "Functions";
+            this.Name = "CustomerInterface";
+            this.Text = "Customer Interface";
             this.tabControl1.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
             this.MainPage.PerformLayout();
@@ -530,10 +541,14 @@
             this.PaymentDetails.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBank)).EndInit();
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errBankname)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCardNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCVV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMonth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,17 +566,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCVV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCardNo;
-        private System.Windows.Forms.TextBox txtBranchNo;
         private System.Windows.Forms.ComboBox cbBankNames;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.PictureBox pbBank;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listCode;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -574,7 +586,13 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbYear;
+        private System.Windows.Forms.ComboBox cbMonth;
+        private System.Windows.Forms.ListBox listAnswer;
+        private System.Windows.Forms.ErrorProvider errBankname;
+        private System.Windows.Forms.ErrorProvider errCardNo;
+        private System.Windows.Forms.ErrorProvider errCVV;
+        private System.Windows.Forms.ErrorProvider errMonth;
+        private System.Windows.Forms.ErrorProvider errYear;
     }
 }
