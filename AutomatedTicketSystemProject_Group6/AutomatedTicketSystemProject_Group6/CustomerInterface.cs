@@ -19,21 +19,9 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-                       
-        }
-
-        private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        
-
-        private void btnSave_Click_1(object sender, EventArgs e)
-        {
-            int cardNo;
+            float cardNo;
             int CVV;
-            if (int.TryParse(txtCardNo.Text, out cardNo))
+            if (float.TryParse(txtCardNo.Text, out cardNo))
             {
                 if (txtCardNo.Text.Length != 16)
                 {
@@ -68,15 +56,20 @@ namespace AutomatedTicketSystemProject_Group6
                         MessageBox.Show("Please enter a valid cvv code");
                     }
                 }
-
+               
             }
             else
             {
                 MessageBox.Show("Please enter a valid card number");
-            }
+            }             
         }
 
-        private void btnRequest_Click_1(object sender, EventArgs e)
+        private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
         {
             int code;
             Random requestedCode = new Random();
