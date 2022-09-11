@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtCardholderName = new System.Windows.Forms.TextBox();
+            this.txtCardNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtExpDate = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbMonth = new System.Windows.Forms.ComboBox();
@@ -40,10 +44,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtExpDate = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCardNo = new System.Windows.Forms.TextBox();
-            this.txtCardholderName = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,38 @@
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bank Details";
+            // 
+            // txtCardholderName
+            // 
+            this.txtCardholderName.Location = new System.Drawing.Point(161, 99);
+            this.txtCardholderName.Name = "txtCardholderName";
+            this.txtCardholderName.Size = new System.Drawing.Size(227, 20);
+            this.txtCardholderName.TabIndex = 32;
+            // 
+            // txtCardNo
+            // 
+            this.txtCardNo.Location = new System.Drawing.Point(160, 148);
+            this.txtCardNo.Name = "txtCardNo";
+            this.txtCardNo.Size = new System.Drawing.Size(227, 20);
+            this.txtCardNo.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 16);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Cardholder Name:";
+            // 
+            // txtExpDate
+            // 
+            this.txtExpDate.Enabled = false;
+            this.txtExpDate.Location = new System.Drawing.Point(226, 340);
+            this.txtExpDate.Name = "txtExpDate";
+            this.txtExpDate.Size = new System.Drawing.Size(161, 20);
+            this.txtExpDate.TabIndex = 29;
             // 
             // label15
             // 
@@ -114,18 +146,18 @@
             // 
             this.cbYear.FormattingEnabled = true;
             this.cbYear.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
             this.cbYear.Location = new System.Drawing.Point(227, 262);
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(161, 21);
@@ -234,38 +266,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txtExpDate
-            // 
-            this.txtExpDate.Enabled = false;
-            this.txtExpDate.Location = new System.Drawing.Point(226, 340);
-            this.txtExpDate.Name = "txtExpDate";
-            this.txtExpDate.Size = new System.Drawing.Size(161, 20);
-            this.txtExpDate.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 16);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Cardholder Name:";
-            // 
-            // txtCardNo
-            // 
-            this.txtCardNo.Location = new System.Drawing.Point(160, 148);
-            this.txtCardNo.Name = "txtCardNo";
-            this.txtCardNo.Size = new System.Drawing.Size(227, 20);
-            this.txtCardNo.TabIndex = 31;
-            // 
-            // txtCardholderName
-            // 
-            this.txtCardholderName.Location = new System.Drawing.Point(161, 99);
-            this.txtCardholderName.Name = "txtCardholderName";
-            this.txtCardholderName.Size = new System.Drawing.Size(227, 20);
-            this.txtCardholderName.TabIndex = 32;
             // 
             // AddCard
             // 
