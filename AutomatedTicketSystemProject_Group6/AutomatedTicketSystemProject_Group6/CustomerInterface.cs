@@ -19,9 +19,9 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            int cardNo;
+            float cardNo;
             int CVV;
-            if (int.TryParse(txtCardNo.Text, out cardNo))
+            if (float.TryParse(txtCardNo.Text, out cardNo))
             {
                 if (txtCardNo.Text.Length != 16)
                 {
