@@ -19,11 +19,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFAQ.SelectedItem.ToString() == "How can I see my top customers?")
-            {
-
-            }
-
+           
             if (cbFAQ.SelectedItem.ToString() == "What do I do if I forget my manager code?")
             {
                 listAnswer.Items.Clear();
@@ -44,9 +40,15 @@ namespace AutomatedTicketSystemProject_Group6
                 listAnswer.Items.Add("Yes.");
                 
             }
+
+            if (cbFAQ.SelectedItem.ToString() == "How can I see my top customers?")
+            {
+
+            }
+
         }
 
-      
+
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
