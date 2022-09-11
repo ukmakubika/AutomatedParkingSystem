@@ -131,7 +131,7 @@ namespace AutomatedTicketSystemProject_Group6
 
             //retrieve data
             adapter = new SqlDataAdapter();
-            string sql = "SELECT from BANK WHERE Card_HolderName = '" + addCard.name + "'";
+            string sql = "SELECT * from BANK WHERE Card_HolderName = '" + addCard.name + "'";
             command = new SqlCommand(sql, connection);
             adapter.SelectCommand = command;
 

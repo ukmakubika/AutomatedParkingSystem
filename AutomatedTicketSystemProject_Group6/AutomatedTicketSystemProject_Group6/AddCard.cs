@@ -76,13 +76,15 @@ namespace AutomatedTicketSystemProject_Group6
             {
                 MessageBox.Show("Please enter a valid card number");
             }
-
-            txtExpDate.Text = cbMonth.Text + " " + cbYear.Text;
             try
             {
+                txtExpDate.Text =  cbMonth.Text + " " + cbYear.Text;
+                string dateExp = txtExpDate.Text;
+                var parsedExp = DateTime.Parse(dateExp);
+
                 name = txtCardholderName.Text;
 
-                string addme = $"INSERT INTO BANK(Bank_name, Exp_date Card_no, Card_HolderName) VALUES('{cbBankNames.Text}', '{txtCardNo.Text}', '{txtExpDate.Text}','{txtCardholderName.Text}')";//tell to insert in string language
+                string addme = $"INSERT INTO BANK(Bank_name, Exp_date, Card_no, Card_HolderName) VALUES('{cbBankNames.Text}', '{txtCardNo.Text}', {parsedExp:d0},'{txtCardholderName.Text}')";//tell to insert in string language
 
                 connection = new SqlConnection(cnctString);//whats it gonna connect to 
 
