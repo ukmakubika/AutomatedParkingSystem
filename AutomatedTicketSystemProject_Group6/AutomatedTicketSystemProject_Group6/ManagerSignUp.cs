@@ -18,7 +18,9 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
         string name, surname, email, contactNo, userName;
-        string password, confirmPassword, securityQuestion, answer, code;
+        string password, confirmPassword, code;
+        public string answer;
+        public string securityQuestion;
         private void ManagerSignUp_Load(object sender, EventArgs e)
         {
 
