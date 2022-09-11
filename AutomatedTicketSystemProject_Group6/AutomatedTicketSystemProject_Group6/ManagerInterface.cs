@@ -45,5 +45,57 @@ namespace AutomatedTicketSystemProject_Group6
                 
             }
         }
+
+      
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            rbLowToHigh.Enabled = true;
+            rbHighToLow.Enabled = true;
+            rbName.Enabled = true;
+            rbLongestHours.Enabled = true;
+        }
+
+        private void cbGeneral_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbGeneral.Items != null)
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+            }
+            else
+            {
+                rbLowToHigh.Enabled = false;
+                rbHighToLow.Enabled = false;
+                rbName.Enabled = false;
+                rbLongestHours.Enabled = false;
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbGeneral.ResetText();
+            rbLowToHigh.Enabled = false;
+            rbHighToLow.Enabled = false;
+            rbName.Enabled = false;
+            rbLongestHours.Enabled = false;
+
+        }
+
+        private void checkCustom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkCustom.Checked)
+            {
+                txtCustomName.Enabled = true;
+                btnCreate.Enabled = true;
+            }
+            else
+            {
+                txtCustomName.Enabled = false;
+                btnCreate.Enabled = false;
+            }
+        }
     }
 }
