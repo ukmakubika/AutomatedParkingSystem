@@ -118,12 +118,28 @@ namespace AutomatedTicketSystemProject_Group6
         private void rbClient_CheckedChanged(object sender, EventArgs e)
         {
             txtCode.Enabled = false;
+            txtCode.Visible = false;
             lblCode.Visible = false;
         }
 
         private void MainLogin_Load_1(object sender, EventArgs e)
         {
             lblCode.Visible = false;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

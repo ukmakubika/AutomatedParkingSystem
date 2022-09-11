@@ -18,6 +18,22 @@ namespace AutomatedTicketSystemProject_Group6
         string name, surname, email, idNum; 
         string userName, contactNo, password, securityQuestion, confirmPassword, answer;
         string connectString = @"Data Source=LAPTOP-9UVIJHCO;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         SqlConnection connection;
         SqlCommand command;
         SqlDataAdapter adapter;

@@ -104,18 +104,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -126,25 +126,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pexels-brett-sayles-1756957.jpg" />
+    <None Include="Resources\pexels-monstera-7794440 %281%29 %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pexels-monstera-7794440.jpg" />
+    <None Include="Resources\pexels-brett-sayles-1756957 %282%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Nduv.png" />
+    <None Include="Resources\pexels-monstera-7794440 %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Nduv2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-pixabay-257416.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Nd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ndu.png" />
+    <None Include="Resources\icons8-close-window-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
