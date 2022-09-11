@@ -459,6 +459,7 @@
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
             this.cbFAQ.TabIndex = 14;
+            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged_1);
             // 
             // label11
             // 
