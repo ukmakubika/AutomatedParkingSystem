@@ -55,7 +55,8 @@ namespace AutomatedTicketSystemProject_Group6
                         connection = new SqlConnection(connectString);
 
                         connection.Open();
-                        string sqlInsert = $"INSERT INTO CLIENT(Client_FName, Client_LName, Client_IDNum, Client_Email, Client_ContactNo, Client_UserName) VALUES('{name}', '{surname}', '{idNum}', '{email}', '{contactNo}', '{userName}')";
+                        string sqlInsert = $"INSERT INTO CLIENT(Client_FName, Client_LName, Client_IDNum, Client_Email, Client_ContactNo, Client_UserName) " +
+                            $"VALUES('{name}', '{surname}', '{idNum}', '{email}', '{contactNo}', '{userName}')";
                         command = new SqlCommand(sqlInsert, connection);
                         adapter = new SqlDataAdapter();
                         adapter.InsertCommand = command;
