@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
@@ -46,8 +45,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbYear = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
             this.txtCVV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCardNo = new System.Windows.Forms.TextBox();
@@ -63,11 +62,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.errBankname = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errCardNo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errCVV = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errMonth = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errYear = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -77,11 +71,6 @@
             this.groupBox3.SuspendLayout();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errBankname)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errCardNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errCVV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errMonth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errYear)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -188,7 +177,7 @@
             this.btnRequest.TabIndex = 4;
             this.btnRequest.Text = "Request Code";
             this.btnRequest.UseVisualStyleBackColor = true;
-            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click_1);
             // 
             // label3
             // 
@@ -236,8 +225,8 @@
             // 
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.cbYear);
             this.groupBox3.Controls.Add(this.cbMonth);
+            this.groupBox3.Controls.Add(this.cbYear);
             this.groupBox3.Controls.Add(this.txtCVV);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtCardNo);
@@ -256,7 +245,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(138, 318);
+            this.label15.Location = new System.Drawing.Point(138, 327);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 16);
             this.label15.TabIndex = 28;
@@ -266,16 +255,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(138, 259);
+            this.label1.Location = new System.Drawing.Point(138, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 27;
             this.label1.Text = "Month:";
             // 
-            // cbYear
+            // cbMonth
             // 
-            this.cbYear.FormattingEnabled = true;
-            this.cbYear.Items.AddRange(new object[] {
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Items.AddRange(new object[] {
             "2022",
             "2023",
             "2024",
@@ -287,15 +276,15 @@
             "2030",
             "2031",
             "2032"});
-            this.cbYear.Location = new System.Drawing.Point(202, 313);
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(161, 21);
-            this.cbYear.TabIndex = 26;
+            this.cbMonth.Location = new System.Drawing.Point(202, 322);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(161, 21);
+            this.cbMonth.TabIndex = 26;
             // 
-            // cbMonth
+            // cbYear
             // 
-            this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Items.AddRange(new object[] {
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -308,14 +297,14 @@
             "October",
             "November",
             "December"});
-            this.cbMonth.Location = new System.Drawing.Point(203, 258);
-            this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(161, 21);
-            this.cbMonth.TabIndex = 25;
+            this.cbYear.Location = new System.Drawing.Point(203, 260);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(161, 21);
+            this.cbYear.TabIndex = 25;
             // 
             // txtCVV
             // 
-            this.txtCVV.Location = new System.Drawing.Point(137, 191);
+            this.txtCVV.Location = new System.Drawing.Point(137, 194);
             this.txtCVV.Name = "txtCVV";
             this.txtCVV.Size = new System.Drawing.Size(227, 20);
             this.txtCVV.TabIndex = 24;
@@ -324,7 +313,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 194);
+            this.label4.Location = new System.Drawing.Point(31, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 16);
             this.label4.TabIndex = 23;
@@ -332,7 +321,7 @@
             // 
             // txtCardNo
             // 
-            this.txtCardNo.Location = new System.Drawing.Point(137, 123);
+            this.txtCardNo.Location = new System.Drawing.Point(137, 122);
             this.txtCardNo.Name = "txtCardNo";
             this.txtCardNo.Size = new System.Drawing.Size(227, 20);
             this.txtCardNo.TabIndex = 20;
@@ -379,7 +368,7 @@
             "UBank Limited",
             "Unibank",
             "VBS Mutual Bank"});
-            this.cbBankNames.Location = new System.Drawing.Point(137, 58);
+            this.cbBankNames.Location = new System.Drawing.Point(137, 49);
             this.cbBankNames.Name = "cbBankNames";
             this.cbBankNames.Size = new System.Drawing.Size(227, 21);
             this.cbBankNames.TabIndex = 17;
@@ -388,7 +377,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 126);
+            this.label7.Location = new System.Drawing.Point(31, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 16);
             this.label7.TabIndex = 15;
@@ -398,7 +387,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 258);
+            this.label8.Location = new System.Drawing.Point(31, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 16);
             this.label8.TabIndex = 14;
@@ -408,7 +397,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 61);
+            this.label9.Location = new System.Drawing.Point(31, 52);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 16);
             this.label9.TabIndex = 13;
@@ -422,7 +411,7 @@
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // Help
             // 
@@ -443,7 +432,7 @@
             this.groupBox5.Controls.Add(this.cbFAQ);
             this.groupBox5.Location = new System.Drawing.Point(205, 130);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(353, 210);
+            this.groupBox5.Size = new System.Drawing.Size(353, 187);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Frequently Asked Quetsions";
@@ -451,10 +440,10 @@
             // listAnswer
             // 
             this.listAnswer.FormattingEnabled = true;
-            this.listAnswer.Location = new System.Drawing.Point(17, 96);
+            this.listAnswer.Location = new System.Drawing.Point(17, 103);
             this.listAnswer.Name = "listAnswer";
-            this.listAnswer.Size = new System.Drawing.Size(320, 95);
-            this.listAnswer.TabIndex = 16;
+            this.listAnswer.Size = new System.Drawing.Size(321, 56);
+            this.listAnswer.TabIndex = 15;
             // 
             // cbFAQ
             // 
@@ -470,7 +459,6 @@
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
             this.cbFAQ.TabIndex = 14;
-            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -502,26 +490,6 @@
             this.label13.TabIndex = 11;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // errBankname
-            // 
-            this.errBankname.ContainerControl = this;
-            // 
-            // errCardNo
-            // 
-            this.errCardNo.ContainerControl = this;
-            // 
-            // errCVV
-            // 
-            this.errCVV.ContainerControl = this;
-            // 
-            // errMonth
-            // 
-            this.errMonth.ContainerControl = this;
-            // 
-            // errYear
-            // 
-            this.errYear.ContainerControl = this;
-            // 
             // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,7 +497,7 @@
             this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.tabControl1);
             this.Name = "CustomerInterface";
-            this.Text = "Customer Interface";
+            this.Text = "Functions";
             this.tabControl1.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
             this.MainPage.PerformLayout();
@@ -544,11 +512,6 @@
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errBankname)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errCardNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errCVV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errMonth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -586,13 +549,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.ComboBox cbMonth;
+        private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.ListBox listAnswer;
-        private System.Windows.Forms.ErrorProvider errBankname;
-        private System.Windows.Forms.ErrorProvider errCardNo;
-        private System.Windows.Forms.ErrorProvider errCVV;
-        private System.Windows.Forms.ErrorProvider errMonth;
-        private System.Windows.Forms.ErrorProvider errYear;
     }
 }
