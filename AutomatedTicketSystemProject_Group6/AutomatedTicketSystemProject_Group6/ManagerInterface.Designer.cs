@@ -32,6 +32,7 @@
             this.Reports = new System.Windows.Forms.TabPage();
             this.HelpManager = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.listAnswer = new System.Windows.Forms.ListBox();
             this.cbFAQ = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -77,13 +78,22 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.listAnswer);
             this.groupBox5.Controls.Add(this.cbFAQ);
             this.groupBox5.Location = new System.Drawing.Point(216, 128);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(353, 133);
+            this.groupBox5.Size = new System.Drawing.Size(353, 207);
             this.groupBox5.TabIndex = 19;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Frequently Asked Quetsions";
+            // 
+            // listAnswer
+            // 
+            this.listAnswer.FormattingEnabled = true;
+            this.listAnswer.Location = new System.Drawing.Point(17, 92);
+            this.listAnswer.Name = "listAnswer";
+            this.listAnswer.Size = new System.Drawing.Size(320, 95);
+            this.listAnswer.TabIndex = 15;
             // 
             // cbFAQ
             // 
@@ -93,10 +103,11 @@
             "What do I do if I forget my manager code?",
             "What do I do if I forget my Username?",
             "Can I use the app to request a mall code similarly to a customer?"});
-            this.cbFAQ.Location = new System.Drawing.Point(76, 56);
+            this.cbFAQ.Location = new System.Drawing.Point(78, 52);
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 21);
             this.cbFAQ.TabIndex = 14;
+            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -154,5 +165,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox listAnswer;
     }
 }
