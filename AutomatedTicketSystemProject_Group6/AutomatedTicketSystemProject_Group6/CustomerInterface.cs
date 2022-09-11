@@ -17,6 +17,52 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            int cardNo;
+            int CVV;
+            if (int.TryParse(txtCardNo.Text, out cardNo))
+            {
+                if (txtCardNo.Text.Length != 16)
+                {
+                    MessageBox.Show("Please enter a valid length card number.");
+                }
+                else
+                {
+                    if (int.TryParse(txtCVV.Text, out CVV))
+                    {
+                        if (txtCVV.Text.Length != 3)
+                        {
+                            MessageBox.Show("Please enter a valid length CVV number.");
+                        }
+                        else
+                        {
+                            if (cbBankNames.SelectedItem == null)
+                            {
+                                MessageBox.Show("Please select a bank");
+                            }
+                            if (cbMonth.SelectedItem == null)
+                            {
+                                MessageBox.Show("Please select a month");
+                            }
+                            if (cbYear.SelectedItem == null)
+                            {
+                                MessageBox.Show("Please select a year");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid cvv code");
+                    }
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid card number");
+            }             
+        }
 
         private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -60,7 +106,7 @@ namespace AutomatedTicketSystemProject_Group6
             }
         }
 
-        private void btnRequest_Click_1(object sender, EventArgs e)
+        private void btnRequest_Click(object sender, EventArgs e)
         {
             int code;
             Random requestedCode = new Random();
@@ -72,44 +118,9 @@ namespace AutomatedTicketSystemProject_Group6
             listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
         }
 
-        private void btnSave_Click_1(object sender, EventArgs e)
+        private void btnRequest_Click(object sender, EventArgs e)
         {
-            int cardNo;
-            int CVV;
-            bool isValidCardNo = int.TryParse(txtCardNo.Text, out cardNo);
-            bool isValidCVV = int.TryParse(txtCVV.Text, out CVV);
 
-            if (cbBankNames.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a bank");
-            }
-            if (cbMonth.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a month");
-            }
-            if (cbYear.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a year");
-            }
-
-            if (!isValidCardNo)
-            {
-                MessageBox.Show("Please enter a valid number");
-
-                if (txtCardNo.Text.Length != 16)
-                {
-                    MessageBox.Show("Please enter a valid length card number.");
-                }
-            }
-            if (!isValidCVV)
-            {
-                MessageBox.Show("Please enter a valid number");
-
-                if (txtCVV.Text.Length != 3)
-                {
-                    MessageBox.Show("Please enter a valid length CVV number.");
-                }
-            }
         }
     }
 }

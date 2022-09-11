@@ -46,9 +46,7 @@ namespace AutomatedTicketSystemProject_Group6
             lblCode.Visible = true; 
         }
 
-        
-
-        private void loginBtn_Click_1(object sender, EventArgs e)
+        private void loginBtn_Click(object sender, EventArgs e)
         {
             if (rbManager.Checked)
             {
@@ -58,37 +56,61 @@ namespace AutomatedTicketSystemProject_Group6
 
             if (rbClient.Checked)
             {
-                string userName, password;
-                userName = txtUsername.Text;
-                password = txtPassword.Text;
-                try
+                CustomerInterface customerInt = new CustomerInterface();
+                customerInt.ShowDialog();
+            }
+        }
+
+        private void loginBtn_Click_1(object sender, EventArgs e)
+        {
+            if(txtUsername.Text.Length == 0 && txtPassword.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter details");
+                txtUsername.Focus();
+            }
+            else
+            {
+                if (rbManager.Checked)
                 {
-                    string userDetails;
+                    ManagerInterface managerInt = new ManagerInterface();
+                    managerInt.ShowDialog();
+                }
 
-                    StreamReader inputFile;
-                    inputFile = File.OpenText("UserDetails.txt");
-
-                    while (!inputFile.EndOfStream)
+                if (rbClient.Checked)
+                {
+                    string userName, password;
+                    userName = txtUsername.Text;
+                    password = txtPassword.Text;
+                    try
                     {
-                        userDetails = inputFile.ReadLine();
-                        if (userDetails.Contains(userName) && userDetails.Contains(password))
+                        string userDetails = " ";
+
+                        StreamReader inputFile;
+                        inputFile = File.OpenText("UserDetails.txt");
+
+                        while (!inputFile.EndOfStream)
+                        {
+                            userDetails += inputFile.ReadLine();
+                            
+                            
+                        }
+                        if ((userDetails.Contains(userName)) && (userDetails.Contains(password)))
                         {
                             MessageBox.Show("Logged in");
                             CustomerInterface customerInt = new CustomerInterface();
                             customerInt.ShowDialog();
-                            
+
                         }
                         else
                         {
                             MessageBox.Show("Invalid username or password");
-                            
+
                         }
-                        break;
                     }
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }
                 }
             }
         }
