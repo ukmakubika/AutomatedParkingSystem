@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class Functions : Form
+    public partial class FAQ : Form
     {
-        public Functions()
+        public FAQ()
         {
             InitializeComponent();
-        }
-
-        private void pbBank_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

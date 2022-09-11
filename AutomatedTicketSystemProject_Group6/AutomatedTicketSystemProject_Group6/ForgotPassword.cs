@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace AutomatedTicketSystemProject_Group6
 {
-    public partial class ExistingManager : Form
+    public partial class ForgotPassword : Form
     {
-        public ExistingManager()
+        public ForgotPassword()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
