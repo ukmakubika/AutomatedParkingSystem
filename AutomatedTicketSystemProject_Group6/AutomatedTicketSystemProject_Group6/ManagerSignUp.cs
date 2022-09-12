@@ -23,17 +23,7 @@ namespace AutomatedTicketSystemProject_Group6
         public string securityQuestion;
         private void ManagerSignUp_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
