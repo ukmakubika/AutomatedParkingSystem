@@ -21,7 +21,17 @@ namespace AutomatedTicketSystemProject_Group6
         string password, confirmPassword, securityQuestion, answer, code;
         private void ManagerSignUp_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
