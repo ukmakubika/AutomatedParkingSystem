@@ -180,5 +180,15 @@ namespace AutomatedTicketSystemProject_Group6
             ForgotPassword passwordFrm = new ForgotPassword();
             passwordFrm.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
