@@ -19,6 +19,7 @@ namespace AutomatedTicketSystemProject_Group6
         }
 
         public int code;
+        public int time;
 
         //Connection of data
         SqlConnection connection;
@@ -73,6 +74,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void btnRequest_Click_1(object sender, EventArgs e)
         {
+
             //int code;
             listCode.Items.Clear();
             
@@ -81,6 +83,11 @@ namespace AutomatedTicketSystemProject_Group6
             DateTime thisday = DateTime.Today;
 
             listCode.Items.Add(code.ToString());
+
+            btnStart.Enabled = true;
+            btnStop.Enabled = true;
+            btnPay.Enabled = true;
+            
 
         }
 
@@ -116,10 +123,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         }
 
-        private void CustomerInterface_Load(object sender, EventArgs e)
-        {
-            loadAll();
-        }
+        
 
         private void loadAll()
         {
@@ -156,26 +160,87 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            timeTracker.Stop();
+            isActive = false;
+            timeS = 0;
+            timeMin = 0;
+            timeH = 0;
+
+            //timeTracker.Stop();
 
             DateTime thisday = DateTime.Today;
+
+            time = int.Parse(timeMinutes.Text);  
+
             listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
+            listPrev.Items.Add("-------------------------------------------------------------");
+            listPrev.Items.Add("Time Elapsed: " + timeHours.Text + ":" + String.Format("{0:00}", timeMin).ToString() + ":" + timeSeconds.Text);
+            listPrev.Items.Add("-------------------------------------------------------------");
         }
 
         private void timeTracker_Tick(object sender, EventArgs e)
         {
+            if (isActive)
+            {
+                timeS++;
 
+                if (timeS >= 60)
+                {
+                    timeMin++;
+                    timeS = 0;
+
+                    if (timeMin >= 60)
+                    {
+                        timeH++;
+                        timeMin = 0;
+                    }
+                }
+               
+            }
+            ShowTime();
+           
         }
+
+        public void ShowTime()
+        {
+            timeSeconds.Text = String.Format("{0:00}", timeS);
+            timeMinutes.Text = String.Format("{0:00}", timeMin);
+            timeHours.Text = String.Format("{0:00}", timeH);
+        }
+
+        int timeS, timeMin, timeH;
+        bool isActive;
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            timeTracker.Start();
+            //timeTracker.Start();
+            
+
+            isActive = true;
+        }
+
+        private void CustomerInterface_Load(object sender, EventArgs e)
+        {
+            loadAll();
+
+            listPrev.Items.Add("Code \t Today");
+            listPrev.Items.Add("===============================");
+
+            timeS = 0;
+            timeMin = 0;
+            timeH = 0;
+
+            isActive = false;
         }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
             Payment payment = new Payment();
             payment.ShowDialog();
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,6 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnPay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -82,7 +83,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.timeTracker = new System.Windows.Forms.Timer(this.components);
-            this.btnPay = new System.Windows.Forms.Button();
+            this.timeHours = new System.Windows.Forms.Label();
+            this.timeMinutes = new System.Windows.Forms.Label();
+            this.timeSeconds = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,6 +104,7 @@
             this.Help.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -131,6 +138,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox10);
             this.groupBox3.Controls.Add(this.btnPay);
             this.groupBox3.Controls.Add(this.btnStop);
             this.groupBox3.Controls.Add(this.btnStart);
@@ -142,8 +150,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Timer";
             // 
+            // btnPay
+            // 
+            this.btnPay.Enabled = false;
+            this.btnPay.Location = new System.Drawing.Point(37, 112);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(108, 36);
+            this.btnPay.TabIndex = 19;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // btnStop
             // 
+            this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(37, 70);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(108, 36);
@@ -154,6 +174,7 @@
             // 
             // btnStart
             // 
+            this.btnStart.Enabled = false;
             this.btnStart.Location = new System.Drawing.Point(37, 28);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(108, 36);
@@ -209,7 +230,7 @@
             this.groupBox2.Size = new System.Drawing.Size(230, 278);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Previous Vistis";
+            this.groupBox2.Text = "Today\'s Visit";
             // 
             // listPrev
             // 
@@ -665,18 +686,72 @@
             // 
             // timeTracker
             // 
+            this.timeTracker.Enabled = true;
             this.timeTracker.Interval = 1000;
             this.timeTracker.Tick += new System.EventHandler(this.timeTracker_Tick);
             // 
-            // btnPay
+            // timeHours
             // 
-            this.btnPay.Location = new System.Drawing.Point(37, 112);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(108, 36);
-            this.btnPay.TabIndex = 19;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = true;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            this.timeHours.AutoSize = true;
+            this.timeHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeHours.Location = new System.Drawing.Point(26, 25);
+            this.timeHours.Name = "timeHours";
+            this.timeHours.Size = new System.Drawing.Size(27, 20);
+            this.timeHours.TabIndex = 20;
+            this.timeHours.Text = "00";
+            // 
+            // timeMinutes
+            // 
+            this.timeMinutes.AutoSize = true;
+            this.timeMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeMinutes.Location = new System.Drawing.Point(54, 25);
+            this.timeMinutes.Name = "timeMinutes";
+            this.timeMinutes.Size = new System.Drawing.Size(27, 20);
+            this.timeMinutes.TabIndex = 21;
+            this.timeMinutes.Text = "00";
+            this.timeMinutes.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // timeSeconds
+            // 
+            this.timeSeconds.AutoSize = true;
+            this.timeSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeSeconds.Location = new System.Drawing.Point(86, 25);
+            this.timeSeconds.Name = "timeSeconds";
+            this.timeSeconds.Size = new System.Drawing.Size(27, 20);
+            this.timeSeconds.TabIndex = 22;
+            this.timeSeconds.Text = "00";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label21);
+            this.groupBox10.Controls.Add(this.timeSeconds);
+            this.groupBox10.Controls.Add(this.label20);
+            this.groupBox10.Controls.Add(this.timeMinutes);
+            this.groupBox10.Controls.Add(this.timeHours);
+            this.groupBox10.Location = new System.Drawing.Point(24, 154);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(140, 63);
+            this.groupBox10.TabIndex = 23;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Time Elapsed";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(48, 27);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(10, 15);
+            this.label20.TabIndex = 24;
+            this.label20.Text = ":";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(77, 26);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(10, 15);
+            this.label21.TabIndex = 25;
+            this.label21.Text = ":";
             // 
             // CustomerInterface
             // 
@@ -709,6 +784,8 @@
             this.Help.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -769,5 +846,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button tbnUpdate;
         private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Label timeSeconds;
+        private System.Windows.Forms.Label timeMinutes;
+        private System.Windows.Forms.Label timeHours;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
     }
 }
