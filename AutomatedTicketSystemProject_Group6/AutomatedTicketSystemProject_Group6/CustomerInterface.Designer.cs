@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
@@ -59,6 +60,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.timeTracker = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -68,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -83,6 +89,7 @@
             // 
             // MainPage
             // 
+            this.MainPage.Controls.Add(this.groupBox3);
             this.MainPage.Controls.Add(this.label14);
             this.MainPage.Controls.Add(this.groupBox4);
             this.MainPage.Controls.Add(this.groupBox2);
@@ -101,7 +108,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(207, 21);
+            this.label14.Location = new System.Drawing.Point(224, 30);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(337, 25);
             this.label14.TabIndex = 17;
@@ -111,9 +118,9 @@
             // 
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.listCode);
-            this.groupBox4.Location = new System.Drawing.Point(102, 254);
+            this.groupBox4.Location = new System.Drawing.Point(22, 254);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(315, 124);
+            this.groupBox4.Size = new System.Drawing.Size(261, 124);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Code Display";
@@ -133,15 +140,15 @@
             this.listCode.FormattingEnabled = true;
             this.listCode.Location = new System.Drawing.Point(36, 58);
             this.listCode.Name = "listCode";
-            this.listCode.Size = new System.Drawing.Size(235, 30);
+            this.listCode.Size = new System.Drawing.Size(161, 30);
             this.listCode.TabIndex = 14;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listPrev);
-            this.groupBox2.Location = new System.Drawing.Point(450, 100);
+            this.groupBox2.Location = new System.Drawing.Point(519, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(264, 278);
+            this.groupBox2.Size = new System.Drawing.Size(230, 278);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Previous Vistis";
@@ -149,9 +156,9 @@
             // listPrev
             // 
             this.listPrev.FormattingEnabled = true;
-            this.listPrev.Location = new System.Drawing.Point(41, 40);
+            this.listPrev.Location = new System.Drawing.Point(21, 30);
             this.listPrev.Name = "listPrev";
-            this.listPrev.Size = new System.Drawing.Size(188, 212);
+            this.listPrev.Size = new System.Drawing.Size(188, 225);
             this.listPrev.TabIndex = 7;
             // 
             // groupBox1
@@ -159,9 +166,9 @@
             this.groupBox1.Controls.Add(this.btnRequest);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(102, 100);
+            this.groupBox1.Location = new System.Drawing.Point(22, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 135);
+            this.groupBox1.Size = new System.Drawing.Size(261, 135);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Request Code";
@@ -190,7 +197,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(397, 52);
+            this.label5.Location = new System.Drawing.Point(417, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 18);
             this.label5.TabIndex = 11;
@@ -200,7 +207,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(291, 52);
+            this.label2.Location = new System.Drawing.Point(311, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 18);
             this.label2.TabIndex = 10;
@@ -397,6 +404,36 @@
             this.label13.TabIndex = 11;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(37, 28);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(108, 36);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "Start Time";
+            this.btnStart.UseVisualStyleBackColor = true;
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(37, 84);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(108, 36);
+            this.btnStop.TabIndex = 18;
+            this.btnStop.Text = "Stop Time";
+            this.btnStop.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnStop);
+            this.groupBox3.Controls.Add(this.btnStart);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(314, 100);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(181, 277);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Timer";
+            // 
             // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +457,7 @@
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -457,5 +495,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDelete;
         private System.Windows.Forms.Button txtDisplay;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Timer timeTracker;
     }
 }
