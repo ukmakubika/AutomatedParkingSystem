@@ -24,8 +24,7 @@ namespace AutomatedTicketSystemProject_Group6
             {
                 if (rbManager.Checked)
                 {
-                    txtCode.Enabled = true;
-                    label6.Visible = true;
+                    
                     if (txtCode.Text.Length != 0)
                     {
                         string username, answer, securityQuestion, newPassword, passwordConfirm, code;
@@ -41,25 +40,87 @@ namespace AutomatedTicketSystemProject_Group6
                         {
                             try
                             {
-                                string managerDetails = " ";
-
-                                StreamReader inputFile;
-                                inputFile = File.OpenText("ManagerDetails.txt");
-
-                                while (!inputFile.EndOfStream)
+                                string[] managerDetails = File.ReadAllText("ManagerDetails.txt").Split(' ');
+                                string managerSearch = username;
+                                string questionSearch = securityQuestion;
+                                string answerSearch = answer;
+                                string codeSearch = code;
+                                bool condition1 = false;
+                                bool condition2 = false;
+                                bool condition3 = false;
+                                for (int i = 0; i < managerDetails.Length; i++)
                                 {
-                                    managerDetails += inputFile.ReadLine();
+                                    if (managerDetails[i].Contains(managerSearch) == true)
+                                    {
+                                        condition1 = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        condition1 = false;
+                                    }
+
                                 }
-                                if ((managerDetails.Contains(username)) && (managerDetails.Contains(securityQuestion)) && (managerDetails.Contains(answer)) && (managerDetails.Contains(code)))
+                                for (int i = 0; i < managerDetails.Length; i++)
                                 {
-                                    StreamWriter outputFile;
-                                    outputFile = File.AppendText("ManagerDetails.txt");
+                                    if (managerDetails[i].Contains(answerSearch) == true)
+                                    {
+                                        condition2 = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        condition2 = false;
+                                    }
+                                }
+                                for (int i = 0; i < managerDetails.Length; i++)
+                                {
+                                    if (managerDetails[i].Contains(codeSearch) == true)
+                                    {
+                                        condition3 = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        condition3 = false;
+                                    }
 
-                                    outputFile.WriteLine(username + " " + newPassword + " " + securityQuestion + " " + answer + " " + code);
+                                }
+                                if ((condition1 == true))
+                                {
+                                    if (condition2 == true)
+                                    {
+                                        if (condition3 == true)
+                                        {
+                                            StreamWriter outputFile;
 
-                                    outputFile.Close();
-                                    MessageBox.Show("Password changed successfully!");
-                                    this.Close();
+                                            outputFile = File.AppendText("ManagerDetails.txt");
+
+                                            outputFile.WriteLine(username + " " + newPassword + " " + securityQuestion + " " + answer + " " + code);
+
+                                            outputFile.Close();
+
+                                            MessageBox.Show("Password changed successfully.");
+
+                                            this.Close();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Manager code error");
+                                            txtAnswer.Text = " ";
+                                            txtAnswer.Focus();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Invalid Answer Code");
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid username");
+                                    txtUsername.Text = " ";
+                                    txtUsername.Focus();
                                 }
                             }
                             catch (Exception error)
@@ -76,8 +137,6 @@ namespace AutomatedTicketSystemProject_Group6
                 }
                 if (rbClient.Checked)
                 {
-                    txtCode.Enabled = false;
-                    label6.Visible = false;
                     string username, answer, securityQuestion, newPassword, passwordConfirm;
 
                     username = txtUsername.Text;
@@ -90,25 +149,60 @@ namespace AutomatedTicketSystemProject_Group6
                     {
                         try
                         {
-                            string clientDetails = " ";
-
-                            StreamReader inputFile;
-                            inputFile = File.OpenText("UserDetails.txt");
-
-                            while (!inputFile.EndOfStream)
+                            string[] managerDetails = File.ReadAllText("UserDetails.txt").Split(' ');
+                            string userSearch = username;
+                            string questionSearch = securityQuestion;
+                            string answerSearch = answer;
+                            bool condition1 = false;
+                            bool condition2 = false;
+                            for (int i = 0; i < managerDetails.Length; i++)
                             {
-                                clientDetails += inputFile.ReadLine();
+                                if (managerDetails[i].Contains(userSearch) == true)
+                                {
+                                    condition1 = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    condition1 = false;
+                                }
+
                             }
-                            if ((clientDetails.Contains(username)) && (clientDetails.Contains(securityQuestion)) && (clientDetails.Contains(answer)))
+                            for (int i = 0; i < managerDetails.Length; i++)
                             {
-                                StreamWriter outputFile;
-                                outputFile = File.AppendText("UserDetails.txt");
+                                if (managerDetails[i].Contains(answer) == true)
+                                {
+                                    condition2 = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    condition2 = false;
+                                }
+                            }
+                            if ((condition1 == true))
+                            {
+                                if (condition2 == true)
+                                {
+                                    StreamWriter outputFile;
+                                    outputFile = File.AppendText("UserDetails.txt");
 
-                                outputFile.WriteLine(username + " " + newPassword + " " + securityQuestion + " " + answer);
+                                    outputFile.WriteLine(username + " " + newPassword + " " + securityQuestion + " " + answer);
 
-                                outputFile.Close();
-                                MessageBox.Show("Password changed successfully!");
-                                this.Close();
+                                    outputFile.Close();
+                                    MessageBox.Show("Password changed successfully!");
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid Answer to Question");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid username");
+                                txtUsername.Text = " ";
+                                txtUsername.Focus();
                             }
                         }
                         catch (Exception error)
@@ -121,10 +215,6 @@ namespace AutomatedTicketSystemProject_Group6
                         MessageBox.Show("Passwords don't match");
                     }
 
-                }
-                else
-                {
-                    MessageBox.Show("Please indicate whether you are a client or manager");
                 }
             }
             else
@@ -140,14 +230,16 @@ namespace AutomatedTicketSystemProject_Group6
             label6.Visible = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void rbManager_CheckedChanged(object sender, EventArgs e)
         {
-            this.Close();
+            txtCode.Enabled = true;
+            label6.Visible = true;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void rbClient_CheckedChanged(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            txtCode.Enabled = false;
+            label6.Visible = false;
         }
     }
 }

@@ -85,27 +85,79 @@ namespace AutomatedTicketSystemProject_Group6
                         code = txtCode.Text;
                         try
                         {
-                            string managerDetails = " ";
-
-                            StreamReader inputFile;
-                            inputFile = File.OpenText("ManagerDetails.txt");
-
-                            while (!inputFile.EndOfStream)
+                            string[] managerDetails = File.ReadAllText("ManagerDetails.txt").Split(' ');
+                            string managerSearch = userName;
+                            string passwordSearch = password;
+                            string codeSearch = code;
+                            bool condition1 = false;
+                            bool condition2 = false;
+                            bool condition3 = false;
+                            for (int i = 0; i < managerDetails.Length; i++)
                             {
-                                managerDetails += inputFile.ReadLine();
+                                if (managerDetails[i].Contains(managerSearch) == true)
+                                {
+                                    condition1 = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    condition1 = false;
+                                }
+
                             }
-                            if ((managerDetails.Contains(userName)) && (managerDetails.Contains(password)) && (managerDetails.Contains(code)))
+                            for (int i = 0; i < managerDetails.Length; i++)
                             {
-                                MessageBox.Show("Logged in");
-                                ManagerInterface managerFrm = new ManagerInterface();
-                                managerFrm.ShowDialog();
+                                if (managerDetails[i].Contains(passwordSearch) == true)
+                                {
+                                    condition2 = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    condition2 = false;
+                                }
+                            }
+                            for (int i = 0; i < managerDetails.Length; i++)
+                            {
+                                if (managerDetails[i].Contains(codeSearch) == true)
+                                {
+                                    condition3 = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    condition3 = false;
+                                }
+
+                            }
+                            if ((condition1 == true))
+                            {
+                                if (condition2 == true)
+                                {
+                                    if (condition3 == true)
+                                    {
+                                        MessageBox.Show("Logged in");
+                                        ManagerInterface managerFrm = new ManagerInterface();
+                                        managerFrm.ShowDialog();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Invalid Manager Code");
+                                        txtCode.Text = " ";
+                                        txtCode.Focus();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid password");
+                                    txtPassword.Text = " ";
+                                    txtPassword.Focus();
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Incorrect login details");
+                                MessageBox.Show("Invalid username");
                                 txtUsername.Text = " ";
-                                txtPassword.Text = " ";
-                                txtCode.Text = " ";
                                 txtUsername.Focus();
                             }
                         }
@@ -125,33 +177,56 @@ namespace AutomatedTicketSystemProject_Group6
                     password = txtPassword.Text;
                     try
                     {
-                        string userDetails = " ";
 
-                        StreamReader inputFile;
-                        inputFile = File.OpenText("UserDetails.txt");
-
-                        while (!inputFile.EndOfStream)
+                        string[] userDetails = File.ReadAllText("UserDetails.txt").Split(' ');
+                        string userSearch = userName;
+                        string passwordSearch = password;
+                        bool condition1 = false;
+                        bool condition2 = false;
+                        for (int i = 0; i < userDetails.Length; i++)
                         {
-                            userDetails += inputFile.ReadLine();
-                            
-                            
+                            if (userDetails[i].Contains(userSearch) == true)
+                            {
+                                condition1 = true;
+                                break;
+                            }
+                            else
+                            {
+                                condition1 = false;
+                            }
+
                         }
-                        if (File.ReadAllText("UserDetails.txt").Contains(userName))
+                        for (int i = 0; i < userDetails.Length; i++)
                         {
-                            if (File.ReadAllText("UserDetails.txt").Contains(password))
+                            if (userDetails[i].Contains(passwordSearch) == true)
+                            {
+                                condition2 = true;
+                                break;
+                            }
+                            else
+                            {
+                                condition2 = false;
+                            }
+                        }
+                        if ((condition1 == true))
+                        {
+                            if (condition2 == true)
                             {
                                 MessageBox.Show("Logged in");
                                 CustomerInterface customerInt = new CustomerInterface();
                                 customerInt.ShowDialog();
                             }
-                            
-
+                            else
+                            {
+                                MessageBox.Show("Invalid password");
+                                txtPassword.Text = " ";
+                                txtPassword.Focus();
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Invalid username or password");
+                            MessageBox.Show("Invalid username");
                             txtUsername.Text = " ";
-                            txtPassword.Text = " ";
                             txtUsername.Focus();
                         }
                     }

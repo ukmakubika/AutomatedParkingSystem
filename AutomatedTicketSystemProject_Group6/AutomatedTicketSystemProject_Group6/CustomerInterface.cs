@@ -18,6 +18,9 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
 
+        public int code;
+        public int time;
+
         //Connection of data
         SqlConnection connection;
         string cnctString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -26,17 +29,67 @@ namespace AutomatedTicketSystemProject_Group6
         SqlDataAdapter adapter;
         SqlCommand command;
         DataSet data;
+        SqlDataReader reader;
+
+        private void cbFAQ_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbFAQ.SelectedItem.ToString() == "Where can I get my Requested Code code?")
+            {
+                listAnswer.Items.Clear();
+                listAnswer.Items.Add("Press the Request Code button on the Main Page.");
+                listAnswer.Items.Add("Your code will appear in the display box.");
+            }
+            if (cbFAQ.SelectedItem.ToString() == "Which bank cards are accepted on the Automated Parking System?")
+            {
+                listAnswer.Items.Clear();
+                listAnswer.Items.Add("The banks availible on the Automated Parking System");
+                listAnswer.Items.Add("can be found in the Payment Details page when you click");
+                listAnswer.Items.Add("the Bank Name selection box.");
+            }
+            if (cbFAQ.SelectedItem.ToString() == "Is there a fee to use the Automated Parking System app?")
+            {
+                listAnswer.Items.Clear();
+                listAnswer.Items.Add("No. Automated Parking System is a free-to-use");
+            }
+            if (cbFAQ.SelectedItem.ToString() == "How do I add/remove a bank card on the \nAutomated Parking System app?")
+            {
+                listAnswer.Items.Clear();
+                listAnswer.Items.Add("Under the Payment Details tab, Press the Add New button");
+                listAnswer.Items.Add("to add a new card and press the Remove Card option to");
+                listAnswer.Items.Add("remove a card of your choosing.");
+            }
+            if (cbFAQ.SelectedItem.ToString() == "How do I set default card on the Automated Parking System app?")
+            {
+                listAnswer.Items.Clear();
+                listAnswer.Items.Add("Under the Payment Deatils tab,");
+                listAnswer.Items.Add("Click the set default button");
+                listAnswer.Items.Add("and select the card you would like to set as your default.");
+            }
+            if (cbFAQ.SelectedItem.ToString() == "What if I forget my password?")
+            {
+                listAnswer.Items.Clear();
+                listAnswer.Items.Add("Choose the edit account details page and");
+                listAnswer.Items.Add("select the change password option.");
+            }
+        }
 
         private void btnRequest_Click_1(object sender, EventArgs e)
         {
-            int code;
+
+            //int code;
+            listCode.Items.Clear();
+            
             Random requestedCode = new Random();
             code = requestedCode.Next(10000, 99999);
             DateTime thisday = DateTime.Today;
 
-            listCode.Items.Clear();
             listCode.Items.Add(code.ToString());
-            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
+
+            btnStart.Enabled = true;
+            btnStop.Enabled = true;
+            btnPay.Enabled = true;
+            
+
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -71,10 +124,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         }
 
-        private void CustomerInterface_Load(object sender, EventArgs e)
-        {
-            loadAll();
-        }
+        
 
         private void loadAll()
         {
@@ -109,12 +159,110 @@ namespace AutomatedTicketSystemProject_Group6
 
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void btnStop_Click(object sender, EventArgs e)
         {
+            isActive = false;
+            timeS = 0;
+            timeMin = 0;
+            timeH = 0;
 
+            //timeTracker.Stop();
+
+            DateTime thisday = DateTime.Today;
+
+            time = int.Parse(String.Format("{0:00}", timeH));  
+
+            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
+            listPrev.Items.Add("-------------------------------------------------------------");
+            listPrev.Items.Add("Time Elapsed: " + String.Format("{0:00}", timeH).ToString() + ":" + String.Format("{0:00}", timeMin).ToString() + ":" + timeSeconds.Text);
+            listPrev.Items.Add("-------------------------------------------------------------");
+        }
+
+        private void timeTracker_Tick(object sender, EventArgs e)
+        {
+            if (isActive)
+            {
+                timeS++;
+
+                if (timeS >= 60)
+                {
+                    timeMin++;
+                    timeS = 0;
+
+                    if (timeMin >= 60)
+                    {
+                        timeH++;
+                        timeMin = 0;
+                    }
+                }
+               
+            }
+            ShowTime();
+           
+        }
+
+        public void ShowTime()
+        {
+            timeSeconds.Text = String.Format("{0:00}", timeS);
+            timeMinutes.Text = String.Format("{0:00}", timeMin);
+            timeHours.Text = String.Format("{0:00}", timeH);
+        }
+
+        int timeS, timeMin, timeH;
+        bool isActive;
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            //timeTracker.Start();
+            
+
+            isActive = true;
+        }
+
+        private void CustomerInterface_Load(object sender, EventArgs e)
+        {
+            loadAll();
+
+            listPrev.Items.Add("Code \t Today");
+            listPrev.Items.Add("===============================");
+
+            timeS = 0;
+            timeMin = 0;
+            timeH = 0;
+
+            isActive = false;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(cnctString);
+
+            connection.Open();
+
+            //string output;
+            string searchName = $"SELECT * from BANK WHERE Name LIKE '%" + txtSearch.Text + "%'";
+            command = new SqlCommand(searchName, connection);
+
+            reader = command.ExecuteReader();
+
+            /*lbDisplay.Items.Clear();
+
+            while (reader.Read())
+            {
+                output = reader.GetValue(0) + "\t" + reader.GetValue(1) + "\t\t" + reader.GetValue(2) + "\t\t" + reader.GetValue(3);
+                lbDisplay.Items.Add(output);
+            }*/
+
+            connection.Close();
         }
 
         private void btnPay_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            payment.ShowDialog();
+        }
+
+        private void label18_Click(object sender, EventArgs e)
         {
 
         }
