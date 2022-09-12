@@ -70,6 +70,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -82,6 +85,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,6 +103,7 @@
             // 
             this.MainPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPage.BackgroundImage")));
             this.MainPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPage.Controls.Add(this.groupBox6);
             this.MainPage.Controls.Add(this.label14);
             this.MainPage.Controls.Add(this.groupBox4);
             this.MainPage.Controls.Add(this.groupBox2);
@@ -107,7 +112,7 @@
             this.MainPage.Controls.Add(this.label2);
             this.MainPage.Location = new System.Drawing.Point(4, 22);
             this.MainPage.Name = "MainPage";
-            this.MainPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.MainPage.Padding = new System.Windows.Forms.Padding(3);
             this.MainPage.Size = new System.Drawing.Size(741, 399);
             this.MainPage.TabIndex = 0;
             this.MainPage.Text = "Main Page";
@@ -235,7 +240,7 @@
             this.PaymentDetails.Controls.Add(this.btnSave);
             this.PaymentDetails.Location = new System.Drawing.Point(4, 22);
             this.PaymentDetails.Name = "PaymentDetails";
-            this.PaymentDetails.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.PaymentDetails.Padding = new System.Windows.Forms.Padding(3);
             this.PaymentDetails.Size = new System.Drawing.Size(741, 399);
             this.PaymentDetails.TabIndex = 1;
             this.PaymentDetails.Text = "Payment Details";
@@ -521,7 +526,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 465);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 24);
             this.panel1.TabIndex = 1;
@@ -534,7 +539,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 25);
             this.panel2.TabIndex = 18;
@@ -543,7 +548,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(728, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 18);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -567,7 +572,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(780, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(18, 19);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -580,7 +585,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 25);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(20, 440);
             this.panel3.TabIndex = 18;
@@ -590,10 +595,40 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(780, 25);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(20, 440);
             this.panel4.TabIndex = 18;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnStop);
+            this.groupBox6.Controls.Add(this.btnStart);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(296, 101);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(181, 277);
+            this.groupBox6.TabIndex = 20;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Timer";
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(37, 84);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(108, 36);
+            this.btnStop.TabIndex = 18;
+            this.btnStop.Text = "Stop Time";
+            this.btnStop.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(37, 28);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(108, 36);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "Start Time";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // CustomerInterface
             // 
@@ -626,6 +661,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -673,5 +709,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnStart;
     }
 }
