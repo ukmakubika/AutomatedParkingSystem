@@ -42,6 +42,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PaymentDetails = new System.Windows.Forms.TabPage();
+            this.txtDisplay = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dbBankAccounts = new System.Windows.Forms.DataGridView();
             this.Help = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listAnswer = new System.Windows.Forms.ListBox();
@@ -49,25 +59,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dbBankAccounts = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtDelete = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDisplay = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.PaymentDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -227,6 +227,98 @@
             this.PaymentDetails.UseVisualStyleBackColor = true;
             this.PaymentDetails.Click += new System.EventHandler(this.PaymentDetails_Click);
             // 
+            // txtDisplay
+            // 
+            this.txtDisplay.Location = new System.Drawing.Point(34, 153);
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.Size = new System.Drawing.Size(104, 36);
+            this.txtDisplay.TabIndex = 9;
+            this.txtDisplay.Text = "Show All";
+            this.txtDisplay.UseVisualStyleBackColor = true;
+            this.txtDisplay.Click += new System.EventHandler(this.txtDisplay_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(31, 330);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Card to Delete";
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.Location = new System.Drawing.Point(33, 349);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(205, 20);
+            this.txtDelete.TabIndex = 7;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(337, 31);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(65, 24);
+            this.lblName.TabIndex = 6;
+            this.lblName.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(312, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "What would you like to do today,";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(35, 108);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(205, 20);
+            this.txtSearch.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(33, 276);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 36);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(35, 212);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(104, 36);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // dbBankAccounts
+            // 
+            this.dbBankAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbBankAccounts.Location = new System.Drawing.Point(299, 89);
+            this.dbBankAccounts.Name = "dbBankAccounts";
+            this.dbBankAccounts.Size = new System.Drawing.Size(434, 280);
+            this.dbBankAccounts.TabIndex = 0;
+            // 
             // Help
             // 
             this.Help.Controls.Add(this.groupBox5);
@@ -305,98 +397,6 @@
             this.label13.TabIndex = 11;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // dbBankAccounts
-            // 
-            this.dbBankAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbBankAccounts.Location = new System.Drawing.Point(299, 80);
-            this.dbBankAccounts.Name = "dbBankAccounts";
-            this.dbBankAccounts.Size = new System.Drawing.Size(434, 290);
-            this.dbBankAccounts.TabIndex = 0;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(35, 212);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 36);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(33, 276);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(104, 36);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Search";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(35, 108);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(205, 20);
-            this.txtSearch.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(312, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "What would you like to do today,";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(337, 31);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(65, 24);
-            this.lblName.TabIndex = 6;
-            this.lblName.Text = "Name";
-            // 
-            // txtDelete
-            // 
-            this.txtDelete.Location = new System.Drawing.Point(33, 349);
-            this.txtDelete.Name = "txtDelete";
-            this.txtDelete.Size = new System.Drawing.Size(205, 20);
-            this.txtDelete.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 330);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Card to Delete";
-            // 
-            // txtDisplay
-            // 
-            this.txtDisplay.Location = new System.Drawing.Point(34, 153);
-            this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(104, 36);
-            this.txtDisplay.TabIndex = 9;
-            this.txtDisplay.Text = "Show All";
-            this.txtDisplay.UseVisualStyleBackColor = true;
-            this.txtDisplay.Click += new System.EventHandler(this.txtDisplay_Click);
-            // 
             // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +404,7 @@
             this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.tabControl1);
             this.Name = "CustomerInterface";
-            this.Text = "Functions";
+            this.Text = "Customer Interface";
             this.Load += new System.EventHandler(this.CustomerInterface_Load);
             this.tabControl1.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
@@ -416,10 +416,10 @@
             this.groupBox1.PerformLayout();
             this.PaymentDetails.ResumeLayout(false);
             this.PaymentDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
             this.ResumeLayout(false);
 
         }
