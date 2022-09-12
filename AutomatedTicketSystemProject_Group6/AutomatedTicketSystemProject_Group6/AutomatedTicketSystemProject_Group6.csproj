@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCard.Designer.cs">
+      <DependentUpon>AddCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="CustomerInterface.Designer.cs">
       <DependentUpon>CustomerInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -78,11 +90,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCard.resx">
+      <DependentUpon>AddCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientSignUp.resx">
       <DependentUpon>ClientSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerInterface.resx">
       <DependentUpon>CustomerInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -95,18 +113,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -117,25 +135,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pexels-brett-sayles-1756957.jpg" />
+    <None Include="Resources\pexels-monstera-7794440 %281%29 %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pexels-monstera-7794440.jpg" />
+    <None Include="Resources\pexels-brett-sayles-1756957 %282%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Nduv.png" />
+    <None Include="Resources\pexels-monstera-7794440 %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Nduv2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-pixabay-257416.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Nd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ndu.png" />
+    <None Include="Resources\icons8-close-window-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

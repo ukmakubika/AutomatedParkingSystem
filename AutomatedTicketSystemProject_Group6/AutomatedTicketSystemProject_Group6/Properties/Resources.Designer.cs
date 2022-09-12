@@ -63,9 +63,9 @@ namespace AutomatedTicketSystemProject_Group6.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Nd {
+        internal static System.Drawing.Bitmap icons8_close_window_24 {
             get {
-                object obj = ResourceManager.GetObject("Nd", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-close-window-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace AutomatedTicketSystemProject_Group6.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ndu {
+        internal static System.Drawing.Bitmap pexels_brett_sayles_1756957__2_ {
             get {
-                object obj = ResourceManager.GetObject("Ndu", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels-brett-sayles-1756957 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace AutomatedTicketSystemProject_Group6.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Nduv {
+        internal static System.Drawing.Bitmap pexels_monstera_7794440__1_ {
             get {
-                object obj = ResourceManager.GetObject("Nduv", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels-monstera-7794440 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,39 +93,9 @@ namespace AutomatedTicketSystemProject_Group6.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Nduv2 {
+        internal static System.Drawing.Bitmap pexels_monstera_7794440__1___1_ {
             get {
-                object obj = ResourceManager.GetObject("Nduv2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_brett_sayles_1756957 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-brett-sayles-1756957", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_monstera_7794440 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-monstera-7794440", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_pixabay_257416 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-pixabay-257416", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels-monstera-7794440 (1) (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
