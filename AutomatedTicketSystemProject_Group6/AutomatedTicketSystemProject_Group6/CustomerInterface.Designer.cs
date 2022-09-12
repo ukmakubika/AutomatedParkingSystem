@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,12 +63,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timeTracker = new System.Windows.Forms.Timer(this.components);
+            this.listCosts = new System.Windows.Forms.ListBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,6 +106,36 @@
             this.MainPage.TabIndex = 0;
             this.MainPage.Text = "Main Page";
             this.MainPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnStop);
+            this.groupBox3.Controls.Add(this.btnStart);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(314, 100);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(181, 277);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Timer";
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(37, 84);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(108, 36);
+            this.btnStop.TabIndex = 18;
+            this.btnStop.Text = "Stop Time";
+            this.btnStop.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(37, 28);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(108, 36);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "Start Time";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -328,6 +361,7 @@
             // 
             // Help
             // 
+            this.Help.Controls.Add(this.groupBox6);
             this.Help.Controls.Add(this.groupBox5);
             this.Help.Controls.Add(this.label11);
             this.Help.Controls.Add(this.label12);
@@ -343,9 +377,9 @@
             // 
             this.groupBox5.Controls.Add(this.listAnswer);
             this.groupBox5.Controls.Add(this.cbFAQ);
-            this.groupBox5.Location = new System.Drawing.Point(205, 130);
+            this.groupBox5.Location = new System.Drawing.Point(39, 118);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(353, 187);
+            this.groupBox5.Size = new System.Drawing.Size(353, 263);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Frequently Asked Quetsions";
@@ -355,7 +389,7 @@
             this.listAnswer.FormattingEnabled = true;
             this.listAnswer.Location = new System.Drawing.Point(17, 103);
             this.listAnswer.Name = "listAnswer";
-            this.listAnswer.Size = new System.Drawing.Size(321, 56);
+            this.listAnswer.Size = new System.Drawing.Size(321, 134);
             this.listAnswer.TabIndex = 15;
             // 
             // cbFAQ
@@ -404,35 +438,37 @@
             this.label13.TabIndex = 11;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // btnStart
+            // listCosts
             // 
-            this.btnStart.Location = new System.Drawing.Point(37, 28);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(108, 36);
-            this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "Start Time";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.listCosts.FormattingEnabled = true;
+            this.listCosts.Items.AddRange(new object[] {
+            "0 - 1 hours\t R5",
+            "",
+            "1-2 hours\t \tR10",
+            "",
+            "2-3 hours\t \tR10",
+            "",
+            "3-4 hours\t \tR10",
+            "",
+            "4-5 hours\t \tR10",
+            "",
+            "5-6 hours\t \tR10",
+            "",
+            "6+ hours\t \tR40"});
+            this.listCosts.Location = new System.Drawing.Point(44, 38);
+            this.listCosts.Name = "listCosts";
+            this.listCosts.Size = new System.Drawing.Size(214, 186);
+            this.listCosts.TabIndex = 16;
             // 
-            // btnStop
+            // groupBox6
             // 
-            this.btnStop.Location = new System.Drawing.Point(37, 84);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(108, 36);
-            this.btnStop.TabIndex = 18;
-            this.btnStop.Text = "Stop Time";
-            this.btnStop.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnStop);
-            this.groupBox3.Controls.Add(this.btnStart);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(314, 100);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(181, 277);
-            this.groupBox3.TabIndex = 19;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Timer";
+            this.groupBox6.Controls.Add(this.listCosts);
+            this.groupBox6.Location = new System.Drawing.Point(423, 118);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(305, 263);
+            this.groupBox6.TabIndex = 17;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Parking Fees";
             // 
             // CustomerInterface
             // 
@@ -446,6 +482,7 @@
             this.tabControl1.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
             this.MainPage.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -457,7 +494,7 @@
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -499,5 +536,7 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Timer timeTracker;
+        private System.Windows.Forms.ListBox listCosts;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
