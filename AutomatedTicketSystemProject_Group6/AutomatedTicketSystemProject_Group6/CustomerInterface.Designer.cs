@@ -56,14 +56,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dbBankAccounts = new System.Windows.Forms.DataGridView();
+            this.EditProfile = new System.Windows.Forms.TabPage();
             this.Help = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listCosts = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -72,7 +66,28 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.EditProfile = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.listDeatail = new System.Windows.Forms.ListBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbUpdate = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.tbnUpdate = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -81,12 +96,16 @@
             this.groupBox1.SuspendLayout();
             this.PaymentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
+            this.EditProfile.SuspendLayout();
             this.Help.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -375,6 +394,18 @@
             this.dbBankAccounts.Size = new System.Drawing.Size(434, 280);
             this.dbBankAccounts.TabIndex = 10;
             // 
+            // EditProfile
+            // 
+            this.EditProfile.Controls.Add(this.groupBox9);
+            this.EditProfile.Controls.Add(this.groupBox8);
+            this.EditProfile.Controls.Add(this.groupBox7);
+            this.EditProfile.Location = new System.Drawing.Point(4, 22);
+            this.EditProfile.Name = "EditProfile";
+            this.EditProfile.Size = new System.Drawing.Size(741, 399);
+            this.EditProfile.TabIndex = 3;
+            this.EditProfile.Text = "Edit Profile";
+            this.EditProfile.UseVisualStyleBackColor = true;
+            // 
             // Help
             // 
             this.Help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Help.BackgroundImage")));
@@ -389,85 +420,6 @@
             this.Help.TabIndex = 2;
             this.Help.Text = "Help ";
             this.Help.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 465);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 24);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 25);
-            this.panel2.TabIndex = 18;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(728, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 18);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(333, 6);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 15);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Customer Interface";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(780, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 25);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(20, 440);
-            this.panel3.TabIndex = 18;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(780, 25);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(20, 440);
-            this.panel4.TabIndex = 18;
             // 
             // groupBox3
             // 
@@ -565,14 +517,239 @@
             this.label13.TabIndex = 18;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // EditProfile
+            // panel1
             // 
-            this.EditProfile.Location = new System.Drawing.Point(4, 22);
-            this.EditProfile.Name = "EditProfile";
-            this.EditProfile.Size = new System.Drawing.Size(741, 399);
-            this.EditProfile.TabIndex = 3;
-            this.EditProfile.Text = "Edit Profile";
-            this.EditProfile.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 465);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 24);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 25);
+            this.panel2.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(728, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(333, 6);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 15);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Customer Interface";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(780, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 25);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(20, 440);
+            this.panel3.TabIndex = 18;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(780, 25);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(20, 440);
+            this.panel4.TabIndex = 18;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.listDeatail);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(388, 28);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(338, 141);
+            this.groupBox9.TabIndex = 76;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Saved Detail";
+            // 
+            // listDeatail
+            // 
+            this.listDeatail.FormattingEnabled = true;
+            this.listDeatail.ItemHeight = 15;
+            this.listDeatail.Location = new System.Drawing.Point(69, 63);
+            this.listDeatail.Name = "listDeatail";
+            this.listDeatail.Size = new System.Drawing.Size(215, 19);
+            this.listDeatail.TabIndex = 72;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label8);
+            this.groupBox8.Controls.Add(this.cbUpdate);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(16, 28);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(350, 141);
+            this.groupBox8.TabIndex = 75;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Selection";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(23, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(209, 15);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "What detail would you like to update?";
+            // 
+            // cbUpdate
+            // 
+            this.cbUpdate.FormattingEnabled = true;
+            this.cbUpdate.Items.AddRange(new object[] {
+            "Surname",
+            "Email Address",
+            "Username ",
+            "Contact Number"});
+            this.cbUpdate.Location = new System.Drawing.Point(26, 72);
+            this.cbUpdate.Name = "cbUpdate";
+            this.cbUpdate.Size = new System.Drawing.Size(215, 23);
+            this.cbUpdate.TabIndex = 69;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.tbnUpdate);
+            this.groupBox7.Controls.Add(this.txtUsername);
+            this.groupBox7.Controls.Add(this.txtEmail);
+            this.groupBox7.Controls.Add(this.txtContact);
+            this.groupBox7.Controls.Add(this.txtSurname);
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(16, 196);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(710, 175);
+            this.groupBox7.TabIndex = 74;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Personal Deatils";
+            // 
+            // tbnUpdate
+            // 
+            this.tbnUpdate.Location = new System.Drawing.Point(26, 122);
+            this.tbnUpdate.Name = "tbnUpdate";
+            this.tbnUpdate.Size = new System.Drawing.Size(95, 28);
+            this.tbnUpdate.TabIndex = 69;
+            this.tbnUpdate.Text = "Update";
+            this.tbnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Enabled = false;
+            this.txtUsername.Location = new System.Drawing.Point(482, 35);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(215, 21);
+            this.txtUsername.TabIndex = 68;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(136, 77);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(215, 21);
+            this.txtEmail.TabIndex = 67;
+            // 
+            // txtContact
+            // 
+            this.txtContact.Enabled = false;
+            this.txtContact.Location = new System.Drawing.Point(482, 80);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(215, 21);
+            this.txtContact.TabIndex = 65;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Enabled = false;
+            this.txtSurname.Location = new System.Drawing.Point(136, 38);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(215, 21);
+            this.txtSurname.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(369, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 16);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Username:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(23, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 16);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Email Address:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(369, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 16);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Contact Number:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(23, 41);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(64, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Surname:";
             // 
             // CustomerInterface
             // 
@@ -599,14 +776,20 @@
             this.PaymentDetails.ResumeLayout(false);
             this.PaymentDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
+            this.EditProfile.ResumeLayout(false);
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -657,5 +840,20 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ListBox listDeatail;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbUpdate;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button tbnUpdate;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }
