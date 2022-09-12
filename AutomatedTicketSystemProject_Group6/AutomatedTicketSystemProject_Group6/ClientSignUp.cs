@@ -20,7 +20,7 @@ namespace AutomatedTicketSystemProject_Group6
         public string answer;
         public string securityQuestion;
 
-        string connectString = @"Data Source=LAPTOP-9UVIJHCO;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         private void label11_Click(object sender, EventArgs e)
         {
@@ -43,6 +43,11 @@ namespace AutomatedTicketSystemProject_Group6
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         SqlDataAdapter adapter;

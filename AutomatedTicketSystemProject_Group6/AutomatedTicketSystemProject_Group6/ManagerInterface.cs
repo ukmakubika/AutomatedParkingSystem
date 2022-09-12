@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace AutomatedTicketSystemProject_Group6
 {
@@ -16,7 +18,12 @@ namespace AutomatedTicketSystemProject_Group6
         {
             InitializeComponent();
         }
-
+        string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataReader reader;
+        SqlDataAdapter adapter;
+        DataSet dataSet;
         private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
         {
            
@@ -56,6 +63,30 @@ namespace AutomatedTicketSystemProject_Group6
             rbHighToLow.Enabled = true;
             rbName.Enabled = true;
             rbLongestHours.Enabled = true;
+            if (rbName.Checked)
+            {
+                try
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT Client_FName, Client_LName FROM CLIENT";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0) + "\t" + reader.GetValue(1));
+                    }
+
+                    connection.Close();
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
         }
 
         private void cbGeneral_SelectedIndexChanged(object sender, EventArgs e)

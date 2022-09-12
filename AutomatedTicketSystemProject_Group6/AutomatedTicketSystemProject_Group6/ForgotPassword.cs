@@ -241,5 +241,10 @@ namespace AutomatedTicketSystemProject_Group6
             txtCode.Enabled = false;
             label6.Visible = false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
