@@ -169,11 +169,11 @@ namespace AutomatedTicketSystemProject_Group6
 
             DateTime thisday = DateTime.Today;
 
-            time = int.Parse(timeMinutes.Text);  
+            time = int.Parse(String.Format("{0:00}", timeH));  
 
             listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
             listPrev.Items.Add("-------------------------------------------------------------");
-            listPrev.Items.Add("Time Elapsed: " + timeHours.Text + ":" + String.Format("{0:00}", timeMin).ToString() + ":" + timeSeconds.Text);
+            listPrev.Items.Add("Time Elapsed: " + String.Format("{0:00}", timeH).ToString() + ":" + String.Format("{0:00}", timeMin).ToString() + ":" + timeSeconds.Text);
             listPrev.Items.Add("-------------------------------------------------------------");
         }
 

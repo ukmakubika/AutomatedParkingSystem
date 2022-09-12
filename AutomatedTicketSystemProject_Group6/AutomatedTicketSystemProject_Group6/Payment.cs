@@ -34,6 +34,30 @@ namespace AutomatedTicketSystemProject_Group6
             {
                 btnPay.Enabled = true;
             }
+
+            CustomerInterface custInt = new CustomerInterface();
+
+            if (custInt.time < 1)
+            {
+                listAmountDue.Items.Clear();    
+                listAmountDue.Items.Add("Time Spent: " + custInt.time + " Hours");
+                listAmountDue.Items.Add("===========================================");
+                listAmountDue.Items.Add("Amount Due: R5");
+            }
+            else if (custInt.time > 1 && custInt.time <6)
+            {
+                listAmountDue.Items.Clear();
+                listAmountDue.Items.Add("Time Spent: " + custInt.time + " Hours");
+                listAmountDue.Items.Add("===========================================");
+                listAmountDue.Items.Add("Amount Due: R10");
+            }
+            else 
+            {
+                listAmountDue.Items.Clear();
+                listAmountDue.Items.Add("Time Spent: " + custInt.time + " Hours");
+                listAmountDue.Items.Add("===========================================");
+                listAmountDue.Items.Add("Amount Due: R40");
+            }
         }
     }
 }

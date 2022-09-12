@@ -46,21 +46,21 @@
             this.cbGeneral = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.HelpManager = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.listCosts = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listAnswer = new System.Windows.Forms.ListBox();
             this.cbFAQ = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.listCosts = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.Reports.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.HelpManager.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -242,7 +242,7 @@
             // 
             this.cbGeneral.FormattingEnabled = true;
             this.cbGeneral.Items.AddRange(new object[] {
-            "Most Frequent Visitors",
+            "Highest Spending Client",
             "Longest Hours Spent"});
             this.cbGeneral.Location = new System.Drawing.Point(28, 46);
             this.cbGeneral.Name = "cbGeneral";
@@ -274,6 +274,38 @@
             this.HelpManager.TabIndex = 1;
             this.HelpManager.Text = "Help";
             this.HelpManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.listCosts);
+            this.groupBox6.Location = new System.Drawing.Point(429, 106);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(305, 263);
+            this.groupBox6.TabIndex = 20;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Parking Fees";
+            // 
+            // listCosts
+            // 
+            this.listCosts.FormattingEnabled = true;
+            this.listCosts.Items.AddRange(new object[] {
+            "0 - 1 hours\t R5",
+            "",
+            "1-2 hours\t \tR10",
+            "",
+            "2-3 hours\t \tR10",
+            "",
+            "3-4 hours\t \tR10",
+            "",
+            "4-5 hours\t \tR10",
+            "",
+            "5-6 hours\t \tR10",
+            "",
+            "6+ hours\t \tR40"});
+            this.listCosts.Location = new System.Drawing.Point(44, 38);
+            this.listCosts.Name = "listCosts";
+            this.listCosts.Size = new System.Drawing.Size(214, 186);
+            this.listCosts.TabIndex = 16;
             // 
             // groupBox5
             // 
@@ -338,38 +370,6 @@
             this.label13.TabIndex = 16;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.listCosts);
-            this.groupBox6.Location = new System.Drawing.Point(429, 106);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(305, 263);
-            this.groupBox6.TabIndex = 20;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Parking Fees";
-            // 
-            // listCosts
-            // 
-            this.listCosts.FormattingEnabled = true;
-            this.listCosts.Items.AddRange(new object[] {
-            "0 - 1 hours\t R5",
-            "",
-            "1-2 hours\t \tR10",
-            "",
-            "2-3 hours\t \tR10",
-            "",
-            "3-4 hours\t \tR10",
-            "",
-            "4-5 hours\t \tR10",
-            "",
-            "5-6 hours\t \tR10",
-            "",
-            "6+ hours\t \tR40"});
-            this.listCosts.Location = new System.Drawing.Point(44, 38);
-            this.listCosts.Name = "listCosts";
-            this.listCosts.Size = new System.Drawing.Size(214, 186);
-            this.listCosts.TabIndex = 16;
-            // 
             // ManagerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,8 +386,8 @@
             this.groupBox1.PerformLayout();
             this.HelpManager.ResumeLayout(false);
             this.HelpManager.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
