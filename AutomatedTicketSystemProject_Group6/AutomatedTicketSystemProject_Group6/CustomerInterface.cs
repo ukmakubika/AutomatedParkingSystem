@@ -29,6 +29,7 @@ namespace AutomatedTicketSystemProject_Group6
         SqlDataAdapter adapter;
         SqlCommand command;
         DataSet data;
+        SqlDataReader reader;
 
         private void cbFAQ_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -230,6 +231,29 @@ namespace AutomatedTicketSystemProject_Group6
             timeH = 0;
 
             isActive = false;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(cnctString);
+
+            connection.Open();
+
+            //string output;
+            string searchName = $"SELECT * from BANK WHERE Name LIKE '%" + txtSearch.Text + "%'";
+            command = new SqlCommand(searchName, connection);
+
+            reader = command.ExecuteReader();
+
+            /*lbDisplay.Items.Clear();
+
+            while (reader.Read())
+            {
+                output = reader.GetValue(0) + "\t" + reader.GetValue(1) + "\t\t" + reader.GetValue(2) + "\t\t" + reader.GetValue(3);
+                lbDisplay.Items.Add(output);
+            }*/
+
+            connection.Close();
         }
 
         private void btnPay_Click(object sender, EventArgs e)

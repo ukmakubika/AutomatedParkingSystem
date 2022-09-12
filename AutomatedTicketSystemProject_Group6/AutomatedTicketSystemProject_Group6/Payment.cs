@@ -59,5 +59,14 @@ namespace AutomatedTicketSystemProject_Group6
                 listAmountDue.Items.Add("Amount Due: R40");
             }
         }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            listAmountDue.Items.Clear();
+            listAmountDue.Items.Add("===========================================");
+            listAmountDue.Items.Add("\t\tAmount Paid");
+            listAmountDue.Items.Add("===========================================");
+
+        }
     }
 }
