@@ -108,5 +108,15 @@ namespace AutomatedTicketSystemProject_Group6
         {
 
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
