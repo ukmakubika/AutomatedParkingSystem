@@ -145,5 +145,10 @@ namespace AutomatedTicketSystemProject_Group6
 
             //adapter, command, selectcommand, dataset, adapter, datasource, datamember
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
