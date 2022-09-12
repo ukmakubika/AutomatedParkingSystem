@@ -99,5 +99,10 @@ namespace AutomatedTicketSystemProject_Group6
                 btnCreate.Enabled = false;
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

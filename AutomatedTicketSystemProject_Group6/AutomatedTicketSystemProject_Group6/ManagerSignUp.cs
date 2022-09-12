@@ -18,20 +18,12 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
         string name, surname, email, contactNo, userName;
-        string password, confirmPassword, securityQuestion, answer, code;
+        string password, confirmPassword, code;
+        public string answer;
+        public string securityQuestion;
         private void ManagerSignUp_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

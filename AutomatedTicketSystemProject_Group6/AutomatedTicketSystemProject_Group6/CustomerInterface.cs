@@ -146,14 +146,9 @@ namespace AutomatedTicketSystemProject_Group6
             //adapter, command, selectcommand, dataset, adapter, datasource, datamember
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
