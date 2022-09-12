@@ -44,3 +44,4 @@ C:\Users\tyson\OneDrive\Documents\GitHub\New folder\AutomatedTicketSystemProject
 C:\Users\tyson\OneDrive\Documents\GitHub\New folder\AutomatedTicketSystemProject_Group6\AutomatedTicketSystemProject_Group6\bin\Debug\AutomatedTicketSystemProject_Group6.pdb
 C:\Users\tyson\OneDrive\Documents\GitHub\New folder\AutomatedTicketSystemProject_Group6\AutomatedTicketSystemProject_Group6\obj\Debug\AutomatedTicketSystemProject_Group6.MainLogin.resources
 C:\Users\tyson\OneDrive\Documents\GitHub\New folder\AutomatedTicketSystemProject_Group6\AutomatedTicketSystemProject_Group6\obj\Debug\AutomatedTicketSystemProject_Group6.ManagerSignUp.resources
+C:\Users\ukmak\OneDrive\Documents\GitHub\AutomatedParkingSystem\AutomatedTicketSystemProject_Group6\AutomatedTicketSystemProject_Group6\obj\Debug\AutomatedTicketSystemProject_Group6.AddCard.resources
