@@ -18,6 +18,8 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
 
+        public int code;
+
         //Connection of data
         SqlConnection connection;
         string cnctString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -71,14 +73,15 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void btnRequest_Click_1(object sender, EventArgs e)
         {
-            int code;
+            //int code;
+            listCode.Items.Clear();
+            
             Random requestedCode = new Random();
             code = requestedCode.Next(10000, 99999);
             DateTime thisday = DateTime.Today;
 
-            listCode.Items.Clear();
             listCode.Items.Add(code.ToString());
-            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
+
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -149,6 +152,30 @@ namespace AutomatedTicketSystemProject_Group6
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            timeTracker.Stop();
+
+            DateTime thisday = DateTime.Today;
+            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
+        }
+
+        private void timeTracker_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            timeTracker.Start();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            payment.ShowDialog();
         }
     }
 }
