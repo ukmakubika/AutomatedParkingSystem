@@ -72,41 +72,50 @@ namespace AutomatedTicketSystemProject_Group6
             {
                 if (rbManager.Checked)
                 {
-                    string userName, password, code;
-                    userName = txtUsername.Text;
-                    password = txtPassword.Text;
-                    code = txtCode.Text;
-                    try
+                    if (txtCode.Text.Length == 0)
                     {
-                        string managerDetails = " ";
-
-                        StreamReader inputFile;
-                        inputFile = File.OpenText("ManagerDetails.txt");
-
-                        while (!inputFile.EndOfStream)
-                        {
-                            managerDetails += inputFile.ReadLine();
-                        }
-                        if ((managerDetails.Contains(userName)) && (managerDetails.Contains(password)) && (managerDetails.Contains(code)))
-                        {
-                            MessageBox.Show("Logged in");
-                            ManagerInterface managerFrm = new ManagerInterface();
-                            managerFrm.ShowDialog();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Incorrect login details");
-                            txtUsername.Text = " ";
-                            txtPassword.Text = " ";
-                            txtCode.Text = " ";
-                            txtUsername.Focus();
-                        }
+                        MessageBox.Show("Please enter valid code");
+                        txtCode.Focus();
                     }
-                    catch(Exception error)
+                    else
                     {
-                        MessageBox.Show(error.Message);
-                    }                    //ManagerInterface managerInt = new ManagerInterface();
-                    //managerInt.ShowDialog();
+                        string userName, password, code;
+                        userName = txtUsername.Text;
+                        password = txtPassword.Text;
+                        code = txtCode.Text;
+                        try
+                        {
+                            string managerDetails = " ";
+
+                            StreamReader inputFile;
+                            inputFile = File.OpenText("ManagerDetails.txt");
+
+                            while (!inputFile.EndOfStream)
+                            {
+                                managerDetails += inputFile.ReadLine();
+                            }
+                            if ((managerDetails.Contains(userName)) && (managerDetails.Contains(password)) && (managerDetails.Contains(code)))
+                            {
+                                MessageBox.Show("Logged in");
+                                ManagerInterface managerFrm = new ManagerInterface();
+                                managerFrm.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect login details");
+                                txtUsername.Text = " ";
+                                txtPassword.Text = " ";
+                                txtCode.Text = " ";
+                                txtUsername.Focus();
+                            }
+                        }
+                        catch (Exception error)
+                        {
+                            MessageBox.Show(error.Message);
+                        }                    
+                                             
+                    }
+
                 }
 
                 if (rbClient.Checked)
@@ -127,11 +136,15 @@ namespace AutomatedTicketSystemProject_Group6
                             
                             
                         }
-                        if ((userDetails.Contains(userName)) && (userDetails.Contains(password)))
+                        if (File.ReadAllText("UserDetails.txt").Contains(userName))
                         {
-                            MessageBox.Show("Logged in");
-                            CustomerInterface customerInt = new CustomerInterface();
-                            customerInt.ShowDialog();
+                            if (File.ReadAllText("UserDetails.txt").Contains(password))
+                            {
+                                MessageBox.Show("Logged in");
+                                CustomerInterface customerInt = new CustomerInterface();
+                                customerInt.ShowDialog();
+                            }
+                            
 
                         }
                         else
@@ -153,7 +166,6 @@ namespace AutomatedTicketSystemProject_Group6
         private void rbClient_CheckedChanged(object sender, EventArgs e)
         {
             txtCode.Enabled = false;
-            txtCode.Visible = false;
             lblCode.Visible = false;
         }
 
@@ -162,19 +174,11 @@ namespace AutomatedTicketSystemProject_Group6
             lblCode.Visible = false;
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void linkPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            //Open forgot password form
+            ForgotPassword passwordFrm = new ForgotPassword();
+            passwordFrm.ShowDialog();
         }
     }
 }

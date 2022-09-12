@@ -15,8 +15,11 @@ namespace AutomatedTicketSystemProject_Group6
 {
     public partial class ClientSignUp : Form
     {
-        string name, surname, email, idNum; 
-        string userName, contactNo, password, securityQuestion, confirmPassword, answer;
+        string name, surname, email, idNum;
+        string userName, contactNo, password, confirmPassword;
+        public string answer;
+        public string securityQuestion;
+
         string connectString = @"Data Source=LAPTOP-9UVIJHCO;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         private void label11_Click(object sender, EventArgs e)
