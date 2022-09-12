@@ -43,7 +43,6 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblCode = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbManager)).BeginInit();
@@ -241,15 +240,6 @@
             this.loginBtn.UseWaitCursor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_1);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 566);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1067, 36);
-            this.panel2.TabIndex = 0;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -286,7 +276,6 @@
             this.Controls.Add(this.rbManager);
             this.Controls.Add(this.pbClient);
             this.Controls.Add(this.pbManager);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainLogin";
@@ -318,7 +307,6 @@
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lblCode;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

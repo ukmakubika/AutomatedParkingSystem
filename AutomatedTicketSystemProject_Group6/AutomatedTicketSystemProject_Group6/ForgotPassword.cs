@@ -31,5 +31,10 @@ namespace AutomatedTicketSystemProject_Group6
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void ForgotPassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
