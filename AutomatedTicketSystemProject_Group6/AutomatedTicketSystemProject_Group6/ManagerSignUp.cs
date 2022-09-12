@@ -19,6 +19,17 @@ namespace AutomatedTicketSystemProject_Group6
         }
         string name, surname, email, contactNo, userName;
         string password, confirmPassword, code;
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;   
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public string answer;
         public string securityQuestion;
         private void ManagerSignUp_Load(object sender, EventArgs e)

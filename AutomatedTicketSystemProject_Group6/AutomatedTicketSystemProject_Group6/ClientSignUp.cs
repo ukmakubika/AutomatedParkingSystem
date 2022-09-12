@@ -39,6 +39,12 @@ namespace AutomatedTicketSystemProject_Group6
 
         SqlConnection connection;
         SqlCommand command;
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         SqlDataAdapter adapter;
         DataSet data;
         private void btnConfirm_Click_1(object sender, EventArgs e)
