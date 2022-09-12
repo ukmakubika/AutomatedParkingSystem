@@ -31,20 +31,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbQuestion = new System.Windows.Forms.ComboBox();
             this.txtAnswer = new System.Windows.Forms.TextBox();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtConfirm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.cbQuestion = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,21 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identity Confirmation";
+            // 
+            // cbQuestion
+            // 
+            this.cbQuestion.FormattingEnabled = true;
+            this.cbQuestion.Items.AddRange(new object[] {
+            "In what city were you born?",
+            "What is the name of your favorite pet?",
+            "What is your mother\'s maiden name?",
+            "What high school did you attend?",
+            "What was the name of your elementary school?",
+            "What was your favorite food as a child?"});
+            this.cbQuestion.Location = new System.Drawing.Point(79, 28);
+            this.cbQuestion.Name = "cbQuestion";
+            this.cbQuestion.Size = new System.Drawing.Size(261, 21);
+            this.cbQuestion.TabIndex = 4;
             // 
             // txtAnswer
             // 
@@ -137,6 +152,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "New Password";
             // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(157, 91);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(234, 20);
+            this.txtCode.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 15);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Code to Confirm Manager:";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(327, 395);
@@ -157,6 +189,7 @@
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
             this.rbManager.UseVisualStyleBackColor = true;
+            this.rbManager.CheckedChanged += new System.EventHandler(this.rbManager_CheckedChanged);
             // 
             // rbClient
             // 
@@ -168,6 +201,7 @@
             this.rbClient.TabStop = true;
             this.rbClient.Text = "Client";
             this.rbClient.UseVisualStyleBackColor = true;
+            this.rbClient.CheckedChanged += new System.EventHandler(this.rbClient_CheckedChanged);
             // 
             // label5
             // 
@@ -185,31 +219,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(285, 20);
             this.txtUsername.TabIndex = 13;
-            // 
-            // cbQuestion
-            // 
-            this.cbQuestion.FormattingEnabled = true;
-            this.cbQuestion.Location = new System.Drawing.Point(79, 28);
-            this.cbQuestion.Name = "cbQuestion";
-            this.cbQuestion.Size = new System.Drawing.Size(261, 21);
-            this.cbQuestion.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 15);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Code to Confirm Manager:";
-            // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(157, 91);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(234, 20);
-            this.txtCode.TabIndex = 9;
             // 
             // ForgotPassword
             // 
