@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerInterface));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,19 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PaymentDetails = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbMonth = new System.Windows.Forms.ComboBox();
-            this.cbYear = new System.Windows.Forms.ComboBox();
-            this.txtCVV = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCardNo = new System.Windows.Forms.TextBox();
-            this.cbBankNames = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.Help = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listAnswer = new System.Windows.Forms.ListBox();
@@ -70,22 +60,29 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
+            this.txtDisplay = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dbBankAccounts = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.PaymentDetails.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.Help.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -117,6 +114,36 @@
             this.MainPage.TabIndex = 0;
             this.MainPage.Text = "Main Page";
             this.MainPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnStop);
+            this.groupBox6.Controls.Add(this.btnStart);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(296, 101);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(181, 277);
+            this.groupBox6.TabIndex = 20;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Timer";
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(37, 84);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(108, 36);
+            this.btnStop.TabIndex = 18;
+            this.btnStop.Text = "Stop Time";
+            this.btnStop.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(37, 28);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(108, 36);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "Start Time";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -236,8 +263,16 @@
             // 
             this.PaymentDetails.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PaymentDetails.BackgroundImage")));
             this.PaymentDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PaymentDetails.Controls.Add(this.groupBox3);
-            this.PaymentDetails.Controls.Add(this.btnSave);
+            this.PaymentDetails.Controls.Add(this.txtDisplay);
+            this.PaymentDetails.Controls.Add(this.label1);
+            this.PaymentDetails.Controls.Add(this.txtDelete);
+            this.PaymentDetails.Controls.Add(this.lblName);
+            this.PaymentDetails.Controls.Add(this.label4);
+            this.PaymentDetails.Controls.Add(this.txtSearch);
+            this.PaymentDetails.Controls.Add(this.label7);
+            this.PaymentDetails.Controls.Add(this.btnDelete);
+            this.PaymentDetails.Controls.Add(this.btnAdd);
+            this.PaymentDetails.Controls.Add(this.dbBankAccounts);
             this.PaymentDetails.Location = new System.Drawing.Point(4, 22);
             this.PaymentDetails.Name = "PaymentDetails";
             this.PaymentDetails.Padding = new System.Windows.Forms.Padding(3);
@@ -245,199 +280,6 @@
             this.PaymentDetails.TabIndex = 1;
             this.PaymentDetails.Text = "Payment Details";
             this.PaymentDetails.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.cbMonth);
-            this.groupBox3.Controls.Add(this.cbYear);
-            this.groupBox3.Controls.Add(this.txtCVV);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txtCardNo);
-            this.groupBox3.Controls.Add(this.cbBankNames);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(33, 17);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(398, 376);
-            this.groupBox3.TabIndex = 25;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Bank Details";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(138, 327);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(38, 15);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "Year:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(138, 261);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 15);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Month:";
-            // 
-            // cbMonth
-            // 
-            this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Items.AddRange(new object[] {
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030",
-            "2031",
-            "2032"});
-            this.cbMonth.Location = new System.Drawing.Point(202, 322);
-            this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(161, 23);
-            this.cbMonth.TabIndex = 26;
-            // 
-            // cbYear
-            // 
-            this.cbYear.FormattingEnabled = true;
-            this.cbYear.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbYear.Location = new System.Drawing.Point(203, 260);
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(161, 23);
-            this.cbYear.TabIndex = 25;
-            // 
-            // txtCVV
-            // 
-            this.txtCVV.Location = new System.Drawing.Point(137, 194);
-            this.txtCVV.Name = "txtCVV";
-            this.txtCVV.Size = new System.Drawing.Size(227, 23);
-            this.txtCVV.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "CVV:";
-            // 
-            // txtCardNo
-            // 
-            this.txtCardNo.Location = new System.Drawing.Point(137, 122);
-            this.txtCardNo.Name = "txtCardNo";
-            this.txtCardNo.Size = new System.Drawing.Size(227, 23);
-            this.txtCardNo.TabIndex = 20;
-            // 
-            // cbBankNames
-            // 
-            this.cbBankNames.FormattingEnabled = true;
-            this.cbBankNames.Items.AddRange(new object[] {
-            "FNB/RMB",
-            "ABSA BANK LIMITED",
-            "Capitec Bank",
-            "Nedbank Limited",
-            "Standard Bank",
-            "African Bank",
-            "Albaraka Bank",
-            "BNP Paribas",
-            "Bidvest Bank",
-            "CitiBank",
-            "Access Bank (South Africa) Ltd",
-            "Bank Zero ",
-            "Discovery Bank",
-            "FinBond Mutual Bank",
-            "Finbond Net1",
-            "Grindrob Bank",
-            "HBZ Bank",
-            "HSBC Bank",
-            "Habib Overseas Bank",
-            "Investec Bank",
-            "Ithala",
-            "JP Morgan Chase",
-            "MTN Banking",
-            "Mercantile Bank",
-            "Nedbank Incorp FCB",
-            "Nedbank PEP Bank",
-            "Olympus mODILE",
-            "People\'s Bank Ltd Inc NBS",
-            "S.A. Reserve Bank",
-            "SASFIN Bank",
-            "Societe Generale",
-            "South African Postbank SOC Ltd",
-            "Standard Chartered Bank",
-            "State Bank of India",
-            "TymeBank",
-            "UBank Limited",
-            "Unibank",
-            "VBS Mutual Bank"});
-            this.cbBankNames.Location = new System.Drawing.Point(137, 49);
-            this.cbBankNames.Name = "cbBankNames";
-            this.cbBankNames.Size = new System.Drawing.Size(227, 23);
-            this.cbBankNames.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 125);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 15);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Card Number:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 260);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 15);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Expiration Date:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 15);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Bank Name:";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(632, 356);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(98, 37);
-            this.btnSave.TabIndex = 22;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // Help
             // 
@@ -600,35 +442,94 @@
             this.panel4.Size = new System.Drawing.Size(20, 440);
             this.panel4.TabIndex = 18;
             // 
-            // groupBox6
+            // txtDisplay
             // 
-            this.groupBox6.Controls.Add(this.btnStop);
-            this.groupBox6.Controls.Add(this.btnStart);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(296, 101);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(181, 277);
-            this.groupBox6.TabIndex = 20;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Timer";
+            this.txtDisplay.Location = new System.Drawing.Point(23, 152);
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.Size = new System.Drawing.Size(104, 36);
+            this.txtDisplay.TabIndex = 19;
+            this.txtDisplay.Text = "Show All";
+            this.txtDisplay.UseVisualStyleBackColor = true;
             // 
-            // btnStop
+            // label1
             // 
-            this.btnStop.Location = new System.Drawing.Point(37, 84);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(108, 36);
-            this.btnStop.TabIndex = 18;
-            this.btnStop.Text = "Stop Time";
-            this.btnStop.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 329);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Card to Delete";
             // 
-            // btnStart
+            // txtDelete
             // 
-            this.btnStart.Location = new System.Drawing.Point(37, 28);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(108, 36);
-            this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "Start Time";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.txtDelete.Location = new System.Drawing.Point(22, 348);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(205, 20);
+            this.txtDelete.TabIndex = 17;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(326, 30);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(65, 24);
+            this.lblName.TabIndex = 16;
+            this.lblName.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(312, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "What would you like to do today,";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(24, 107);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(205, 20);
+            this.txtSearch.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Search";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(22, 275);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 36);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(24, 211);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(104, 36);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // dbBankAccounts
+            // 
+            this.dbBankAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbBankAccounts.Location = new System.Drawing.Point(288, 88);
+            this.dbBankAccounts.Name = "dbBankAccounts";
+            this.dbBankAccounts.Size = new System.Drawing.Size(434, 280);
+            this.dbBankAccounts.TabIndex = 10;
             // 
             // CustomerInterface
             // 
@@ -646,14 +547,14 @@
             this.tabControl1.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
             this.MainPage.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.PaymentDetails.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.PaymentDetails.PerformLayout();
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -661,7 +562,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,15 +579,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtCVV;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCardNo;
-        private System.Windows.Forms.ComboBox cbBankNames;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listCode;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -697,10 +589,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox cbFAQ;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbMonth;
-        private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.ListBox listAnswer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -712,5 +600,15 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button txtDisplay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDelete;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dbBankAccounts;
     }
 }
