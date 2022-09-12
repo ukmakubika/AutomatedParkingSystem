@@ -46,20 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PaymentDetails = new System.Windows.Forms.TabPage();
-            this.Help = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listAnswer = new System.Windows.Forms.ListBox();
-            this.cbFAQ = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.txtDisplay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDelete = new System.Windows.Forms.TextBox();
@@ -70,6 +56,23 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dbBankAccounts = new System.Windows.Forms.DataGridView();
+            this.Help = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listCosts = new System.Windows.Forms.ListBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.listAnswer = new System.Windows.Forms.ListBox();
+            this.cbFAQ = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.EditProfile = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -77,18 +80,20 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.PaymentDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.Help.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.MainPage);
             this.tabControl1.Controls.Add(this.PaymentDetails);
+            this.tabControl1.Controls.Add(this.EditProfile);
             this.tabControl1.Controls.Add(this.Help);
             this.tabControl1.Location = new System.Drawing.Point(26, 31);
             this.tabControl1.Name = "tabControl1";
@@ -281,167 +286,6 @@
             this.PaymentDetails.Text = "Payment Details";
             this.PaymentDetails.UseVisualStyleBackColor = true;
             // 
-            // Help
-            // 
-            this.Help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Help.BackgroundImage")));
-            this.Help.Controls.Add(this.groupBox5);
-            this.Help.Controls.Add(this.label11);
-            this.Help.Controls.Add(this.label12);
-            this.Help.Controls.Add(this.label13);
-            this.Help.Location = new System.Drawing.Point(4, 22);
-            this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(741, 399);
-            this.Help.TabIndex = 2;
-            this.Help.Text = "Help ";
-            this.Help.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.listAnswer);
-            this.groupBox5.Controls.Add(this.cbFAQ);
-            this.groupBox5.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(205, 130);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(353, 187);
-            this.groupBox5.TabIndex = 15;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Frequently Asked Quetsions";
-            // 
-            // listAnswer
-            // 
-            this.listAnswer.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listAnswer.FormattingEnabled = true;
-            this.listAnswer.ItemHeight = 15;
-            this.listAnswer.Location = new System.Drawing.Point(17, 103);
-            this.listAnswer.Name = "listAnswer";
-            this.listAnswer.Size = new System.Drawing.Size(321, 34);
-            this.listAnswer.TabIndex = 15;
-            // 
-            // cbFAQ
-            // 
-            this.cbFAQ.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFAQ.FormattingEnabled = true;
-            this.cbFAQ.Items.AddRange(new object[] {
-            "Where can I get my Requested Code code?",
-            "Which bank cards are accepted on the Automated Parking System?",
-            "Is there a fee to use the Automated Parking System app?",
-            "How do I add/remove a bank card on the Automated Parking System app?",
-            "How do I set default card on the Automated Parking System app?",
-            "What if I forget my password?"});
-            this.cbFAQ.Location = new System.Drawing.Point(76, 56);
-            this.cbFAQ.Name = "cbFAQ";
-            this.cbFAQ.Size = new System.Drawing.Size(202, 23);
-            this.cbFAQ.TabIndex = 14;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(190, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(398, 25);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "AUTOMATED PARKING SYSTEM";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(220, 76);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(333, 15);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Please select one of the frequently asked questions below.";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(178, 53);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(439, 15);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 465);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 24);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 25);
-            this.panel2.TabIndex = 18;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(728, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 18);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(333, 6);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 15);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Customer Interface";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(780, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 25);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(20, 440);
-            this.panel3.TabIndex = 18;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(780, 25);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(20, 440);
-            this.panel4.TabIndex = 18;
-            // 
             // txtDisplay
             // 
             this.txtDisplay.Location = new System.Drawing.Point(23, 152);
@@ -531,6 +375,205 @@
             this.dbBankAccounts.Size = new System.Drawing.Size(434, 280);
             this.dbBankAccounts.TabIndex = 10;
             // 
+            // Help
+            // 
+            this.Help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Help.BackgroundImage")));
+            this.Help.Controls.Add(this.groupBox3);
+            this.Help.Controls.Add(this.groupBox5);
+            this.Help.Controls.Add(this.label11);
+            this.Help.Controls.Add(this.label12);
+            this.Help.Controls.Add(this.label13);
+            this.Help.Location = new System.Drawing.Point(4, 22);
+            this.Help.Name = "Help";
+            this.Help.Size = new System.Drawing.Size(741, 399);
+            this.Help.TabIndex = 2;
+            this.Help.Text = "Help ";
+            this.Help.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 465);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 24);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 25);
+            this.panel2.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(728, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(333, 6);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 15);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Customer Interface";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(780, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 25);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(20, 440);
+            this.panel3.TabIndex = 18;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(780, 25);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(20, 440);
+            this.panel4.TabIndex = 18;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.listCosts);
+            this.groupBox3.Location = new System.Drawing.Point(410, 118);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(305, 263);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Parking Fees";
+            // 
+            // listCosts
+            // 
+            this.listCosts.FormattingEnabled = true;
+            this.listCosts.Items.AddRange(new object[] {
+            "0 - 1 hours\t R5",
+            "",
+            "1-2 hours\t \tR10",
+            "",
+            "2-3 hours\t \tR10",
+            "",
+            "3-4 hours\t \tR10",
+            "",
+            "4-5 hours\t \tR10",
+            "",
+            "5-6 hours\t \tR10",
+            "",
+            "6+ hours\t \tR40"});
+            this.listCosts.Location = new System.Drawing.Point(44, 38);
+            this.listCosts.Name = "listCosts";
+            this.listCosts.Size = new System.Drawing.Size(214, 186);
+            this.listCosts.TabIndex = 16;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.listAnswer);
+            this.groupBox5.Controls.Add(this.cbFAQ);
+            this.groupBox5.Location = new System.Drawing.Point(26, 118);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(353, 263);
+            this.groupBox5.TabIndex = 21;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Frequently Asked Quetsions";
+            // 
+            // listAnswer
+            // 
+            this.listAnswer.FormattingEnabled = true;
+            this.listAnswer.Location = new System.Drawing.Point(17, 103);
+            this.listAnswer.Name = "listAnswer";
+            this.listAnswer.Size = new System.Drawing.Size(321, 134);
+            this.listAnswer.TabIndex = 15;
+            // 
+            // cbFAQ
+            // 
+            this.cbFAQ.FormattingEnabled = true;
+            this.cbFAQ.Items.AddRange(new object[] {
+            "Where can I get my Requested Code code?",
+            "Which bank cards are accepted on the Automated Parking System?",
+            "Is there a fee to use the Automated Parking System app?",
+            "How do I add/remove a bank card on the Automated Parking System app?",
+            "How do I set default card on the Automated Parking System app?",
+            "What if I forget my password?"});
+            this.cbFAQ.Location = new System.Drawing.Point(76, 56);
+            this.cbFAQ.Name = "cbFAQ";
+            this.cbFAQ.Size = new System.Drawing.Size(202, 21);
+            this.cbFAQ.TabIndex = 14;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(204, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(337, 25);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "AUTOMATED PARKING SYSTEM";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(190, 73);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(355, 16);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Please select one of the frequently asked questions below.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(165, 53);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(446, 16);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
+            // 
+            // EditProfile
+            // 
+            this.EditProfile.Location = new System.Drawing.Point(4, 22);
+            this.EditProfile.Name = "EditProfile";
+            this.EditProfile.Size = new System.Drawing.Size(741, 399);
+            this.EditProfile.TabIndex = 3;
+            this.EditProfile.Text = "Edit Profile";
+            this.EditProfile.UseVisualStyleBackColor = true;
+            // 
             // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,14 +598,15 @@
             this.groupBox1.PerformLayout();
             this.PaymentDetails.ResumeLayout(false);
             this.PaymentDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,13 +627,7 @@
         private System.Windows.Forms.ListBox listCode;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TabPage Help;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox cbFAQ;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox listAnswer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -610,5 +648,14 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dbBankAccounts;
+        private System.Windows.Forms.TabPage EditProfile;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListBox listCosts;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ListBox listAnswer;
+        private System.Windows.Forms.ComboBox cbFAQ;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
