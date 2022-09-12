@@ -32,8 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,6 +55,21 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dbBankAccounts = new System.Windows.Forms.DataGridView();
             this.EditProfile = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.listDeatail = new System.Windows.Forms.ListBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbUpdate = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.tbnUpdate = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.Help = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listCosts = new System.Windows.Forms.ListBox();
@@ -73,21 +86,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.listDeatail = new System.Windows.Forms.ListBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbUpdate = new System.Windows.Forms.ComboBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.tbnUpdate = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtContact = new System.Windows.Forms.TextBox();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -97,15 +98,15 @@
             this.PaymentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).BeginInit();
             this.EditProfile.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.Help.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -141,6 +142,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnPay);
             this.groupBox6.Controls.Add(this.btnStop);
             this.groupBox6.Controls.Add(this.btnStart);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,24 +152,6 @@
             this.groupBox6.TabIndex = 20;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Timer";
-            // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(37, 84);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(108, 36);
-            this.btnStop.TabIndex = 18;
-            this.btnStop.Text = "Stop Time";
-            this.btnStop.UseVisualStyleBackColor = true;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(37, 28);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(108, 36);
-            this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "Start Time";
-            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -406,6 +390,161 @@
             this.EditProfile.Text = "Edit Profile";
             this.EditProfile.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.listDeatail);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(388, 28);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(338, 141);
+            this.groupBox9.TabIndex = 76;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Saved Detail";
+            // 
+            // listDeatail
+            // 
+            this.listDeatail.FormattingEnabled = true;
+            this.listDeatail.ItemHeight = 15;
+            this.listDeatail.Location = new System.Drawing.Point(69, 63);
+            this.listDeatail.Name = "listDeatail";
+            this.listDeatail.Size = new System.Drawing.Size(215, 19);
+            this.listDeatail.TabIndex = 72;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label8);
+            this.groupBox8.Controls.Add(this.cbUpdate);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(16, 28);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(350, 141);
+            this.groupBox8.TabIndex = 75;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Selection";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(23, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(209, 15);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "What detail would you like to update?";
+            // 
+            // cbUpdate
+            // 
+            this.cbUpdate.FormattingEnabled = true;
+            this.cbUpdate.Items.AddRange(new object[] {
+            "Surname",
+            "Email Address",
+            "Username ",
+            "Contact Number"});
+            this.cbUpdate.Location = new System.Drawing.Point(26, 72);
+            this.cbUpdate.Name = "cbUpdate";
+            this.cbUpdate.Size = new System.Drawing.Size(215, 23);
+            this.cbUpdate.TabIndex = 69;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.tbnUpdate);
+            this.groupBox7.Controls.Add(this.txtUsername);
+            this.groupBox7.Controls.Add(this.txtEmail);
+            this.groupBox7.Controls.Add(this.txtContact);
+            this.groupBox7.Controls.Add(this.txtSurname);
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(16, 196);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(710, 175);
+            this.groupBox7.TabIndex = 74;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Personal Deatils";
+            // 
+            // tbnUpdate
+            // 
+            this.tbnUpdate.Location = new System.Drawing.Point(26, 122);
+            this.tbnUpdate.Name = "tbnUpdate";
+            this.tbnUpdate.Size = new System.Drawing.Size(95, 28);
+            this.tbnUpdate.TabIndex = 69;
+            this.tbnUpdate.Text = "Update";
+            this.tbnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Enabled = false;
+            this.txtUsername.Location = new System.Drawing.Point(482, 35);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(215, 21);
+            this.txtUsername.TabIndex = 68;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(136, 77);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(215, 21);
+            this.txtEmail.TabIndex = 67;
+            // 
+            // txtContact
+            // 
+            this.txtContact.Enabled = false;
+            this.txtContact.Location = new System.Drawing.Point(482, 80);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(215, 21);
+            this.txtContact.TabIndex = 65;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Enabled = false;
+            this.txtSurname.Location = new System.Drawing.Point(136, 38);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(215, 21);
+            this.txtSurname.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(369, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 16);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Username:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(23, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 16);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Email Address:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(369, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 16);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Contact Number:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(23, 41);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(64, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Surname:";
+            // 
             // Help
             // 
             this.Help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Help.BackgroundImage")));
@@ -596,160 +735,32 @@
             this.panel4.Size = new System.Drawing.Size(20, 440);
             this.panel4.TabIndex = 18;
             // 
-            // groupBox9
+            // btnPay
             // 
-            this.groupBox9.Controls.Add(this.listDeatail);
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(388, 28);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(338, 141);
-            this.groupBox9.TabIndex = 76;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Saved Detail";
+            this.btnPay.Location = new System.Drawing.Point(32, 115);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(108, 36);
+            this.btnPay.TabIndex = 22;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = true;
             // 
-            // listDeatail
+            // btnStop
             // 
-            this.listDeatail.FormattingEnabled = true;
-            this.listDeatail.ItemHeight = 15;
-            this.listDeatail.Location = new System.Drawing.Point(69, 63);
-            this.listDeatail.Name = "listDeatail";
-            this.listDeatail.Size = new System.Drawing.Size(215, 19);
-            this.listDeatail.TabIndex = 72;
+            this.btnStop.Location = new System.Drawing.Point(32, 73);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(108, 36);
+            this.btnStop.TabIndex = 21;
+            this.btnStop.Text = "Stop Time";
+            this.btnStop.UseVisualStyleBackColor = true;
             // 
-            // groupBox8
+            // btnStart
             // 
-            this.groupBox8.Controls.Add(this.label8);
-            this.groupBox8.Controls.Add(this.cbUpdate);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(16, 28);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(350, 141);
-            this.groupBox8.TabIndex = 75;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Selection";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 33);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(209, 15);
-            this.label8.TabIndex = 70;
-            this.label8.Text = "What detail would you like to update?";
-            // 
-            // cbUpdate
-            // 
-            this.cbUpdate.FormattingEnabled = true;
-            this.cbUpdate.Items.AddRange(new object[] {
-            "Surname",
-            "Email Address",
-            "Username ",
-            "Contact Number"});
-            this.cbUpdate.Location = new System.Drawing.Point(26, 72);
-            this.cbUpdate.Name = "cbUpdate";
-            this.cbUpdate.Size = new System.Drawing.Size(215, 23);
-            this.cbUpdate.TabIndex = 69;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.tbnUpdate);
-            this.groupBox7.Controls.Add(this.txtUsername);
-            this.groupBox7.Controls.Add(this.txtEmail);
-            this.groupBox7.Controls.Add(this.txtContact);
-            this.groupBox7.Controls.Add(this.txtSurname);
-            this.groupBox7.Controls.Add(this.label9);
-            this.groupBox7.Controls.Add(this.label15);
-            this.groupBox7.Controls.Add(this.label16);
-            this.groupBox7.Controls.Add(this.label17);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(16, 196);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(710, 175);
-            this.groupBox7.TabIndex = 74;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Personal Deatils";
-            // 
-            // tbnUpdate
-            // 
-            this.tbnUpdate.Location = new System.Drawing.Point(26, 122);
-            this.tbnUpdate.Name = "tbnUpdate";
-            this.tbnUpdate.Size = new System.Drawing.Size(95, 28);
-            this.tbnUpdate.TabIndex = 69;
-            this.tbnUpdate.Text = "Update";
-            this.tbnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Enabled = false;
-            this.txtUsername.Location = new System.Drawing.Point(482, 35);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(215, 21);
-            this.txtUsername.TabIndex = 68;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(136, 77);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(215, 21);
-            this.txtEmail.TabIndex = 67;
-            // 
-            // txtContact
-            // 
-            this.txtContact.Enabled = false;
-            this.txtContact.Location = new System.Drawing.Point(482, 80);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(215, 21);
-            this.txtContact.TabIndex = 65;
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Enabled = false;
-            this.txtSurname.Location = new System.Drawing.Point(136, 38);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(215, 21);
-            this.txtSurname.TabIndex = 63;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(369, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Username:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(23, 80);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 16);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "Email Address:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(369, 83);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 16);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Contact Number:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(23, 41);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 16);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Surname:";
+            this.btnStart.Location = new System.Drawing.Point(32, 31);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(108, 36);
+            this.btnStart.TabIndex = 20;
+            this.btnStart.Text = "Start Time";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // CustomerInterface
             // 
@@ -777,6 +788,11 @@
             this.PaymentDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
             this.EditProfile.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.Help.ResumeLayout(false);
             this.Help.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -785,11 +801,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -819,8 +830,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button txtDisplay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDelete;
@@ -855,5 +864,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnStart;
     }
 }
