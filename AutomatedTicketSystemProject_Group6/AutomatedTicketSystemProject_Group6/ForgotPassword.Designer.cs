@@ -65,7 +65,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(64, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 16);
+            this.label2.Size = new System.Drawing.Size(290, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Please enter your answer to the question above";
             // 
@@ -84,6 +84,13 @@
             // cbQuestion
             // 
             this.cbQuestion.FormattingEnabled = true;
+            this.cbQuestion.Items.AddRange(new object[] {
+            "In what city were you born?",
+            "What is the name of your favorite pet?",
+            "What is your mother\'s maiden name?",
+            "What high school did you attend?",
+            "What was the name of your elementary school?",
+            "What was your favorite food as a child?"});
             this.cbQuestion.Location = new System.Drawing.Point(79, 28);
             this.cbQuestion.Name = "cbQuestion";
             this.cbQuestion.Size = new System.Drawing.Size(261, 21);
@@ -182,6 +189,7 @@
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
             this.rbManager.UseVisualStyleBackColor = true;
+            this.rbManager.CheckedChanged += new System.EventHandler(this.rbManager_CheckedChanged);
             // 
             // rbClient
             // 
@@ -193,12 +201,13 @@
             this.rbClient.TabStop = true;
             this.rbClient.Text = "Client";
             this.rbClient.UseVisualStyleBackColor = true;
+            this.rbClient.CheckedChanged += new System.EventHandler(this.rbClient_CheckedChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(181, 106);
+            this.label5.Location = new System.Drawing.Point(165, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 15);
             this.label5.TabIndex = 12;
@@ -206,7 +215,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(255, 105);
+            this.txtUsername.Location = new System.Drawing.Point(239, 104);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(285, 20);
             this.txtUsername.TabIndex = 13;
