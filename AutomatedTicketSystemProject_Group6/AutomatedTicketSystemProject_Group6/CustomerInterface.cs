@@ -159,47 +159,7 @@ namespace AutomatedTicketSystemProject_Group6
 
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
-        {
-            isActive = false;
-            timeS = 0;
-            timeMin = 0;
-            timeH = 0;
-
-            //timeTracker.Stop();
-
-            DateTime thisday = DateTime.Today;
-
-            time = int.Parse(String.Format("{0:00}", timeH));  
-
-            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
-            listPrev.Items.Add("-------------------------------------------------------------");
-            listPrev.Items.Add("Time Elapsed: " + String.Format("{0:00}", timeH).ToString() + ":" + String.Format("{0:00}", timeMin).ToString() + ":" + timeSeconds.Text);
-            listPrev.Items.Add("-------------------------------------------------------------");
-        }
-
-        private void timeTracker_Tick(object sender, EventArgs e)
-        {
-            if (isActive)
-            {
-                timeS++;
-
-                if (timeS >= 60)
-                {
-                    timeMin++;
-                    timeS = 0;
-
-                    if (timeMin >= 60)
-                    {
-                        timeH++;
-                        timeMin = 0;
-                    }
-                }
-               
-            }
-            ShowTime();
-           
-        }
+        
 
         public void ShowTime()
         {
@@ -211,13 +171,6 @@ namespace AutomatedTicketSystemProject_Group6
         int timeS, timeMin, timeH;
         bool isActive;
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            //timeTracker.Start();
-            
-
-            isActive = true;
-        }
 
         private void CustomerInterface_Load(object sender, EventArgs e)
         {
@@ -256,10 +209,61 @@ namespace AutomatedTicketSystemProject_Group6
             connection.Close();
         }
 
-        private void btnPay_Click(object sender, EventArgs e)
+        private void btnStart_Click_1(object sender, EventArgs e)
+        {
+            isActive = true;
+        }
+
+        private void btnStop_Click_1(object sender, EventArgs e)
+        {
+            isActive = false;
+            timeS = 0;
+            timeMin = 0;
+            timeH = 0;
+
+            //timeTracker.Stop();
+
+            DateTime thisday = DateTime.Today;
+
+            time = int.Parse(String.Format("{0:00}", timeH));
+
+            listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
+            listPrev.Items.Add("-------------------------------------------------------------");
+            listPrev.Items.Add("Time Elapsed: " + String.Format("{0:00}", timeH).ToString() + ":" + String.Format("{0:00}", timeMin).ToString() + ":" + timeSeconds.Text);
+            listPrev.Items.Add("-------------------------------------------------------------");
+        }
+
+        private void btnPay_Click_1(object sender, EventArgs e)
         {
             Payment payment = new Payment();
             payment.ShowDialog();
+        }
+
+        private void timeTracker_Tick_1(object sender, EventArgs e)
+        {
+            if (isActive)
+            {
+                timeS++;
+
+                if (timeS >= 60)
+                {
+                    timeMin++;
+                    timeS = 0;
+
+                    if (timeMin >= 60)
+                    {
+                        timeH++;
+                        timeMin = 0;
+                    }
+                }
+
+            }
+            ShowTime();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void label18_Click(object sender, EventArgs e)

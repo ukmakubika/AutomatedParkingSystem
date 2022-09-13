@@ -227,6 +227,7 @@
             this.btnPay.TabIndex = 24;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click_1);
             // 
             // btnStop
             // 
@@ -237,6 +238,7 @@
             this.btnStop.TabIndex = 18;
             this.btnStop.Text = "Stop Time";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click_1);
             // 
             // btnStart
             // 
@@ -247,6 +249,7 @@
             this.btnStart.TabIndex = 5;
             this.btnStart.Text = "Start Time";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click_1);
             // 
             // label14
             // 
@@ -744,6 +747,12 @@
             this.label13.Size = new System.Drawing.Size(408, 14);
             this.label13.TabIndex = 11;
             this.label13.Text = "Whether you’re a manager or customer, we’re here to offer a helping hand. ";
+            // 
+            // timeTracker
+            // 
+            this.timeTracker.Enabled = true;
+            this.timeTracker.Interval = 1000;
+            this.timeTracker.Tick += new System.EventHandler(this.timeTracker_Tick_1);
             // 
             // button1
             // 

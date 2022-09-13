@@ -87,6 +87,31 @@ namespace AutomatedTicketSystemProject_Group6
                     MessageBox.Show(error.Message);
                 }
             }
+
+            if (rbHighToLow.Checked)
+            {
+                try
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT Bank_name FROM BANK";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0) + "\n" + reader.GetValue(1) + "\n" + reader.GetValue(2));
+                    }
+
+                    connection.Close();
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
         }
 
         private void cbGeneral_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,6 +169,16 @@ namespace AutomatedTicketSystemProject_Group6
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void rbLongestHours_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rbHighToLow_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

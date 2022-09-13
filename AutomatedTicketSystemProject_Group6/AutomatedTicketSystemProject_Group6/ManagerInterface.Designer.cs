@@ -124,6 +124,7 @@
             this.rbLongestHours.TabStop = true;
             this.rbLongestHours.Text = "Longest Hours";
             this.rbLongestHours.UseVisualStyleBackColor = true;
+            this.rbLongestHours.CheckedChanged += new System.EventHandler(this.rbLongestHours_CheckedChanged);
             // 
             // rbLowToHigh
             // 
@@ -150,6 +151,7 @@
             this.rbHighToLow.TabStop = true;
             this.rbHighToLow.Text = "Total Visits (High to Low)";
             this.rbHighToLow.UseVisualStyleBackColor = true;
+            this.rbHighToLow.CheckedChanged += new System.EventHandler(this.rbHighToLow_CheckedChanged);
             // 
             // rbName
             // 
@@ -177,6 +179,10 @@
             // listOutput
             // 
             this.listOutput.FormattingEnabled = true;
+            this.listOutput.Items.AddRange(new object[] {
+            "FNB/RMB",
+            "ABSA BANK LIMITED",
+            "Investec Bank"});
             this.listOutput.Location = new System.Drawing.Point(7, 216);
             this.listOutput.Name = "listOutput";
             this.listOutput.Size = new System.Drawing.Size(722, 173);
@@ -234,7 +240,6 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Enabled = false;
             this.btnCreate.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.Location = new System.Drawing.Point(257, 147);
             this.btnCreate.Name = "btnCreate";
@@ -256,7 +261,7 @@
             // 
             this.cbGeneral.FormattingEnabled = true;
             this.cbGeneral.Items.AddRange(new object[] {
-            "Most Frequent Visitors",
+            "Top 3 Banks Used",
             "Longest Hours Spent"});
             this.cbGeneral.Location = new System.Drawing.Point(28, 46);
             this.cbGeneral.Name = "cbGeneral";
