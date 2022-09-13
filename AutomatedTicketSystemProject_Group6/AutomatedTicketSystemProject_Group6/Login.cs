@@ -19,6 +19,8 @@ namespace AutomatedTicketSystemProject_Group6
             InitializeComponent();
         }
 
+        public string userName;
+
         private void MainLogin_Load(object sender, EventArgs e)
         {
 
@@ -79,7 +81,7 @@ namespace AutomatedTicketSystemProject_Group6
                     }
                     else
                     {
-                        string userName, password, code;
+                        string password, code;
                         userName = txtUsername.Text;
                         password = txtPassword.Text;
                         code = txtCode.Text;
