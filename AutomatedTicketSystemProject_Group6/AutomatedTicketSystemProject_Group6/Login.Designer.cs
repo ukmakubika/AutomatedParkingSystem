@@ -70,7 +70,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username:";
             this.label1.UseWaitCursor = true;
@@ -81,7 +81,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             this.label2.UseWaitCursor = true;
@@ -143,7 +143,7 @@
             this.rbManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbManager.Location = new System.Drawing.Point(56, 248);
             this.rbManager.Name = "rbManager";
-            this.rbManager.Size = new System.Drawing.Size(80, 20);
+            this.rbManager.Size = new System.Drawing.Size(79, 20);
             this.rbManager.TabIndex = 9;
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
@@ -156,7 +156,7 @@
             this.rbClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbClient.Location = new System.Drawing.Point(476, 248);
             this.rbClient.Name = "rbClient";
-            this.rbClient.Size = new System.Drawing.Size(59, 20);
+            this.rbClient.Size = new System.Drawing.Size(58, 20);
             this.rbClient.TabIndex = 10;
             this.rbClient.TabStop = true;
             this.rbClient.Text = "Client";
@@ -198,7 +198,7 @@
             this.lblCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCode.Location = new System.Drawing.Point(18, 114);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(44, 16);
+            this.lblCode.Size = new System.Drawing.Size(43, 16);
             this.lblCode.TabIndex = 10;
             this.lblCode.Text = "Code:";
             this.lblCode.UseWaitCursor = true;
@@ -244,7 +244,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel linkPassword;
         private System.Windows.Forms.LinkLabel linkSignup;
@@ -254,6 +253,7 @@
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lblCode;
+        public System.Windows.Forms.TextBox txtUsername;
     }
 }
 

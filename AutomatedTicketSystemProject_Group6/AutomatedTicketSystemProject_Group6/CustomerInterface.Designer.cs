@@ -32,6 +32,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.timeSeconds = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.timeMinutes = new System.Windows.Forms.Label();
+            this.timeHours = new System.Windows.Forms.Label();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -59,7 +65,7 @@
             this.dbBankAccounts = new System.Windows.Forms.DataGridView();
             this.EditProfile = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.listDeatail = new System.Windows.Forms.ListBox();
+            this.listDetail = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbUpdate = new System.Windows.Forms.ComboBox();
@@ -83,15 +89,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.timeTracker = new System.Windows.Forms.Timer(this.components);
-            this.timeHours = new System.Windows.Forms.Label();
-            this.timeMinutes = new System.Windows.Forms.Label();
-            this.timeSeconds = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,7 +105,6 @@
             this.Help.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -149,6 +149,69 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Timer";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label21);
+            this.groupBox10.Controls.Add(this.timeSeconds);
+            this.groupBox10.Controls.Add(this.label20);
+            this.groupBox10.Controls.Add(this.timeMinutes);
+            this.groupBox10.Controls.Add(this.timeHours);
+            this.groupBox10.Location = new System.Drawing.Point(24, 154);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(140, 63);
+            this.groupBox10.TabIndex = 23;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Time Elapsed";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(77, 26);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(10, 15);
+            this.label21.TabIndex = 25;
+            this.label21.Text = ":";
+            // 
+            // timeSeconds
+            // 
+            this.timeSeconds.AutoSize = true;
+            this.timeSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeSeconds.Location = new System.Drawing.Point(86, 25);
+            this.timeSeconds.Name = "timeSeconds";
+            this.timeSeconds.Size = new System.Drawing.Size(27, 20);
+            this.timeSeconds.TabIndex = 22;
+            this.timeSeconds.Text = "00";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(48, 27);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(10, 15);
+            this.label20.TabIndex = 24;
+            this.label20.Text = ":";
+            // 
+            // timeMinutes
+            // 
+            this.timeMinutes.AutoSize = true;
+            this.timeMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeMinutes.Location = new System.Drawing.Point(54, 25);
+            this.timeMinutes.Name = "timeMinutes";
+            this.timeMinutes.Size = new System.Drawing.Size(27, 20);
+            this.timeMinutes.TabIndex = 21;
+            this.timeMinutes.Text = "00";
+            this.timeMinutes.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // timeHours
+            // 
+            this.timeHours.AutoSize = true;
+            this.timeHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeHours.Location = new System.Drawing.Point(26, 25);
+            this.timeHours.Name = "timeHours";
+            this.timeHours.Size = new System.Drawing.Size(27, 20);
+            this.timeHours.TabIndex = 20;
+            this.timeHours.Text = "00";
             // 
             // btnPay
             // 
@@ -420,7 +483,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.listDeatail);
+            this.groupBox9.Controls.Add(this.listDetail);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.Location = new System.Drawing.Point(397, 34);
             this.groupBox9.Name = "groupBox9";
@@ -429,15 +492,15 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Saved Detail";
             // 
-            // listDeatail
+            // listDetail
             // 
-            this.listDeatail.FormattingEnabled = true;
-            this.listDeatail.ItemHeight = 15;
-            this.listDeatail.Location = new System.Drawing.Point(69, 63);
-            this.listDeatail.Name = "listDeatail";
-            this.listDeatail.Size = new System.Drawing.Size(215, 19);
-            this.listDeatail.TabIndex = 72;
-            this.listDeatail.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listDetail.FormattingEnabled = true;
+            this.listDetail.ItemHeight = 15;
+            this.listDetail.Location = new System.Drawing.Point(69, 48);
+            this.listDetail.Name = "listDetail";
+            this.listDetail.Size = new System.Drawing.Size(215, 49);
+            this.listDetail.TabIndex = 72;
+            this.listDetail.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // groupBox8
             // 
@@ -473,6 +536,7 @@
             this.cbUpdate.Name = "cbUpdate";
             this.cbUpdate.Size = new System.Drawing.Size(215, 23);
             this.cbUpdate.TabIndex = 69;
+            this.cbUpdate.SelectedIndexChanged += new System.EventHandler(this.cbUpdate_SelectedIndexChanged);
             // 
             // groupBox7
             // 
@@ -491,7 +555,7 @@
             this.groupBox7.Size = new System.Drawing.Size(729, 175);
             this.groupBox7.TabIndex = 45;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Personal Deatils";
+            this.groupBox7.Text = "Personal Details";
             // 
             // tbnUpdate
             // 
@@ -501,6 +565,7 @@
             this.tbnUpdate.TabIndex = 69;
             this.tbnUpdate.Text = "Update";
             this.tbnUpdate.UseVisualStyleBackColor = true;
+            this.tbnUpdate.Click += new System.EventHandler(this.tbnUpdate_Click);
             // 
             // txtUsername
             // 
@@ -691,69 +756,6 @@
             this.timeTracker.Interval = 1000;
             this.timeTracker.Tick += new System.EventHandler(this.timeTracker_Tick);
             // 
-            // timeHours
-            // 
-            this.timeHours.AutoSize = true;
-            this.timeHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeHours.Location = new System.Drawing.Point(26, 25);
-            this.timeHours.Name = "timeHours";
-            this.timeHours.Size = new System.Drawing.Size(27, 20);
-            this.timeHours.TabIndex = 20;
-            this.timeHours.Text = "00";
-            // 
-            // timeMinutes
-            // 
-            this.timeMinutes.AutoSize = true;
-            this.timeMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeMinutes.Location = new System.Drawing.Point(54, 25);
-            this.timeMinutes.Name = "timeMinutes";
-            this.timeMinutes.Size = new System.Drawing.Size(27, 20);
-            this.timeMinutes.TabIndex = 21;
-            this.timeMinutes.Text = "00";
-            this.timeMinutes.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // timeSeconds
-            // 
-            this.timeSeconds.AutoSize = true;
-            this.timeSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeSeconds.Location = new System.Drawing.Point(86, 25);
-            this.timeSeconds.Name = "timeSeconds";
-            this.timeSeconds.Size = new System.Drawing.Size(27, 20);
-            this.timeSeconds.TabIndex = 22;
-            this.timeSeconds.Text = "00";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.label21);
-            this.groupBox10.Controls.Add(this.timeSeconds);
-            this.groupBox10.Controls.Add(this.label20);
-            this.groupBox10.Controls.Add(this.timeMinutes);
-            this.groupBox10.Controls.Add(this.timeHours);
-            this.groupBox10.Location = new System.Drawing.Point(24, 154);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(140, 63);
-            this.groupBox10.TabIndex = 23;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Time Elapsed";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(48, 27);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(10, 15);
-            this.label20.TabIndex = 24;
-            this.label20.Text = ":";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(77, 26);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(10, 15);
-            this.label21.TabIndex = 25;
-            this.label21.Text = ":";
-            // 
             // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,6 +769,8 @@
             this.MainPage.ResumeLayout(false);
             this.MainPage.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -785,8 +789,6 @@
             this.Help.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -832,7 +834,7 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TabPage EditProfile;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.ListBox listDeatail;
+        private System.Windows.Forms.ListBox listDetail;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbUpdate;

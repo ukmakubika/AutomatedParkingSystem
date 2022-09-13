@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AutomatedTicketSystemProject_Group6
 {
@@ -16,6 +17,12 @@ namespace AutomatedTicketSystemProject_Group6
         {
             InitializeComponent();
         }
+
+        string connectString = @"Data Source=LAPTOP-9UVIJHCO;Initial Catalog=TicketSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataAdapter adapter;
+        DataSet data;
 
         private void cbFAQ_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -56,6 +63,13 @@ namespace AutomatedTicketSystemProject_Group6
             rbHighToLow.Enabled = true;
             rbName.Enabled = true;
             rbLongestHours.Enabled = true;
+
+            string sql = "SELECT Bank_ID, COUNT(Client_ID) AS Total_Banks FROM BANK GROUP BY Bank_ID";
+
+
+
+
+
         }
 
         private void cbGeneral_SelectedIndexChanged(object sender, EventArgs e)

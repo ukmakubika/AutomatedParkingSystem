@@ -78,7 +78,7 @@ namespace AutomatedTicketSystemProject_Group6
 
             //int code;
             listCode.Items.Clear();
-            
+
             Random requestedCode = new Random();
             code = requestedCode.Next(10000, 99999);
             DateTime thisday = DateTime.Today;
@@ -88,13 +88,13 @@ namespace AutomatedTicketSystemProject_Group6
             btnStart.Enabled = true;
             btnStop.Enabled = true;
             btnPay.Enabled = true;
-            
+
 
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -124,11 +124,11 @@ namespace AutomatedTicketSystemProject_Group6
 
         }
 
-        
+
 
         private void loadAll()
         {
-            
+
         }
 
         private void txtDisplay_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace AutomatedTicketSystemProject_Group6
 
             DateTime thisday = DateTime.Today;
 
-            time = int.Parse(String.Format("{0:00}", timeH));  
+            time = int.Parse(String.Format("{0:00}", timeH));
 
             listPrev.Items.Add(code.ToString() + "\t" + thisday.ToString("D"));
             listPrev.Items.Add("-------------------------------------------------------------");
@@ -195,10 +195,10 @@ namespace AutomatedTicketSystemProject_Group6
                         timeMin = 0;
                     }
                 }
-               
+
             }
             ShowTime();
-           
+
         }
 
         public void ShowTime()
@@ -214,14 +214,14 @@ namespace AutomatedTicketSystemProject_Group6
         private void btnStart_Click(object sender, EventArgs e)
         {
             //timeTracker.Start();
-            
+
 
             isActive = true;
         }
 
         private void CustomerInterface_Load(object sender, EventArgs e)
         {
-            loadAll();
+           
 
             listPrev.Items.Add("Code \t Today");
             listPrev.Items.Add("===============================");
@@ -243,17 +243,48 @@ namespace AutomatedTicketSystemProject_Group6
             string searchName = $"SELECT * from BANK WHERE Name LIKE '%" + txtSearch.Text + "%'";
             command = new SqlCommand(searchName, connection);
 
-            reader = command.ExecuteReader();
-
-            /*lbDisplay.Items.Clear();
-
-            while (reader.Read())
-            {
-                output = reader.GetValue(0) + "\t" + reader.GetValue(1) + "\t\t" + reader.GetValue(2) + "\t\t" + reader.GetValue(3);
-                lbDisplay.Items.Add(output);
-            }*/
+            reader = command.ExecuteReader();         
 
             connection.Close();
+        }
+
+        private void tbnUpdate_Click(object sender, EventArgs e)
+        {
+            MainLogin login = new MainLogin();
+            string name = login.txtUsername.Text;
+            listDetail.Items.Add(name);
+        }
+
+        private void cbUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (cbUpdate.SelectedItem.ToString() == "Surname")
+                {
+                    txtSurname.Enabled = true;
+                }
+                else if (cbUpdate.SelectedItem.ToString() == "Email Address")
+                {
+                    txtEmail.Enabled = true;
+                }
+                else if (cbUpdate.SelectedItem.ToString() == "Username ")
+                {
+                    txtUsername.Enabled = true;
+
+                }
+               else  if (cbUpdate.SelectedItem.ToString() == "Contact Number")
+                {
+                    txtContact.Enabled = true;
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+                    
+
+                  
         }
 
         private void btnPay_Click(object sender, EventArgs e)
