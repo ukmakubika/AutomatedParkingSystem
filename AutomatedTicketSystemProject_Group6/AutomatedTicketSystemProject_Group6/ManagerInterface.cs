@@ -88,30 +88,190 @@ namespace AutomatedTicketSystemProject_Group6
                 }
             }
 
-            if (rbHighToLow.Checked)
+            if (cbGeneral.SelectedItem.ToString() == "Top 3 Banks Used")
             {
-                try
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbHighToLow.Checked)
                 {
                     connection = new SqlConnection(connectString);
 
                     connection.Open();
-                    string sql = "SELECT Bank_name FROM BANK";
+                    string sql = "SELECT Bank_name, COUNT(Bank_name) AS Total_Banks FROM BANK GROUP BY Bank_name ORDER BY Total_Banks ASC";
                     command = new SqlCommand(sql, connection);
                     reader = command.ExecuteReader();
                     listOutput.Items.Clear();
 
                     while (reader.Read())
                     {
-                        listOutput.Items.Add(reader.GetValue(0) + "\n" + reader.GetValue(1) + "\n" + reader.GetValue(2));
+                        listOutput.Items.Add(reader.GetValue(0) + "\t" + reader.GetValue(1));
                     }
 
                     connection.Close();
                 }
-                catch (SqlException error)
+            }
+
+            if (cbGeneral.SelectedItem.ToString() == "Longest Hours Spent")
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbHighToLow.Checked)
                 {
-                    MessageBox.Show(error.Message);
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT TimeSpent, COUNT(TimeSpent) AS Total_Time FROM PAYMENT GROUP BY Payment_ID ORDER BY Total_Time ASC";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0) + "\t" + reader.GetValue(1));
+                    }
+
+                    connection.Close();
                 }
             }
+
+            if (cbGeneral.SelectedItem.ToString() == "Top 3 Banks Used")
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbLowToHigh.Checked)
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT Bank_name, COUNT(Bank_name) AS Total_Banks FROM BANK GROUP BY Bank_name ORDER BY Total_Banks DECS";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0) + "\t" + reader.GetValue(1));
+                    }
+
+                    connection.Close();
+                }
+            }
+
+            if (cbGeneral.SelectedItem.ToString() == "Longest Hours Spent")
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbLowToHigh.Checked)
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT TimeSpent, COUNT(TimeSpent) AS Total_Time FROM PAYMENT GROUP BY Payment_ID ORDER BY Total_Time DECS";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0) + "\t" + reader.GetValue(1));
+                    }
+
+                    connection.Close();
+                }
+            }
+
+            if (cbGeneral.SelectedItem.ToString() == "Top 3 Banks Used")
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbLongestHours.Checked)
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT MAX(TimeSpent) FROM PAYMENT";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0));
+                    }
+
+                    connection.Close();
+                }
+            }
+
+            if (cbGeneral.SelectedItem.ToString() == "Longest Hours Spent")
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbLongestHours.Checked)
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT MAX(TimeSpent) FROM PAYMENT";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0));
+                    }
+
+                    connection.Close();
+                }
+            }
+
+            if (cbGeneral.SelectedItem.ToString() == "Longest Hours Spent")
+            {
+                rbLowToHigh.Enabled = true;
+                rbHighToLow.Enabled = true;
+                rbName.Enabled = true;
+                rbLongestHours.Enabled = true;
+
+                if (rbLowToHigh.Checked)
+                {
+                    connection = new SqlConnection(connectString);
+
+                    connection.Open();
+                    string sql = "SELECT TimeSpent, COUNT(TimeSpent) AS Total_Time FROM PAYMENT GROUP BY Payment_ID ORDER BY Total_Time DECS";
+                    command = new SqlCommand(sql, connection);
+                    reader = command.ExecuteReader();
+                    listOutput.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        listOutput.Items.Add(reader.GetValue(0) + "\t" + reader.GetValue(1));
+                    }
+
+                    connection.Close();
+                }
+            }
+
+
+
         }
 
         private void cbGeneral_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,6 +299,17 @@ namespace AutomatedTicketSystemProject_Group6
             rbHighToLow.Enabled = false;
             rbName.Enabled = false;
             rbLongestHours.Enabled = false;
+
+            rbLowToHigh.Checked = false;
+            rbHighToLow.Checked = false;
+            rbName.Checked = false;
+            rbLongestHours.Checked = false;
+
+            checkCustom.Checked = false; 
+
+            txtCustomName.Clear();
+
+            listOutput.Items.Clear();
 
         }
 

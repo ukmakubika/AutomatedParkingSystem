@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerInterface));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.timeTracker = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,6 +137,16 @@
             this.MainPage.TabIndex = 0;
             this.MainPage.Text = "Main Page";
             this.MainPage.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(671, 367);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 29);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Sign out";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -753,16 +763,6 @@
             this.timeTracker.Enabled = true;
             this.timeTracker.Interval = 1000;
             this.timeTracker.Tick += new System.EventHandler(this.timeTracker_Tick_1);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(671, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 29);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Sign out";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // CustomerInterface
             // 
