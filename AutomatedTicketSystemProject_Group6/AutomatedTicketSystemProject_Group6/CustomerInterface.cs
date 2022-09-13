@@ -174,8 +174,6 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void CustomerInterface_Load(object sender, EventArgs e)
         {
-            loadAll();
-
             listPrev.Items.Add("Code \t Today");
             listPrev.Items.Add("===============================");
 
@@ -239,6 +237,47 @@ namespace AutomatedTicketSystemProject_Group6
             payment.ShowDialog();
         }
 
+        private void cbUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbUpdate.SelectedItem.ToString() == "Surname")
+            {
+                txtSurname.Enabled = true;
+                txtContact.Enabled = false;
+                txtEmail.Enabled = false;
+                txtUsername.Enabled = false;
+            }
+            if (cbUpdate.SelectedItem.ToString() == "Email Address")
+            {
+                txtSurname.Enabled = false;
+                txtContact.Enabled = false;
+                txtEmail.Enabled = true;
+                txtUsername.Enabled = false;
+
+            }
+            if (cbUpdate.SelectedItem.ToString() == "Username")
+            {
+                txtSurname.Enabled = false;
+                txtContact.Enabled = false;
+                txtEmail.Enabled = false;
+                txtUsername.Enabled = true;
+            }
+            if (cbUpdate.SelectedItem.ToString() == "Contact Number")
+            {
+                txtSurname.Enabled = false;
+                txtContact.Enabled = true;
+                txtEmail.Enabled = false;
+                txtUsername.Enabled = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainLogin login = new MainLogin();
+            login.ShowDialog();
+
+            this.Close();
+        }
+
         private void timeTracker_Tick_1(object sender, EventArgs e)
         {
             if (isActive)
@@ -261,14 +300,108 @@ namespace AutomatedTicketSystemProject_Group6
             ShowTime();
         }
 
-        private void btnPay_Click(object sender, EventArgs e)
+        
+        private void tbnUpdate_Click(object sender, EventArgs e)
         {
+
+            string username;
+            username = txtConfirm.Text;
+
+            try
+            {
+                if (cbUpdate.SelectedItem.ToString() == "Surname")
+                {
+                    
+                    try
+                    {
+                        connection = new SqlConnection(cnctString);
+
+                        connection.Open();
+                        string updateSurname = $"UPDATE CLIENT SET Client_LName = '{txtSurname.Text}' WHERE Client_UserName LIKE '%" + username + "%'";
+                        command = new SqlCommand(updateSurname, connection);
+                        command.ExecuteNonQuery();
+
+                        connection.Close();
+                        MessageBox.Show("Updated Successfully");
+                    }
+                    catch (SqlException error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }
+                }
+                else if (cbUpdate.SelectedItem.ToString() == "Email Address")
+                {
+                    
+                    try
+                    {
+                        connection = new SqlConnection(cnctString);
+
+                        connection.Open();
+                        string updateEmail = $"UPDATE CLIENT SET Client_Email = '{txtEmail.Text}'WHERE Client_UserName LIKE '%" + username + "%'";
+                        command = new SqlCommand(updateEmail, connection);
+                        command.ExecuteNonQuery();
+
+                        connection.Close();
+
+                    }
+                    catch (SqlException error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }
+                }
+                else if (cbUpdate.SelectedItem.ToString() == "Username ")
+                {
+
+                    
+
+                    try
+                    {
+                        connection = new SqlConnection(cnctString);
+
+                        connection.Open();
+                        string updateUsername = $"UPDATE CLIENT SET Client_UserName = '{txtUsername.Text}' WHERE Client_UserName LIKE '%" + username + "%'"; 
+                        command = new SqlCommand(updateUsername, connection);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+
+                    }
+                    catch (SqlException error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }
+
+                }
+                else if (cbUpdate.SelectedItem.ToString() == "Contact Number")
+                {
+                    
+
+
+                    try
+                    {
+                        connection = new SqlConnection(cnctString);
+
+                        connection.Open();
+                        string contact = $"UPDATE CLIENT SET Client_ContactNo = '{txtContact.Text}' WHERE Client_UserName LIKE '%" + username + "%'"; 
+                        command = new SqlCommand(contact, connection);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+
+                    }
+                    catch (SqlException error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
             
-        }
 
-        private void label18_Click(object sender, EventArgs e)
-        {
 
         }
+
     }
 }

@@ -242,6 +242,7 @@ namespace AutomatedTicketSystemProject_Group6
         {
             txtCode.Enabled = false;
             lblCode.Visible = false;
+            txtCode.Visible = false;
         }
 
         private void MainLogin_Load_1(object sender, EventArgs e)

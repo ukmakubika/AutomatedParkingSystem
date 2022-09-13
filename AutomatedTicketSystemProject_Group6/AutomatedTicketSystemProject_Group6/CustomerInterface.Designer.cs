@@ -65,7 +65,6 @@
             this.dbBankAccounts = new System.Windows.Forms.DataGridView();
             this.EditProfile = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.listDetail = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbUpdate = new System.Windows.Forms.ComboBox();
@@ -89,6 +88,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.timeTracker = new System.Windows.Forms.Timer(this.components);
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -147,6 +147,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Sign out";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox3
             // 
@@ -170,9 +171,9 @@
             this.groupBox10.Controls.Add(this.timeMinutes);
             this.groupBox10.Controls.Add(this.timeHours);
             this.groupBox10.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(21, 169);
+            this.groupBox10.Location = new System.Drawing.Point(21, 170);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(140, 63);
+            this.groupBox10.Size = new System.Drawing.Size(140, 62);
             this.groupBox10.TabIndex = 25;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Time Elapsed";
@@ -180,50 +181,50 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(77, 26);
+            this.label21.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(81, 43);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(11, 14);
+            this.label21.Size = new System.Drawing.Size(11, 16);
             this.label21.TabIndex = 25;
             this.label21.Text = ":";
             // 
             // timeSeconds
             // 
             this.timeSeconds.AutoSize = true;
-            this.timeSeconds.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeSeconds.Location = new System.Drawing.Point(86, 25);
+            this.timeSeconds.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeSeconds.Location = new System.Drawing.Point(98, 43);
             this.timeSeconds.Name = "timeSeconds";
-            this.timeSeconds.Size = new System.Drawing.Size(21, 14);
+            this.timeSeconds.Size = new System.Drawing.Size(23, 16);
             this.timeSeconds.TabIndex = 22;
             this.timeSeconds.Text = "00";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(48, 27);
+            this.label20.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(35, 43);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(11, 14);
+            this.label20.Size = new System.Drawing.Size(11, 16);
             this.label20.TabIndex = 24;
             this.label20.Text = ":";
             // 
             // timeMinutes
             // 
             this.timeMinutes.AutoSize = true;
-            this.timeMinutes.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeMinutes.Location = new System.Drawing.Point(54, 25);
+            this.timeMinutes.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeMinutes.Location = new System.Drawing.Point(52, 43);
             this.timeMinutes.Name = "timeMinutes";
-            this.timeMinutes.Size = new System.Drawing.Size(21, 14);
+            this.timeMinutes.Size = new System.Drawing.Size(23, 16);
             this.timeMinutes.TabIndex = 21;
             this.timeMinutes.Text = "00";
             // 
             // timeHours
             // 
             this.timeHours.AutoSize = true;
-            this.timeHours.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeHours.Location = new System.Drawing.Point(26, 25);
+            this.timeHours.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeHours.Location = new System.Drawing.Point(13, 43);
             this.timeHours.Name = "timeHours";
-            this.timeHours.Size = new System.Drawing.Size(21, 14);
+            this.timeHours.Size = new System.Drawing.Size(23, 16);
             this.timeHours.TabIndex = 20;
             this.timeHours.Text = "00";
             // 
@@ -487,24 +488,14 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.listDetail);
+            this.groupBox9.Controls.Add(this.txtConfirm);
             this.groupBox9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.Location = new System.Drawing.Point(397, 34);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(347, 141);
             this.groupBox9.TabIndex = 73;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Saved Detail";
-            // 
-            // listDetail
-            // 
-            this.listDetail.FormattingEnabled = true;
-            this.listDetail.ItemHeight = 14;
-            this.listDetail.Location = new System.Drawing.Point(69, 63);
-            this.listDetail.Name = "listDetail";
-            this.listDetail.Size = new System.Drawing.Size(215, 18);
-            this.listDetail.TabIndex = 72;
-            this.listDetail.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.groupBox9.Text = "Enter Current Username to Confirm";
             // 
             // groupBox8
             // 
@@ -540,6 +531,7 @@
             this.cbUpdate.Name = "cbUpdate";
             this.cbUpdate.Size = new System.Drawing.Size(215, 22);
             this.cbUpdate.TabIndex = 69;
+            this.cbUpdate.SelectedIndexChanged += new System.EventHandler(this.cbUpdate_SelectedIndexChanged);
             // 
             // groupBox7
             // 
@@ -569,6 +561,7 @@
             this.tbnUpdate.TabIndex = 69;
             this.tbnUpdate.Text = "Update";
             this.tbnUpdate.UseVisualStyleBackColor = true;
+            this.tbnUpdate.Click += new System.EventHandler(this.tbnUpdate_Click);
             // 
             // txtUsername
             // 
@@ -764,6 +757,13 @@
             this.timeTracker.Interval = 1000;
             this.timeTracker.Tick += new System.EventHandler(this.timeTracker_Tick_1);
             // 
+            // txtConfirm
+            // 
+            this.txtConfirm.Location = new System.Drawing.Point(70, 72);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(236, 22);
+            this.txtConfirm.TabIndex = 0;
+            // 
             // CustomerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -791,6 +791,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbBankAccounts)).EndInit();
             this.EditProfile.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -842,7 +843,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TabPage EditProfile;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.ListBox listDetail;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbUpdate;
@@ -864,5 +864,6 @@
         private System.Windows.Forms.Label timeHours;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtConfirm;
     }
 }
