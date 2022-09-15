@@ -65,6 +65,7 @@
             this.dbBankAccounts = new System.Windows.Forms.DataGridView();
             this.EditProfile = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbUpdate = new System.Windows.Forms.ComboBox();
@@ -88,7 +89,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.timeTracker = new System.Windows.Forms.Timer(this.components);
-            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -242,6 +242,7 @@
             // 
             // btnStop
             // 
+            this.btnStop.Enabled = false;
             this.btnStop.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.Location = new System.Drawing.Point(37, 70);
             this.btnStop.Name = "btnStop";
@@ -253,6 +254,7 @@
             // 
             // btnStart
             // 
+            this.btnStart.Enabled = false;
             this.btnStart.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(37, 28);
             this.btnStart.Name = "btnStart";
@@ -497,6 +499,13 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Enter Current Username to Confirm";
             // 
+            // txtConfirm
+            // 
+            this.txtConfirm.Location = new System.Drawing.Point(70, 72);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(236, 22);
+            this.txtConfirm.TabIndex = 0;
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.label8);
@@ -720,6 +729,7 @@
             this.cbFAQ.Name = "cbFAQ";
             this.cbFAQ.Size = new System.Drawing.Size(202, 22);
             this.cbFAQ.TabIndex = 14;
+            this.cbFAQ.SelectedIndexChanged += new System.EventHandler(this.cbFAQ_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -756,13 +766,6 @@
             this.timeTracker.Enabled = true;
             this.timeTracker.Interval = 1000;
             this.timeTracker.Tick += new System.EventHandler(this.timeTracker_Tick_1);
-            // 
-            // txtConfirm
-            // 
-            this.txtConfirm.Location = new System.Drawing.Point(70, 72);
-            this.txtConfirm.Name = "txtConfirm";
-            this.txtConfirm.Size = new System.Drawing.Size(236, 22);
-            this.txtConfirm.TabIndex = 0;
             // 
             // CustomerInterface
             // 

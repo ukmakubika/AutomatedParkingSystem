@@ -45,7 +45,8 @@ namespace AutomatedTicketSystemProject_Group6
         private void rbManager_CheckedChanged(object sender, EventArgs e)
         {
             txtCode.Enabled = true;
-            lblCode.Visible = true; 
+            lblCode.Visible = true;
+            txtCode.Visible = true;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -74,6 +75,8 @@ namespace AutomatedTicketSystemProject_Group6
             {
                 if (rbManager.Checked)
                 {
+                    txtCode.Visible = true;
+                    
                     if (txtCode.Text.Length == 0)
                     {
                         MessageBox.Show("Please enter valid code");

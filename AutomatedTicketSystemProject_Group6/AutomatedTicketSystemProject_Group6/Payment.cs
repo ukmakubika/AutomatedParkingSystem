@@ -19,21 +19,17 @@ namespace AutomatedTicketSystemProject_Group6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cbCards.ResetText();
-            txtCVV.Enabled = true;
-            btnPay.Enabled = true;
+           
         }
 
         private void cbCards_SelectedIndexChanged(object sender, EventArgs e)
         {
-                    }
+                   
+        }
 
         private void Payment_Load(object sender, EventArgs e)
         {
-            if (cbCards.SelectedItem != null)
-            {
-                btnPay.Enabled = true;
-            }
+            
 
             CustomerInterface custInt = new CustomerInterface();
 
@@ -82,6 +78,14 @@ namespace AutomatedTicketSystemProject_Group6
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnPay_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successfully Paid");
+            CustomerInterface customerInterface = new CustomerInterface();
+            customerInterface.ShowDialog();
+            this.Close();
         }
     }
 }
